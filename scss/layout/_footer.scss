@@ -249,6 +249,7 @@
             transition: 0.4s ease;
           }
           &:hover::before {
+            font-weight: 700;
             background: #1665d8;
           }
         }

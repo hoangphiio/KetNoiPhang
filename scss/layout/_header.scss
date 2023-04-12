@@ -20,7 +20,7 @@
       align-items: center;
       position: relative;
       & .header-logo {
-        width: 21%;
+        width: 20%;
         height: 3.8rem;
         max-width: 19.7rem;
         margin-right: 4.5rem;
@@ -30,10 +30,11 @@
         }
       }
       & .header-link {
-        width: 60%;
+        width: 65%;
         > ul {
           @include flex();
           align-items: center;
+          justify-content: end;
           > li {
             margin-right: 4.5rem;
             &:nth-child(2) {
@@ -45,15 +46,53 @@
               border-radius: 1.7rem;
               margin-left: 18px;
               margin-right: 30px;
+              @include flex();
+              align-items: center;
+              a {
+                margin-right: 0.4rem;
+              }
             }
-            a.selected {
+            a {
               display: block;
-              font-weight: 600;
-              color: #2645b5;
-              border-bottom: 0.3rem solid #2645b5;
+              position: relative;
+              transition: 0.4s ease;
+              &:hover {
+                color: #002485;
+              }
+              &::before {
+                content: "";
+                width: 0;
+                height: 0.3rem;
+                bottom: -0.3rem;
+                left: 0;
+                opacity: 0.6;
+                background: #2645b5;
+                position: absolute;
+                transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+              }
+              &:hover::before {
+                width: 100%;
+                opacity: 1;
+              }
+              &.selected {
+                display: block;
+                font-weight: 600;
+                color: #2645b5;
+                border-bottom: 0.3rem solid #2645b5;
+              }
+            }
+            &:hover .ic-down {
+              transform: rotateZ(180deg);
+            }
+            &:hover .ic-down::before {
+              color: #002485;
             }
             .ic-down {
+              cursor: pointer;
+              color: #bdbdbd;
+              transition: 0.4s ease;
               &::before {
+                display: block;
                 font-size: 0.6rem;
               }
             }
@@ -61,11 +100,12 @@
         }
       }
       & .header-contact {
-        width: 19%;
+        width: 15%;
         & .contact-box {
           @include flex();
           align-items: center;
           & .language {
+            cursor: pointer;
             margin-right: 2.5rem;
             position: relative;
             img {
@@ -75,7 +115,7 @@
             }
           }
           & .header-contact {
-            width: 100%;
+            width: fit-content;
             position: relative;
             a {
               border-radius: 17px;

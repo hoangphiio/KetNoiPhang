@@ -23,48 +23,113 @@
         font-size: 2.8rem;
         margin-bottom: 2rem;
         text-transform: uppercase;
+        @include max(700px){
+          font-size: 2.4rem;
+        }
+        @include max(500px){
+          font-size: 2rem;
+        }
       }
       p {
         font-size: 2.4rem;
         color: #262626;
+        @include max(700px){
+          font-size: 2rem;
+        }
+        @include max(500px){
+          font-size: 1.6rem;
+        }
       }
     }
     & .form-bottom {
-      @include flex();
-      margin: 0 -2rem;
       & .form-col {
-        width: 50%;
-        padding: 0 2rem;
+        @include flex();
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        position: relative;
         & .form-card {
-          min-height: 17.6rem;
-          @include flex();
+          width: 50%;
+          padding: 0 15px;
           margin-bottom: 7rem;
-          padding: 2.5rem;
-          border-radius: 2rem;
-          background-color: #fff;
-          & .card-img {
-            width: 15%;
-            @include flex();
-            align-items: center;
-            position: relative;
-            & .img-left {
-            }
-            & .img-right {
-              position: absolute;
-              bottom: 1rem;
-              right: -1.5rem;
-            }
+          @include max(1024px){
+            margin-bottom: 4rem
           }
-          & .card-text {
-            width: 85%;
-            p {
-              &:nth-child(1) {
-                font-size: 2.4rem;
-                font-weight: 700;
+          @include max(600px){
+            width: 100%;
+          }
+          & .card-box {
+            @include flex();
+            padding: 2.5rem;
+            height: 100%;
+            border-radius: 2rem;
+            background: #fff;
+            & .card-img {
+              width: 15%;
+              position: relative;
+              & .img-left {
+                width: 7rem;
+                height: 7rem;
+                display: block;
+                position: relative;
+                @include max(900px){
+                  width: 6rem;
+                  height: 6rem;
+                }
+                @include max(800px){
+                  width: 5rem;
+                  height: 5rem;
+                }
+                @include max(600px){
+                  width: 7rem;
+                  height: 7rem;
+                }
+                @include max(470px){
+                  width: 5rem;
+                  height: 5rem;
+                }
+                img {
+                  object-fit: contain;
+                }
               }
-              &:nth-child(2) {
-                font-size: 2rem;
-                color: #858585;
+              & .img-right {
+                top: 2rem;
+                right: -3.5rem;
+                padding-top: 100%;
+                position: absolute;
+                width: 100%;
+                @include max(800px){
+                  top: 1.5rem;
+                  right: -2.5rem;
+                }
+                img {
+                  object-fit: contain;
+                }
+              }
+            }
+            & .card-text {
+              width: 85%;
+              margin-left: 5rem;
+              p {
+                &:nth-child(1) {
+                  font-size: 2.4rem;
+                  font-weight: 700;
+                  @include max(1024px){
+                    font-size: 2rem;
+                  }
+                  @include max(800px){
+                    @include lc(2);
+                  }
+                }
+                &:nth-child(2) {
+                  font-size: 2rem;
+                  color: #858585;
+                  @include max(1024px){
+                    font-size: 1.6rem;
+                  }
+                  @include max(800px){
+                    @include lc(3);
+                  }
+                }
               }
             }
           }
@@ -89,20 +154,20 @@
       font-size: 2.8rem;
       margin-bottom: 2rem;
       color: #2645b5;
-      @include max(700px){
+      @include max(700px) {
         font-size: 2.4rem;
       }
-      @include max(500px){
+      @include max(500px) {
         font-size: 2rem;
       }
     }
     p {
       font-size: 2.4rem;
       color: #262626;
-      @include max(700px){
+      @include max(700px) {
         font-size: 2rem;
       }
-      @include max(500px){
+      @include max(500px) {
         font-size: 1.6rem;
       }
     }
@@ -170,11 +235,11 @@
   background: #f9f9ff;
   &-wrap {
     padding: 13rem 0;
-    @include max(1024px){
-        padding: 10rem 0;
+    @include max(1024px) {
+      padding: 10rem 0;
     }
-    @include max(800px){
-        padding: 8rem 0;
+    @include max(800px) {
+      padding: 8rem 0;
     }
   }
   &-inner {
@@ -189,19 +254,19 @@
           font-weight: 700;
           font-size: 2.8rem;
           margin-bottom: 2rem;
-          @include max(700px){
+          @include max(700px) {
             font-size: 2.4rem;
           }
-          @include max(500px){
+          @include max(500px) {
             font-size: 2rem;
           }
         }
         p {
           font-size: 2.4rem;
-          @include max(700px){
-            font-size: 2rem
+          @include max(700px) {
+            font-size: 2rem;
           }
-          @include max(500px){
+          @include max(500px) {
             font-size: 1.6rem;
           }
         }
