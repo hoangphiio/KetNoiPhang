@@ -399,9 +399,21 @@ table {
     font-size: 2.8rem;
     margin-bottom: 2rem;
     color: #2645b5; }
+    @media screen and (max-width: 700px) {
+      .customer-title h2 {
+        font-size: 2.4rem; } }
+    @media screen and (max-width: 500px) {
+      .customer-title h2 {
+        font-size: 2rem; } }
   .customer-title p {
     font-size: 2.4rem;
     color: #262626; }
+    @media screen and (max-width: 700px) {
+      .customer-title p {
+        font-size: 2rem; } }
+    @media screen and (max-width: 500px) {
+      .customer-title p {
+        font-size: 1.6rem; } }
 
 .customer-inner-card .customer-inner-body .customer-img {
   position: relative;
@@ -455,6 +467,12 @@ table {
   background: #f9f9ff; }
   .partner-wrap {
     padding: 13rem 0; }
+    @media screen and (max-width: 1024px) {
+      .partner-wrap {
+        padding: 10rem 0; } }
+    @media screen and (max-width: 800px) {
+      .partner-wrap {
+        padding: 8rem 0; } }
   .partner-inner .partner-column-top {
     margin-bottom: 5rem; }
     .partner-inner .partner-column-top .solution-inner-title {
@@ -466,8 +484,20 @@ table {
         font-weight: 700;
         font-size: 2.8rem;
         margin-bottom: 2rem; }
+        @media screen and (max-width: 700px) {
+          .partner-inner .partner-column-top .solution-inner-title h2 {
+            font-size: 2.4rem; } }
+        @media screen and (max-width: 500px) {
+          .partner-inner .partner-column-top .solution-inner-title h2 {
+            font-size: 2rem; } }
       .partner-inner .partner-column-top .solution-inner-title p {
         font-size: 2.4rem; }
+        @media screen and (max-width: 700px) {
+          .partner-inner .partner-column-top .solution-inner-title p {
+            font-size: 2rem; } }
+        @media screen and (max-width: 500px) {
+          .partner-inner .partner-column-top .solution-inner-title p {
+            font-size: 1.6rem; } }
   .partner-inner .partner-column-bottom .partner-column-logo {
     display: -webkit-flex;
     display: -moz-flex;
@@ -482,6 +512,12 @@ table {
       height: 7rem;
       padding: 0 0.5rem;
       margin-bottom: 3rem; }
+      @media screen and (max-width: 1024px) {
+        .partner-inner .partner-column-bottom .partner-column-logo > div {
+          width: 33.333%; } }
+      @media screen and (max-width: 700px) {
+        .partner-inner .partner-column-bottom .partner-column-logo > div {
+          width: 50%; } }
       .partner-inner .partner-column-bottom .partner-column-logo > div img {
         object-fit: contain; }
 
