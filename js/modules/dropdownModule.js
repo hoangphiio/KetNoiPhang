@@ -17,4 +17,16 @@ export default function dropdownModule() {
       }
     });
   });
+
+  $(document).ready(function () {
+    // content button toggle
+    $(".table-option").hide();
+    $(".button").click(function () {
+      $(".table-option").slideToggle(400);
+    });
+  });
+
+  $(".rotate").click(function () {
+    $(this).toggleClass("down");
+})
 }

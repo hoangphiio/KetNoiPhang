@@ -1,5 +1,5 @@
 .price {
-  background: linear-gradient(0deg, #ffffff 0, #f3f3ff 100%);
+  background: linear-gradient(0deg, #ffffff 50%, #f3f3ff 100%);
   &-wrap {
   }
   &-inner {
@@ -13,19 +13,48 @@
         font-size: 3.5rem;
         color: #2645b5;
         margin-bottom: 2.5rem;
+        @include max(1100px) {
+          font-size: 3rem;
+        }
+        @include max(1024px) {
+          font-size: 2.6rem;
+        }
+        @include max(600px) {
+          font-size: 2rem;
+        }
       }
       p {
         font-size: 2.8rem;
+        @include max(1100px) {
+          font-size: 2.4rem;
+        }
+        @include max(1024px) {
+          font-size: 2.2rem;
+        }
+        @include max(600px) {
+          font-size: 1.8rem;
+        }
       }
     }
     & .list-table {
       & .table-form {
         @include flex();
+        flex-wrap: wrap;
         margin: 0 -1.5rem;
         & .table-box {
           width: 25%;
           padding: 0 1.5rem;
+          @include max(1024px) {
+            width: 50%;
+          }
+          @include max(450px) {
+            width: 100%;
+            margin-bottom: 3rem;
+          }
           &:nth-child(1) {
+            @include max(1024px) {
+              margin-bottom: 3rem;
+            }
             & .table-inner:hover {
               border-color: #888;
               box-shadow: 0px 0px 15px #b2b2b2;
@@ -43,6 +72,9 @@
             }
           }
           &:nth-child(2) {
+            @include max(1024px) {
+              margin-bottom: 3rem;
+            }
             & .table-inner:hover {
               border-color: #ffc107;
               box-shadow: 0px 0px 15px #f9dc87;
@@ -111,6 +143,12 @@
               h3 {
                 text-transform: uppercase;
                 font-size: 2.6rem;
+                @include max(1100px) {
+                  font-size: 2.2rem;
+                }
+                @include max(600px) {
+                  font-size: 2rem;
+                }
               }
             }
             & .form-uses {
@@ -126,11 +164,20 @@
                     color: #544837;
                     font-weight: 400;
                   }
+                  @include max(1100px) {
+                    font-size: 2.4rem;
+                  }
+                  @include max(600px) {
+                    font-size: 2rem;
+                  }
                 }
                 &:nth-child(2) {
                   color: #544837;
                   font-size: 1.8rem;
                   margin-bottom: 2.4rem;
+                  @include max(1100px) {
+                    font-size: 1.6rem;
+                  }
                 }
               }
             }
@@ -138,9 +185,15 @@
               padding: 2rem;
               margin-bottom: 3rem;
               text-align: center;
+              @include max(600px) {
+                margin-bottom: 1.2rem;
+              }
               p {
                 color: #262626;
                 font-size: 1.8rem;
+                @include max(600px) {
+                  font-size: 1.4rem;
+                }
               }
             }
             & .form-register {
@@ -151,6 +204,9 @@
                 padding: 0.7rem 5rem;
                 margin-bottom: 2rem;
                 border-radius: 1.8rem;
+                @include max(600px) {
+                  padding: 0.5rem 4rem;
+                }
                 span {
                   color: #fff;
                   font-weight: 700;
@@ -161,6 +217,9 @@
               position: relative;
               margin-bottom: 4.5rem;
               padding-top: calc((30 / 183) * 100%);
+              @include max(600px) {
+                margin-bottom: 3rem;
+              }
             }
             & .form-feature {
               padding: 0 2rem;
@@ -169,6 +228,13 @@
                 font-weight: 700;
                 font-size: 2.8rem;
                 margin-bottom: 3.5rem;
+                @include max(1100px) {
+                  font-size: 2.2rem;
+                }
+                @include max(600px) {
+                  font-size: 1.8rem;
+                  margin-bottom: 2rem;
+                }
               }
               ul {
                 > li {
@@ -202,6 +268,18 @@
         font-size: 2.8rem;
         margin-right: 2rem;
         text-transform: uppercase;
+        @include max(1100px) {
+          font-size: 2.6rem;
+        }
+        @include max(1024px) {
+          font-size: 2.2rem;
+        }
+        @include max(600px) {
+          font-size: 1.8rem;
+        }
+        @include max(420px) {
+          text-align: center;
+        }
       }
       i {
         border-radius: 50%;
@@ -214,15 +292,64 @@
         }
       }
     }
-    & .table-option{
-        margin-top: 5rem;
-        > table{
-            width: 100%;
-            th{
-                padding: 2rem 1rem;
-                background: #fff;
-            }
+    & .table-option {
+      margin-top: 5rem;
+      overflow: auto;
+      > table {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #f5f5f5;
+        box-shadow: 0px 2px 10px #f0f0f0;
+        @include max(700px) {
+          min-width: 100rem;
         }
+        th {
+          font-size: 2rem;
+          padding: 2rem 1rem;
+          background: #fff;
+          &:not(:last-child) {
+            border-right: 1px solid #e5e5e5;
+          }
+          &:nth-child(2) {
+            color: #5e5e5e;
+          }
+          &:nth-child(3) {
+            color: #1cc564;
+          }
+          &:nth-child(4) {
+            color: #ffc107;
+          }
+          &:nth-child(5) {
+            color: #28b0ff;
+          }
+        }
+        tr {
+          &:nth-child(2n) {
+            background: #f7f7ff;
+          }
+          &:hover {
+            transition: 0.2s ease;
+            background: #f7f7ff;
+          }
+          &.group {
+            background: #f7f7ff;
+            td {
+              font-size: 2rem;
+              color: #2f281e;
+              font-weight: 700;
+            }
+          }
+          td {
+            font-size: 1.8rem;
+            padding: 1.5rem;
+            text-align: center;
+            color: #262626;
+            &:first-child {
+              text-align: left;
+            }
+          }
+        }
+      }
     }
   }
 }
