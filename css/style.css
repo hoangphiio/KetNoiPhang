@@ -958,6 +958,172 @@ table {
           color: #fff;
           font-weight: 700; }
 
+.price {
+  background: linear-gradient(0deg, #ffffff 0, #f3f3ff 100%); }
+  .price-inner {
+    padding-top: 7rem; }
+  .price-list .list-title {
+    margin-bottom: 7rem;
+    text-align: center; }
+    .price-list .list-title h1 {
+      font-size: 3.5rem;
+      color: #2645b5;
+      margin-bottom: 2.5rem; }
+    .price-list .list-title p {
+      font-size: 2.8rem; }
+  .price-list .list-table .table-form {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: 0 -1.5rem; }
+    .price-list .list-table .table-form .table-box {
+      width: 25%;
+      padding: 0 1.5rem; }
+      .price-list .list-table .table-form .table-box:nth-child(1) .table-inner:hover {
+        border-color: #888;
+        box-shadow: 0px 0px 15px #b2b2b2; }
+      .price-list .list-table .table-form .table-box:nth-child(1) .form-title {
+        background: rgba(94, 94, 94, 0.1); }
+        .price-list .list-table .table-form .table-box:nth-child(1) .form-title h3 {
+          color: #5e5e5e; }
+      .price-list .list-table .table-form .table-box:nth-child(1) .form-register a {
+        background: #5e5e5e; }
+      .price-list .list-table .table-form .table-box:nth-child(2) .table-inner:hover {
+        border-color: #ffc107;
+        box-shadow: 0px 0px 15px #f9dc87; }
+      .price-list .list-table .table-form .table-box:nth-child(2) .form-title {
+        background: rgba(255, 193, 7, 0.1); }
+        .price-list .list-table .table-form .table-box:nth-child(2) .form-title h3 {
+          color: #ffc107; }
+      .price-list .list-table .table-form .table-box:nth-child(2) .form-register a {
+        background: #ffc107; }
+      .price-list .list-table .table-form .table-box:nth-child(3) .table-inner {
+        border: 1px solid #1cc564;
+        box-shadow: 0px 0px 15px #b2ffd3; }
+      .price-list .list-table .table-form .table-box:nth-child(3) .form-title {
+        background: rgba(28, 197, 100, 0.1); }
+        .price-list .list-table .table-form .table-box:nth-child(3) .form-title h3 {
+          color: #1cc564; }
+      .price-list .list-table .table-form .table-box:nth-child(3) .form-register a {
+        background: #00c86b; }
+      .price-list .list-table .table-form .table-box:nth-child(4) .table-inner:hover {
+        border-color: #28b0ff;
+        box-shadow: 0px 0px 15px #a9defd; }
+      .price-list .list-table .table-form .table-box:nth-child(4) .form-title {
+        background: rgba(40, 176, 255, 0.1); }
+        .price-list .list-table .table-form .table-box:nth-child(4) .form-title h3 {
+          color: #28b0ff; }
+      .price-list .list-table .table-form .table-box:nth-child(4) .form-register a {
+        background: #28b0ff; }
+      .price-list .list-table .table-form .table-box .table-inner {
+        height: 100%;
+        padding: 0.2rem;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 1.2rem;
+        border: 1px solid #fff;
+        transition: 0.4s ease;
+        box-shadow: 0px 2px 10px #f0f0f0; }
+        .price-list .list-table .table-form .table-box .table-inner .form-title {
+          padding: 1.6rem 0;
+          text-align: center;
+          margin-bottom: 2.5rem;
+          border-top-left-radius: 1.2rem;
+          border-top-right-radius: 1.2rem; }
+          .price-list .list-table .table-form .table-box .table-inner .form-title h3 {
+            text-transform: uppercase;
+            font-size: 2.6rem; }
+        .price-list .list-table .table-form .table-box .table-inner .form-uses {
+          border-bottom: 1px solid #e5e5e5; }
+          .price-list .list-table .table-form .table-box .table-inner .form-uses p {
+            text-align: center; }
+            .price-list .list-table .table-form .table-box .table-inner .form-uses p:nth-child(1) {
+              color: #000;
+              font-size: 2.8rem;
+              font-weight: 700;
+              margin-bottom: 0.9rem; }
+              .price-list .list-table .table-form .table-box .table-inner .form-uses p:nth-child(1) span {
+                color: #544837;
+                font-weight: 400; }
+            .price-list .list-table .table-form .table-box .table-inner .form-uses p:nth-child(2) {
+              color: #544837;
+              font-size: 1.8rem;
+              margin-bottom: 2.4rem; }
+        .price-list .list-table .table-form .table-box .table-inner .form-bussiness {
+          padding: 2rem;
+          margin-bottom: 3rem;
+          text-align: center; }
+          .price-list .list-table .table-form .table-box .table-inner .form-bussiness p {
+            color: #262626;
+            font-size: 1.8rem; }
+        .price-list .list-table .table-form .table-box .table-inner .form-register a {
+          display: block;
+          margin: 0 auto;
+          width: fit-content;
+          padding: 0.7rem 5rem;
+          margin-bottom: 2rem;
+          border-radius: 1.8rem; }
+          .price-list .list-table .table-form .table-box .table-inner .form-register a span {
+            color: #fff;
+            font-weight: 700; }
+        .price-list .list-table .table-form .table-box .table-inner .form-img {
+          position: relative;
+          margin-bottom: 4.5rem;
+          padding-top: calc((30 / 183) * 100%); }
+        .price-list .list-table .table-form .table-box .table-inner .form-feature {
+          padding: 0 2rem; }
+          .price-list .list-table .table-form .table-box .table-inner .form-feature p {
+            text-align: center;
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 3.5rem; }
+          .price-list .list-table .table-form .table-box .table-inner .form-feature ul > li {
+            height: 5.4rem;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            margin-bottom: 2rem; }
+            .price-list .list-table .table-form .table-box .table-inner .form-feature ul > li i {
+              line-height: 3rem;
+              margin-right: 1.2rem; }
+            .price-list .list-table .table-form .table-box .table-inner .form-feature ul > li span {
+              font-size: 1.8rem; }
+  .price-table {
+    padding: 8rem 0; }
+    .price-table .table-title {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .price-table .table-title h2 {
+        color: #2645b5;
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-right: 2rem;
+        text-transform: uppercase; }
+      .price-table .table-title i {
+        border-radius: 50%;
+        padding: 1.3rem 1rem;
+        cursor: pointer;
+        background-color: #f7f7ff; }
+        .price-table .table-title i::before {
+          font-size: 1rem;
+          color: #354fa7; }
+    .price-table .table-option {
+      margin-top: 5rem; }
+      .price-table .table-option > table {
+        width: 100%; }
+        .price-table .table-option > table th {
+          padding: 2rem 1rem;
+          background: #fff; }
+
 .footer {
   background: #fafafa; }
   .footer-box {
