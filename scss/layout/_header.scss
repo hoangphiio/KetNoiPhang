@@ -55,14 +55,15 @@
         @include max(360px){
           right: 14rem;
         }
+
       }
       & .header-link {
         width: 65%;
         @include max(1120px) {
-          display: none;
           width: 100%;
           margin: 0;
           top: 7rem;
+          display: none;
           position: absolute;
           background: #fff;
           box-shadow: 0 0.125rem 0.5625rem rgba(0, 0, 0, 0.14221);

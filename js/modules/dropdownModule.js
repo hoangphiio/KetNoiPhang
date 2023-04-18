@@ -13,7 +13,7 @@ export default function dropdownModule() {
     });
     $(".menu > ul > li").click(function () {
       if ($(window).width() <= 1120) {
-        $(this).children("ul").fadeToggle(150);
+        $(this).children("ul").fadeToggle("");
       }
     });
   });
@@ -28,5 +28,5 @@ export default function dropdownModule() {
 
   $(".rotate").click(function () {
     $(this).toggleClass("down");
-})
+  });
 }
