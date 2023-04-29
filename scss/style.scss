@@ -4,6 +4,7 @@
 
 // component
 @import "./component/burgerMenu";
+@import "./component/capcha";
 
 // core
 @import "./core/animation";
@@ -17,4 +18,6 @@
 @import "./layout/banner";
 @import "./layout/feature";
 @import "./layout/price";
+@import "./layout/customer";
+@import "./layout/contact";
 @import "./layout/footer";

@@ -4,29 +4,29 @@ export default function dropdownModule() {
       menu = $(".header-link"); //menu
 
     hamburger.on("click", function () {
-      menu.slideToggle();
+      menu.toggleClass("active");
       $(this).toggleClass("active");
+      $(".overlay").toggleClass("active");
     });
-    $(".menu-mobile").click(function (e) {
+    $(".mobile-menu").click(function (e) {
       $(".menu > ul").toggleClass("show-on-mobile");
       e.preventDefault();
     });
     $(".menu > ul > li").click(function () {
-      if ($(window).width() <= 1120) {
-        $(this).children("ul").fadeToggle(150);
+      if ($(window).width() <= 1130) {
+        $(this).children("ul").fadeToggle();
       }
     });
   });
-
   $(document).ready(function () {
-    // content button toggle
     $(".table-option").hide();
-    $(".button").click(function () {
+    // content button toggle
+    $(".showmore").click(function () {
       $(".table-option").slideToggle(400);
     });
   });
 
   $(".rotate").click(function () {
     $(this).toggleClass("down");
-})
+  });
 }
