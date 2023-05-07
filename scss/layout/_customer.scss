@@ -166,6 +166,9 @@
         &.logo {
           @include flex();
           align-items: center;
+          flex-direction: initial;
+          margin: 0;
+          margin-bottom: 2rem;
           span {
             margin-right: 0.4rem;
           }
