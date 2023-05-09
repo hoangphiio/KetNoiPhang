@@ -4,23 +4,45 @@
   &-body {
     & .body-form {
       padding: 7rem 0;
-      & .form-list {
+      & div.form-list {
         @include flex();
         align-items: center;
         margin: 0 -2rem;
+        @include max(768px) {
+          flex-direction: column;
+        }
         & .list-col {
           width: 50%;
           padding: 0 2rem;
           position: relative;
+          @include max(768px) {
+            width: 100%;
+            margin-bottom: 3rem;
+          }
           &:nth-child(1) {
             h2 {
               font-size: 3rem;
               color: #2645b5;
               margin-bottom: 2.5rem;
+              @include max(1024px) {
+                font-size: 2.6rem;
+              }
+              @include max(610px) {
+                margin-bottom: 2rem;
+              }
+              @include max(500px) {
+                font-size: 2rem;
+              }
             }
             p {
               font-size: 2.6rem;
               color: #262626;
+              @include max(1024px) {
+                font-size: 2rem;
+              }
+              @include max(500px) {
+                font-size: 1.6rem;
+              }
               span {
                 font-weight: 600;
               }
@@ -32,16 +54,22 @@
               padding-top: calc((290 / 516) * 100%);
             }
             & .img-2 {
-              width: 6rem;
-              height: 6rem;
+              width: 8rem;
+              height: 8rem;
               top: 0;
               left: 0;
               right: 0;
               bottom: 0;
               margin: auto;
               position: absolute;
+              img{
+                transition: 0.4s ease-in-out;
+                &:hover{
+                  animation: ripple 1s linear infinite;
+                }
+              }
             }
-            img{
+            img {
               object-fit: contain;
             }
           }
@@ -49,9 +77,9 @@
       }
     }
   }
-  &.right{
+  &.right {
     background-color: #f9f9ff;
-    & .form-list{
+    & .form-list {
       flex-direction: row-reverse;
     }
   }

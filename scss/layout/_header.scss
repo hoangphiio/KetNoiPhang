@@ -45,11 +45,6 @@
         top: 2.2rem;
         right: 18rem;
         display: none;
-        &.active {
-          & .bar {
-            background-color: #fff;
-          }
-        }
         @include max(1120px) {
           display: flex;
         }
@@ -553,7 +548,7 @@
                           margin-bottom: 12px;
                           flex-direction: column;
                         }
-                        @include max(370px) {
+                        @include max(400px) {
                           text-align: center;
                         }
                         &:nth-child(1) {

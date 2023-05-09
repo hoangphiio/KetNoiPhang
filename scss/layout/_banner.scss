@@ -15,19 +15,13 @@
         padding-top: calc((700 / 1728) * 180%);
       }
       @include max(700px) {
-        padding-top: calc((700 / 1728) * 220%);
-      }
-      @include max(700px) {
-        padding-top: calc((700 / 1728) * 250%);
-      }
-      @include max(600px) {
-        padding-top: calc((700 / 1728) * 280%);
-      }
-      @include max(500px) {
         padding-top: calc((700 / 1728) * 350%);
       }
-      @include max(450px) {
+      @include max(500px) {
         padding-top: calc((700 / 1728) * 400%);
+      }
+      @include max(400px) {
+        padding-top: calc((700 / 1728) * 450%);
       }
     }
     &-title {
@@ -67,17 +61,19 @@
               font-size: 5rem;
               font-weight: 700;
               margin-bottom: 2rem;
-              @include max(1100px) {
+              @include max(1366px) {
                 font-size: 4rem;
               }
-              @include max(1000px) {
+              @include max(1024px) {
                 font-size: 3.5rem;
               }
               @include max(880px) {
-                font-size: 3rem;
+                font-size: 2.4rem;
               }
-              @include max(760px) {
-                font-size: 2.6rem;
+              @include max(700px){
+                br{
+                  display: none;
+                }
               }
               @include max(400px) {
                 font-size: 2.2rem;
@@ -86,13 +82,14 @@
             p {
               font-size: 2.6rem;
               color: #262626;
-              line-height: 36px;
-              margin-bottom: 40px;
-              @include max(1100px) {
-                font-size: 2.2rem;
-              }
-              @include max(1000px) {
+              line-height: 3.6rem;
+              margin-bottom: 4rem;
+              @include max(1200px) {
                 font-size: 2rem;
+              }
+              @include max(880px){
+                font-size: 1.8rem;
+                margin-bottom: 3rem;
               }
               @include max(760px) {
                 font-size: 1.6rem;
@@ -109,6 +106,9 @@
             width: fit-content;
             position: relative;
             a {
+              position: relative;
+              overflow: hidden;
+              display: block;
               background: linear-gradient(
                 180deg,
                 #94abff -0.01%,
@@ -116,7 +116,7 @@
                 #2645b5 100%
               );
               border-radius: 1.75rem;
-              padding: 0.92rem 4rem;
+              padding: 0.7rem 4.2rem;
               @include max(400px) {
                 padding: 1rem 4.5rem;
               }
@@ -130,7 +130,7 @@
         & .box-right {
           width: 50%;
           @include max(700px) {
-            width: 60%;
+            width: 100%;
           }
           @include max(500px) {
             width: 100%;
@@ -138,7 +138,7 @@
           & .content-img {
             position: relative;
             padding-top: calc((340 / 572) * 100%);
-            img{
+            img {
               object-fit: contain;
             }
           }
@@ -148,9 +148,23 @@
     &.customer {
       & .banner-content-img {
         padding-top: calc((700 / 1728) * 125%);
+        @include max(1200px){
+          padding-top: calc((700 / 1728) * 150%);
+        }
+        @include max(600px){
+          padding-top: calc((700 / 1728) * 250%);
+        }
+        @include max(500px){
+          padding-top: calc((700 / 1728) * 300%);
+        }
+        @include max(400px){
+          padding-top: calc((700 / 1728) * 350%);          
+        }
       }
       & .banner-content-title {
         top: 0;
+        @include max(1366px){
+        }
         & .content-box {
           flex-direction: column;
           justify-content: center;
@@ -158,9 +172,28 @@
             width: 70%;
             margin-bottom: 3rem;
             text-align: center;
+            @include max(600px){
+              width: 100%;
+            }
+            & .content{
+              h1{
+                @include max(1200px){
+                  font-size: 3rem;
+                }
+                @include max(500px){
+                  font-size: 2.4rem;
+                }
+                @include max(400px){
+                  font-size: 2rem;
+                }
+              }
+            }
           }
           & .box-right {
-            width: 50%;
+            width: 60%;
+            @include max(600px){
+              width: 100%;
+            }
           }
         }
         & .box-right {
@@ -173,3 +206,4 @@
     }
   }
 }
+

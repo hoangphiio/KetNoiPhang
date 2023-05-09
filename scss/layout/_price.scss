@@ -205,7 +205,7 @@
                   display: block;
                   margin: 0 auto;
                   width: fit-content;
-                  padding: 0.7rem 5rem;
+                  padding: 0.7rem 5.067rem;
                   margin-bottom: 2rem;
                   border-radius: 1.8rem;
                   @include max(600px) {
@@ -247,13 +247,13 @@
                     padding: 25px;
                     border-radius: 10px;
                     background-color: #fff;
-                    @include max(800px){
+                    @include max(800px) {
                       width: 60%;
                     }
-                    @include max(600px){
+                    @include max(600px) {
                       width: 80%;
                     }
-                    @include max(400px){
+                    @include max(400px) {
                       width: 90%;
                     }
                     & .content {
@@ -478,7 +478,7 @@
             background: #f7f7ff;
           }
           &.group {
-            background: #f7f7ff;
+            background: #f6f6f6;
             td {
               font-size: 2rem;
               color: #2f281e;

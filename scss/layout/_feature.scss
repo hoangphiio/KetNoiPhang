@@ -141,7 +141,10 @@
 
 .customer {
   &-wrap {
-    padding: 10rem 0;
+    padding: 10rem 0; 
+    @include max(767px){
+      padding: 8rem 0;
+    }
   }
   &-box {
   }
@@ -154,7 +157,7 @@
       font-size: 2.8rem;
       margin-bottom: 2rem;
       color: #2645b5;
-      @include max(700px) {
+      @include max(767px) {
         font-size: 2.4rem;
       }
       @include max(500px) {
@@ -210,6 +213,7 @@
           width: fit-content;
           a {
             display: block;
+            overflow: hidden;
             border-radius: 1.8rem;
             text-align: center;
             padding: 0.9rem 3.5rem;
@@ -291,8 +295,8 @@
         margin: 0 -0.5rem;
         > div {
           width: 25%;
-          height: 7rem;
-          padding: 0 0.5rem;
+          height: 8rem;
+          padding: 0 1rem;
           margin-bottom: 3rem;
           @include max(1024px) {
             width: 33.333%;
@@ -343,16 +347,18 @@
       & .connect-button {
         width: fit-content;
         margin: 0 auto;
-        border-radius: 20px;
-        background: linear-gradient(
-          180deg,
-          #94adff -0.01%,
-          #3454c1 50%,
-          #1d3893 100%
-        );
         a {
+          position: relative;
+          overflow: hidden;
           display: block;
-          padding: 0.8rem 7.8rem;
+          padding: 0.95rem 7.793rem;
+          border-radius: 20px;
+          background: linear-gradient(
+            180deg,
+            #94adff -0.01%,
+            #3454c1 50%,
+            #1d3893 100%
+          );
           @include max(700px) {
             padding: 0.6rem 7rem;
           }

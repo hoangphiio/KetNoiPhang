@@ -35,6 +35,9 @@
         padding: 0.5rem 1.5rem;
         border: 1px solid #94adff;
         justify-content: space-between;
+        @include max(400px) {
+          width: 25rem;
+        }
         & .select-text {
           color: #262626;
         }
@@ -82,6 +85,12 @@
           width: 33.3333%;
           padding: 0 15px;
           margin-bottom: 3rem;
+          @include max(1024px) {
+            width: 50%;
+          }
+          @include max(600px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -117,6 +126,7 @@
       ul {
         @include flex();
         align-items: center;
+        flex-wrap: wrap;
         margin: 0 -2.25rem;
         li {
           padding: 0 2.25rem;
@@ -137,6 +147,7 @@
             font-size: 1.6rem;
             &.active {
               color: #262626;
+              font-weight: 500;
             }
             &:hover {
               color: #2645b5;
@@ -150,6 +161,15 @@
       h1 {
         color: #2f281e;
         font-size: 3.6rem;
+        @include max(1024px) {
+          font-size: 3rem;
+        }
+        @include max(767px) {
+          font-size: 2.4rem;
+        }
+        @include max(465px){
+          font-size: 2rem;
+        }
       }
     }
     & .list-img {
@@ -194,6 +214,9 @@
         font-size: 2rem;
         color: #262626;
         margin-bottom: 2rem;
+        @include max(767px) {
+          font-size: 1.8rem;
+        }
       }
       & .content-desc {
         margin-bottom: 2rem;
@@ -204,10 +227,23 @@
           margin: 0 -1rem;
           background: #fafafa;
           border-radius: 1rem;
+          @include max(767px) {
+            flex-direction: column;
+          }
           & .desc-col {
             padding: 0 1rem;
+            @include max(767px){
+             padding: 0;
+            }
             &:nth-child(1) {
               width: 15%;
+              @include max(1024px) {
+                width: 30%;
+              }
+              @include max(767px) {
+                width: 100%;
+                margin-bottom: 1.2rem;
+              }
               & .col-img {
                 position: relative;
                 padding-top: calc((120 / 190) * 100%);
@@ -215,8 +251,17 @@
             }
             &:nth-child(2) {
               width: 85%;
+              @include max(1024px) {
+                width: 70%;
+              }
+              @include max(767px) {
+                width: 100%;
+              }
               p {
                 font-size: 1.8rem;
+                @include max(1024px) {
+                  font-size: 1.6rem;
+                }
               }
             }
           }

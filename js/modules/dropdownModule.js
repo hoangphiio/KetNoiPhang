@@ -29,4 +29,5 @@ export default function dropdownModule() {
   $(".rotate").click(function () {
     $(this).toggleClass("down");
   });
+
 }

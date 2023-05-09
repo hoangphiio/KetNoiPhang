@@ -304,12 +304,14 @@
         }
         & .contact-send {
           padding: 2.5rem;
+          background: #fff;
+          position: relative;
           padding-top: 2.5rem;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px;
-          background: #fff;
           a {
             width: 100%;
+            display: block;
             p {
               padding: 10px 0;
               text-align: center;
