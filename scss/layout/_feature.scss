@@ -109,26 +109,24 @@
             & .card-text {
               width: 85%;
               margin-left: 5rem;
-              p {
-                &:nth-child(1) {
-                  font-size: 2.4rem;
-                  font-weight: 700;
-                  @include max(1024px) {
-                    font-size: 2rem;
-                  }
-                  @include max(800px) {
-                    @include lc(2);
-                  }
-                }
-                &:nth-child(2) {
+              h3 {
+                font-size: 2.4rem;
+                font-weight: 700;
+                @include max(1024px) {
                   font-size: 2rem;
-                  color: #858585;
-                  @include max(1024px) {
-                    font-size: 1.6rem;
-                  }
-                  @include max(800px) {
-                    @include lc(3);
-                  }
+                }
+                @include max(800px) {
+                  @include lc(2);
+                }
+              }
+              p {
+                font-size: 2rem;
+                color: #858585;
+                @include max(1024px) {
+                  font-size: 1.6rem;
+                }
+                @include max(800px) {
+                  @include lc(3);
                 }
               }
             }
@@ -177,11 +175,11 @@
   }
   &-inner-card {
     & .customer-inner-body {
+      overflow: hidden;
+      border-radius: 1rem;
       & .customer-img {
         position: relative;
         padding-top: calc((196 / 330) * 100%);
-        img {
-        }
       }
       & .customer-content {
         padding: 3rem;
