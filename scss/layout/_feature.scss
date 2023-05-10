@@ -14,7 +14,7 @@
   }
   &-inner {
     & .form-top {
-      max-width: 800px;
+      max-width: 80rem;
       margin: 0 auto;
       text-align: center;
       margin-bottom: 5rem;
@@ -45,11 +45,11 @@
       & .form-col {
         @include flex();
         flex-wrap: wrap;
-        margin: 0 -15px;
+        margin: 0 -1.5rem;
         position: relative;
         & .form-card {
           width: 50%;
-          padding: 0 15px;
+          padding: 0 1.5rem;
           margin-bottom: 4rem;
           @include max(1024px) {
             margin-bottom: 4rem;
@@ -179,33 +179,25 @@
     & .customer-inner-body {
       & .customer-img {
         position: relative;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
         padding-top: calc((196 / 330) * 100%);
         img {
-          border-top-left-radius: 1rem;
-          border-top-right-radius: 1rem;
         }
       }
       & .customer-content {
         padding: 3rem;
         background: #f8f8f8;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        h3 {
+          height: 4.8rem;
+          @include lc(2);
+          font-weight: 600;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
         p {
-          &:nth-child(1) {
-            height: 4.8rem;
-            @include lc(2);
-            font-weight: 600;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-          }
-          &:nth-child(2) {
-            height: 6.3rem;
-            @include lc(3);
-            color: #858585;
-            margin-bottom: 2rem;
-          }
+          height: 6.3rem;
+          @include lc(3);
+          color: #858585;
+          margin-bottom: 2rem;
         }
         & .customer-button {
           margin: 0 auto;
@@ -240,10 +232,7 @@
 .partner {
   background: #f9f9ff;
   &-wrap {
-    padding: 13rem 0;
-    @include max(1024px) {
-      padding: 10rem 0;
-    }
+    padding: 10rem 0;
     @include max(800px) {
       padding: 8rem 0;
     }
@@ -319,7 +308,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-image: url("/assets/img/tinhnang/homepage/banner-02.png");
+    background-image: url("../assets/img/tinhnang/homepage/banner-02.png");
     & .list-connect {
       padding: 10rem 0;
       @include max(500px) {
@@ -352,7 +341,7 @@
           overflow: hidden;
           display: block;
           padding: 0.5rem 6rem;
-          border-radius: 20px;
+          border-radius: 2rem;
           background: #fff;
           span {
             color: #2645b5;

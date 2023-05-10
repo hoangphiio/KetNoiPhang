@@ -11,29 +11,29 @@
       margin-bottom: 2rem;
     }
     & .contact-title {
-      margin-bottom: 30px;
+      margin-bottom: 3rem;
       @include max(1366px) {
-        margin-bottom: 90px;
+        margin-bottom: 9rem;
       }
       @include max(1280px) {
-        margin-bottom: 80px;
+        margin-bottom: 8rem;
       }
       @include max(630px) {
-        margin-bottom: 50px;
+        margin-bottom: 5rem;
       }
       > h3 {
         color: #2f281e;
-        font-size: 30px;
-        padding-bottom: 15px;
+        font-size: 3rem;
+        padding-bottom: 1.5rem;
         @include max(450px) {
-          font-size: 22px;
+          font-size: 2.2rem;
         }
       }
       > p {
         color: #858585;
-        font-size: 20px;
+        font-size: 2rem;
         @include max(450px) {
-          font-size: 14px;
+          font-size: 1.4rem;
         }
       }
     }
@@ -47,20 +47,20 @@
           margin: 0 -2rem;
           padding: 3rem 0;
           flex-wrap: wrap;
-          border-top: 1px dashed #a1a1a1;
-          border-bottom: 1px dashed #a1a1a1;
+          border-top: 0.1rem dashed #a1a1a1;
+          border-bottom: 0.1rem dashed #a1a1a1;
           & .address-box {
             width: 33.3333%;
             padding: 0 2rem;
             @include max(950px) {
               width: 50%;
-              margin-bottom: 3rem;
+              margin-bottom: 0.3rem;
             }
             @include max(500px) {
               width: 100%;
             }
             &:not(:last-child) {
-              border-right: 1px solid #dadada;
+              border-right: 0.1rem solid #dadada;
             }
             &:nth-child(3) {
               @include max(950px) {
@@ -101,21 +101,21 @@
       &-col {
         width: 50%;
         position: relative;
-        border-radius: 10px;
-        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
         @include max(1023px) {
           width: 100%;
-          margin-bottom: 40px;
+          margin-bottom: 4rem;
         }
         &:nth-child(1) {
-          margin-right: 15px;
+          margin-right: 1.5rem;
           overflow: hidden;
           @include max(1023px) {
             margin-right: 0;
           }
         }
         &:nth-child(2) {
-          margin-left: 15px;
+          margin-left: 1.5rem;
           @include max(1023px) {
             margin-left: 0;
           }
@@ -124,28 +124,28 @@
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
           background: #fffbef;
-          padding: 25px;
-          border: 3px solid #fff;
+          padding: 2.5rem;
+          border: 0.3rem solid #fff;
           & .info-hotline {
             @include flex();
             align-items: center;
             margin-bottom: 2rem;
             @include max(520px) {
               flex-wrap: wrap;
-              padding: 12px;
+              padding: 1.2rem;
             }
             & .hotline-img {
               @include flex();
               align-items: center;
-              gap: 10px;
+              gap: 1rem;
               width: 20%;
-              margin-right: 8px;
+              margin-right: 0.8rem;
               @include max(520px) {
                 width: 100%;
                 justify-content: center;
               }
               > img {
-                max-width: 20px;
+                max-width: 0.2rem;
               }
             }
             & .hotline-text {
@@ -241,54 +241,55 @@
             }
             > input {
               width: 100%;
-              padding: 8px 15px;
-              margin-top: 8px;
+              padding: 0.8rem 1.5rem;
+              margin-top: 0.8rem;
               outline: 0;
-              border-radius: 4px;
-              font-size: 16px;
+              border-radius: 0.4rem;
+              font-size: 1.6rem;
               font-family: "Raleway";
-              border: 0.8px solid #e8e8e8;
+              border: 0.1rem solid #e8e8e8;
               &:focus {
-                border: 1px solid $color-first;
+                border: 0.1rem solid $color-first;
               }
             }
             > .col-control > input {
               width: 100%;
-              padding: 8px 15px;
-              margin-top: 8px;
+              padding: 0.8rem 1.5rem;
+              margin-top: 0.8rem;
               outline: 0;
-              border-radius: 4px;
+              border-radius: 0.4rem;
               font-family: "Raleway";
-              font-size: 16px;
-              border: 0.8px solid #e8e8e8;
+              font-size: 1.6rem;
+              border: 0.1rem solid #e8e8e8;
               &:focus {
-                border: 1px solid $color-first;
+                border: 0.1rem solid $color-first;
               }
             }
             > .col-control > textarea {
               width: 100%;
               outline: 0;
               display: block;
-              border-radius: 4px;
-              padding: 6px 15px;
-              font-size: 16px;
-              margin-top: 8px;
-              border: 0.8px solid #e8e8e8;
+              border-radius: 0.4rem;
+              padding: 0.6rem 1.5rem;
+              font-size: 1.6rem;
+              margin-top: 0.8rem;
+              resize: none;
+              border: 0.1rem solid #e8e8e8;
               &:focus {
-                border: 1px solid $color-first;
+                border: 0.1rem solid $color-first;
               }
             }
             > textarea {
               width: 100%;
               outline: 0;
               display: block;
-              border-radius: 4px;
-              padding: 6px 15px;
-              font-size: 16px;
-              margin-top: 8px;
-              border: 0.8px solid #e8e8e8;
+              border-radius: 0.4rem;
+              padding: 0.6rem 1.5rem;
+              font-size: 1.6rem;
+              margin-top: 0.8rem;
+              border: 0.1rem solid #e8e8e8;
               &:focus {
-                border: 1px solid $color-first;
+                border: 0.1rem solid $color-first;
               }
             }
           }
@@ -298,7 +299,7 @@
           & .captcha {
             margin-left: 2.5rem;
             & .iframe {
-              border-radius: 4px;
+              border-radius: 0.4rem;
             }
           }
         }
@@ -307,16 +308,16 @@
           background: #fff;
           position: relative;
           padding-top: 2.5rem;
-          border-bottom-left-radius: 10px;
-          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 1rem;
+          border-bottom-right-radius: 1rem;
           a {
             width: 100%;
             display: block;
             p {
-              padding: 10px 0;
+              padding: 1rem 0;
               text-align: center;
               color: #fff;
-              border-radius: 22px;
+              border-radius: 2.2rem;
               background: linear-gradient(
                 180deg,
                 #94abff -0.01%,
@@ -327,11 +328,11 @@
           }
           input {
             width: 100%;
-            padding: 10px 0;
+            padding: 1rem 0;
             text-align: center;
             color: #fff;
             border: 0;
-            border-radius: 4px;
+            border-radius: 0.4rem;
             background-color: $color-first;
           }
         }
