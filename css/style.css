@@ -1394,18 +1394,13 @@ table {
         position: relative;
         overflow: hidden;
         display: block;
-        padding: 0.95rem 7.793rem;
+        padding: 0.5rem 6rem;
         border-radius: 20px;
-        background: linear-gradient(180deg, #94adff -0.01%, #3454c1 50%, #1d3893 100%); }
-        @media screen and (max-width: 700px) {
-          .connect-box .list-connect .connect-button a {
-            padding: 0.6rem 7rem; } }
-        @media screen and (max-width: 500px) {
-          .connect-box .list-connect .connect-button a {
-            padding: 0.6rem 6rem; } }
+        background: #fff; }
         .connect-box .list-connect .connect-button a span {
-          color: #fff;
-          font-weight: 700; }
+          color: #2645b5;
+          font-weight: 700;
+          font-size: 2rem; }
 
 .price {
   background: linear-gradient(0deg, #ffffff 50%, #f3f3ff 100%); }

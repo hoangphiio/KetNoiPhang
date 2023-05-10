@@ -141,8 +141,8 @@
 
 .customer {
   &-wrap {
-    padding: 10rem 0; 
-    @include max(767px){
+    padding: 10rem 0;
+    @include max(767px) {
       padding: 8rem 0;
     }
   }
@@ -351,23 +351,13 @@
           position: relative;
           overflow: hidden;
           display: block;
-          padding: 0.95rem 7.793rem;
+          padding: 0.5rem 6rem;
           border-radius: 20px;
-          background: linear-gradient(
-            180deg,
-            #94adff -0.01%,
-            #3454c1 50%,
-            #1d3893 100%
-          );
-          @include max(700px) {
-            padding: 0.6rem 7rem;
-          }
-          @include max(500px) {
-            padding: 0.6rem 6rem;
-          }
+          background: #fff;
           span {
-            color: #fff;
+            color: #2645b5;
             font-weight: 700;
+            font-size: 2rem;
           }
         }
       }
