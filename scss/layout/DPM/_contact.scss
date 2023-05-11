@@ -145,7 +145,7 @@
                 justify-content: center;
               }
               > img {
-                max-width: 0.2rem;
+                max-width: 2rem;
               }
             }
             & .hotline-text {
@@ -288,6 +288,7 @@
               font-size: 1.6rem;
               margin-top: 0.8rem;
               border: 0.1rem solid #e8e8e8;
+              resize: none;
               &:focus {
                 border: 0.1rem solid $color-first;
               }
@@ -324,6 +325,7 @@
                 #3456cf 50%,
                 #2645b5 100%
               );
+              font-weight: 700;
             }
           }
           input {

@@ -1,5 +1,5 @@
 export default function swiperModule() {
-  const swiperCard = new Swiper(".customer-inner-card .swiper", {
+  const swiperCard = new Swiper(".customer-card .swiper", {
     slidesPerView: 3,
     spaceBetween: 40,
     loop: true,

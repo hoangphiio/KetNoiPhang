@@ -4,6 +4,9 @@
   &-body {
     & .body-form {
       padding: 7rem 0;
+      @include max(1024px) {
+        padding: 5rem 0;
+      }
       & div.form-list {
         @include flex();
         align-items: center;
@@ -62,9 +65,9 @@
               bottom: 0;
               margin: auto;
               position: absolute;
-              img{
+              img {
                 transition: 0.4s ease-in-out;
-                &:hover{
+                &:hover {
                   animation: ripple 1s linear infinite;
                 }
               }

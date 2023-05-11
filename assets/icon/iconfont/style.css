@@ -25,11 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ic-close:before {
+.ic-uncheck:before {
   content: "\e90b";
   color: #f20000;
 }
-.ic-tick:before {
+.ic-check:before {
   content: "\e90c";
   color: #34b933;
 }

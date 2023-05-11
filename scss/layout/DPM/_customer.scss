@@ -76,42 +76,44 @@
         }
       }
     }
-    & .customer-inner-card {
-      & .customer-inner-list {
-        @include flex();
-        flex-wrap: wrap;
-        margin: 0 -15px;
-        & .customer-inner-body {
-          width: 33.3333%;
-          padding: 0 15px;
-          margin-bottom: 3rem;
-          @include max(1024px) {
-            width: 50%;
-          }
-          @include max(600px) {
-            width: 100%;
-          }
+    & .customer-list {
+      @include flex();
+      flex-wrap: wrap;
+      margin: 0 -15px;
+      & .customer-body {
+        width: 33.3333%;
+        padding: 0 15px;
+        margin-bottom: 3rem;
+        @include max(1024px) {
+          width: 50%;
+        }
+        @include max(600px) {
+          width: 100%;
         }
       }
     }
-    & .customer-link {
-      & .story-link {
-        a {
-          @include flex();
-          position: relative;
-          align-items: center;
-          justify-content: end;
-          & .ic-right-arrow {
-            line-height: 3rem;
-            margin-right: 1rem;
-            &::before {
-              font-size: 2rem;
-              color: #335fb3;
-            }
-          }
-          span {
+    & .story-link {
+      a {
+        @include flex();
+        width: fit-content;
+        position: relative;
+        align-items: center;
+        margin: 0 0 0 auto;
+        &:hover span,
+        &:hover i::before {
+          color: red;
+          transition: 0.2s ease;
+        }
+        & .ic-right-arrow {
+          line-height: 3rem;
+          margin-right: 1rem;
+          &::before {
+            font-size: 2rem;
             color: #335fb3;
           }
+        }
+        span {
+          color: #335fb3;
         }
       }
     }
@@ -167,7 +169,7 @@
         @include max(767px) {
           font-size: 2.4rem;
         }
-        @include max(465px){
+        @include max(465px) {
           font-size: 2rem;
         }
       }
@@ -232,8 +234,8 @@
           }
           & .desc-col {
             padding: 0 1rem;
-            @include max(767px){
-             padding: 0;
+            @include max(767px) {
+              padding: 0;
             }
             &:nth-child(1) {
               width: 15%;

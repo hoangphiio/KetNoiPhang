@@ -100,12 +100,14 @@
                 padding: 1rem;
                 border-top: 4px solid #2645b5;
                 box-shadow: 0 0.2rem 0.9rem rgba(0, 0, 0, 0.14221);
+                animation: zoomOut 0.3s ease-in-out forwards;
               }
             }
             &:hover ul.item-product {
               visibility: visible;
               display: block;
               opacity: 1;
+              animation: zoomIn 0.5s ease-in-out forwards;
             }
             &::before {
               content: "";
@@ -509,6 +511,7 @@
             left: 0;
             opacity: 1;
             visibility: visible;
+            overflow: auto;
           }
           & .header-logo {
             padding: 2rem;
@@ -525,8 +528,6 @@
             }
           }
           & ul {
-            height: 40rem;
-            overflow: auto;
             position: relative;
             align-items: start;
             justify-content: left;

@@ -13,12 +13,13 @@
 @import "./core/reset";
 @import "./core/variable";
 
-// layout
 @import "./layout/header";
-@import "./layout/banner";
-@import "./layout/feature";
-@import "./layout/price";
-@import "./layout/customer";
-@import "./layout/contact";
-@import "./layout/overview";
 @import "./layout/footer";
+
+// layout DPM
+@import "./layout/DPM/banner";
+@import "./layout/DPM/feature";
+@import "./layout/DPM/price";
+@import "./layout/DPM/customer";
+@import "./layout/DPM/contact";
+@import "./layout/DPM/overview";

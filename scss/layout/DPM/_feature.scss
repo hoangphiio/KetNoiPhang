@@ -1,5 +1,8 @@
 .content {
   padding-top: 10rem;
+  @include max(1024px) {
+    padding-top: 5rem;
+  }
   &.form-one {
   }
   &.form-two {
@@ -140,8 +143,8 @@
 .customer {
   &-wrap {
     padding: 10rem 0;
-    @include max(767px) {
-      padding: 8rem 0;
+    @include max(1024px) {
+      padding: 5rem 0;
     }
   }
   &-box {
@@ -173,13 +176,21 @@
       }
     }
   }
-  &-inner-card {
-    & .customer-inner-body {
+  & .customer-card {
+    & .customer-body {
       overflow: hidden;
+      position: relative;
       border-radius: 1rem;
+      &:hover .customer-img img {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
       & .customer-img {
+        overflow: hidden;
         position: relative;
         padding-top: calc((196 / 330) * 100%);
+        img {
+          transition: 1s ease;
+        }
       }
       & .customer-content {
         padding: 3rem;
@@ -231,8 +242,8 @@
   background: #f9f9ff;
   &-wrap {
     padding: 10rem 0;
-    @include max(800px) {
-      padding: 8rem 0;
+    @include max(1024px) {
+      padding: 5rem 0;
     }
   }
   &-inner {
@@ -243,20 +254,12 @@
         text-align: center;
         max-width: 80rem;
         h2 {
-          color: #1cc564;
+          color: #2645b5;
           font-weight: 700;
           font-size: 2.8rem;
           margin-bottom: 2rem;
           text-transform: uppercase;
-        }
-        &.title-darkblue {
-          h2 {
-            color: rgba(0, 96, 255, 1);
-            span {
-              color: #1d3a89;
-            }
-          }
-          @include max(700px) {
+          @include max(767px) {
             font-size: 2.4rem;
           }
           @include max(500px) {
@@ -283,7 +286,7 @@
         > div {
           width: 25%;
           height: 8rem;
-          padding: 0 1rem;
+          padding: 0 2rem;
           margin-bottom: 3rem;
           @include max(1024px) {
             width: 33.333%;
@@ -306,7 +309,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-image: url("../assets/img/tinhnang/homepage/banner-02.png");
+    background-image: url("../assets/img/DPM/tinhnang/homepage/banner-02.png");
     & .list-connect {
       padding: 10rem 0;
       @include max(500px) {
