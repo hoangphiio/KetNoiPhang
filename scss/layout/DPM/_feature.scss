@@ -158,6 +158,7 @@
       font-size: 2.8rem;
       margin-bottom: 2rem;
       color: #2645b5;
+      text-transform: uppercase;
       @include max(767px) {
         font-size: 2.4rem;
       }

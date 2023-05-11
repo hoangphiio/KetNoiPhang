@@ -172,6 +172,15 @@
         }
       }
       .footer-box-col {
+        h3 {
+          padding-bottom: 2.5rem;
+          @include max(610px) {
+            padding-bottom: 2rem;
+          }
+          a {
+            color: #544837;
+          }
+        }
         &:nth-child(1) {
           width: 50%;
           @include max(1010px) {
@@ -215,12 +224,6 @@
           @include max(610px) {
             width: 100%;
             margin-bottom: 2rem;
-          }
-          h3 {
-            padding-bottom: 2.5rem;
-            @include max(610px) {
-              padding-bottom: 2rem;
-            }
           }
         }
         &:nth-child(3) {
