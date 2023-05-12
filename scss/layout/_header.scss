@@ -101,6 +101,9 @@
                 border-top: 4px solid #2645b5;
                 box-shadow: 0 0.2rem 0.9rem rgba(0, 0, 0, 0.14221);
                 animation: zoomOut 0.3s ease-in-out forwards;
+                @include max(1130px){
+                  animation: none;
+                }
               }
             }
             &:hover ul.item-product {

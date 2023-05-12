@@ -3,24 +3,11 @@
   &-inner {
     padding-top: 3rem;
     padding-bottom: 10rem;
-    @include max(1023px) {
-      margin-bottom: 5rem;
-    }
-    @include max(450px) {
-      padding-top: 5rem;
-      margin-bottom: 2rem;
+    @include max(1024px) {
+      padding-bottom: 5rem;
     }
     & .contact-title {
       margin-bottom: 3rem;
-      @include max(1366px) {
-        margin-bottom: 9rem;
-      }
-      @include max(1280px) {
-        margin-bottom: 8rem;
-      }
-      @include max(630px) {
-        margin-bottom: 5rem;
-      }
       > h3 {
         color: #2f281e;
         font-size: 3rem;

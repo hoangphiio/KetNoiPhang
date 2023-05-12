@@ -44,8 +44,6 @@
   align-items: center; }
 
 @media screen and (max-width: 520px) {
-  .captcha {
-    width: 100%; }
   .text {
     margin: 0.5em !important;
     text-align: center; }
@@ -571,6 +569,9 @@ table {
               border-top: 4px solid #2645b5;
               box-shadow: 0 0.2rem 0.9rem rgba(0, 0, 0, 0.14221);
               animation: zoomOut 0.3s ease-in-out forwards; }
+              @media screen and (max-width: 1130px) {
+                .header-inner .list-box .header-link > ul > li ul.item-product {
+                  animation: none; } }
             .header-inner .list-box .header-link > ul > li:hover ul.item-product {
               visibility: visible;
               display: block;
@@ -2104,6 +2105,9 @@ table {
           font-size: 2rem;
           padding: 2rem 1rem;
           background: #fff; }
+          @media screen and (max-width: 600px) {
+            .price-table .table-option > table th {
+              font-size: 1.6rem; } }
           .price-table .table-option > table th:not(:last-child) {
             border-right: 1px solid #e5e5e5; }
           .price-table .table-option > table th:nth-child(2) {
@@ -2125,11 +2129,17 @@ table {
             font-size: 2rem;
             color: #2f281e;
             font-weight: 700; }
+            @media screen and (max-width: 600px) {
+              .price-table .table-option > table tr.group td {
+                font-size: 1.6rem; } }
         .price-table .table-option > table tr td {
           font-size: 1.8rem;
           padding: 1.5rem;
           text-align: center;
           color: #262626; }
+          @media screen and (max-width: 600px) {
+            .price-table .table-option > table tr td {
+              font-size: 1.4rem; } }
           .price-table .table-option > table tr td:first-child {
             text-align: left; }
 
@@ -2397,24 +2407,11 @@ table {
   .contact-inner {
     padding-top: 3rem;
     padding-bottom: 10rem; }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1024px) {
       .contact-inner {
-        margin-bottom: 5rem; } }
-    @media screen and (max-width: 450px) {
-      .contact-inner {
-        padding-top: 5rem;
-        margin-bottom: 2rem; } }
+        padding-bottom: 5rem; } }
     .contact-inner .contact-title {
       margin-bottom: 3rem; }
-      @media screen and (max-width: 1366px) {
-        .contact-inner .contact-title {
-          margin-bottom: 9rem; } }
-      @media screen and (max-width: 1280px) {
-        .contact-inner .contact-title {
-          margin-bottom: 8rem; } }
-      @media screen and (max-width: 630px) {
-        .contact-inner .contact-title {
-          margin-bottom: 5rem; } }
       .contact-inner .contact-title > h3 {
         color: #2f281e;
         font-size: 3rem;
@@ -2716,7 +2713,9 @@ table {
       position: relative; }
       @media screen and (max-width: 768px) {
         .company-body .body-form div.form-list .list-col {
-          width: 100%;
+          width: 100%; } }
+      @media screen and (max-width: 768px) {
+        .company-body .body-form div.form-list .list-col:nth-child(1) {
           margin-bottom: 3rem; } }
       .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
         font-size: 3rem;
@@ -2746,6 +2745,8 @@ table {
         z-index: 1;
         position: relative;
         padding-top: calc((290 / 516) * 100%); }
+        .company-body .body-form div.form-list .list-col:nth-child(2) .img-1 img {
+          object-fit: contain; }
       .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 {
         z-index: 2;
         width: 6rem;

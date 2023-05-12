@@ -20,9 +20,11 @@
           position: relative;
           @include max(768px) {
             width: 100%;
-            margin-bottom: 3rem;
           }
           &:nth-child(1) {
+            @include max(768px) {
+              margin-bottom: 3rem;
+            }
             h2 {
               font-size: 3rem;
               color: #2645b5;
@@ -56,6 +58,9 @@
               z-index: 1;
               position: relative;
               padding-top: calc((290 / 516) * 100%);
+              img {
+                object-fit: contain;
+              }
             }
             & .img-2 {
               z-index: 2;
