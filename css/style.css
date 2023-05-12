@@ -1241,6 +1241,9 @@ table {
               background: #174ae6;
               transition: 0.2s ease-in-out; }
 
+main.KNP .footer-box-bottom .footer-box-col {
+  width: 33.333%; }
+
 .banner-content {
   position: relative; }
   .banner-content-img {

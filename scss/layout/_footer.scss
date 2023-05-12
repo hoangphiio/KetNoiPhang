@@ -321,3 +321,11 @@
     }
   }
 }
+
+main.KNP {
+  & .footer-box-bottom {
+    & .footer-box-col {
+      width: 33.333%;
+    }
+  }
+}
