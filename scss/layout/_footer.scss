@@ -6,7 +6,6 @@
     &-top {
       @include flex();
       align-items: center;
-      padding-bottom: 6rem;
       flex-wrap: wrap;
       @include max(1010px) {
         padding-bottom: 4rem;
@@ -143,8 +142,8 @@
         color: #544837;
       }
       p {
-        font-size: 14px;
-        line-height: 25px;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
         margin-bottom: 1.2rem;
         text-transform: uppercase;
       }
@@ -152,7 +151,7 @@
     &-bottom {
       @include flex();
       flex-wrap: wrap;
-      padding-top: 40px;
+      padding-top: 6rem;
       @include max(610px) {
         text-align: center;
         padding-top: 0;
@@ -172,15 +171,6 @@
         }
       }
       .footer-box-col {
-        h3 {
-          padding-bottom: 2.5rem;
-          @include max(610px) {
-            padding-bottom: 2rem;
-          }
-          a {
-            color: #544837;
-          }
-        }
         &:nth-child(1) {
           width: 50%;
           @include max(1010px) {
@@ -224,6 +214,15 @@
           @include max(610px) {
             width: 100%;
             margin-bottom: 2rem;
+          }
+          h3 {
+            padding-bottom: 2.5rem;
+            @include max(610px) {
+              padding-bottom: 2rem;
+            }
+            a {
+              color: #544837;
+            }
           }
         }
         &:nth-child(3) {
