@@ -3,7 +3,6 @@
   }
   &-body {
     & .body-form {
-      padding: 7rem 0;
       @include max(1024px) {
         padding: 5rem 0;
       }

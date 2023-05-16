@@ -1,8 +1,4 @@
 .content {
-  padding-top: 10rem;
-  @include max(1024px) {
-    padding-top: 5rem;
-  }
   &.form-one {
   }
   &.form-two {
@@ -240,7 +236,6 @@
 .partner {
   background: #f9f9ff;
   &-wrap {
-    padding: 10rem 0;
     @include max(1024px) {
       padding: 5rem 0;
     }

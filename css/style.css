@@ -303,8 +303,10 @@ a {
   color: #000; }
 
 .main {
-  padding-top: 7rem;
   overflow: hidden; }
+
+section {
+  padding: 7.5rem 0; }
 
 button,
 select {
@@ -426,7 +428,6 @@ menu,
 nav,
 output,
 ruby,
-section,
 summary,
 time,
 mark,
@@ -879,7 +880,7 @@ table {
           visibility: hidden;
           position: absolute;
           background-color: #fff;
-          transition: all 0.4s ease; }
+          transition: all 0.6s ease; }
           @media screen and (max-width: 500px) {
             .header .mobile-inner .mobile-box .header-link {
               width: 80%; } }
@@ -1266,16 +1267,14 @@ main.KNP .footer-box-bottom .footer-box-col {
         padding-top: calc((700 / 1728) * 450%); } }
   .banner-content-title {
     position: absolute;
-    top: -20%;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: center; }
-    @media screen and (max-width: 700px) {
-      .banner-content-title {
-        top: 10%; } }
+    justify-content: center;
+    padding: 0 7rem; }
     .banner-content-title .content-box {
       width: 100%;
       height: 100%;
@@ -1413,134 +1412,132 @@ main.KNP .footer-box-bottom .footer-box-col {
       position: relative;
       padding-top: calc((406 / 572) * 100%); }
 
-.content {
-  padding-top: 10rem; }
-  @media screen and (max-width: 1024px) {
-    .content {
-      padding-top: 5rem; } }
-  .content.form-two {
-    background: #f9f9ff; }
-  .content.form-four {
-    background: #f9f9ff; }
-  .content-inner .form-top {
-    max-width: 80rem;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 5rem; }
-    .content-inner .form-top h2 {
-      color: #264585;
-      font-size: 2.8rem;
-      margin-bottom: 2rem;
-      text-transform: uppercase; }
-      @media screen and (max-width: 700px) {
-        .content-inner .form-top h2 {
-          font-size: 2.4rem; } }
-      @media screen and (max-width: 500px) {
-        .content-inner .form-top h2 {
-          font-size: 2rem; } }
-    .content-inner .form-top p {
-      font-size: 2.4rem;
-      color: #262626; }
-      @media screen and (max-width: 700px) {
-        .content-inner .form-top p {
-          font-size: 2rem; } }
-      @media screen and (max-width: 500px) {
-        .content-inner .form-top p {
-          font-size: 1.6rem; } }
-  .content-inner .form-bottom .form-col {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1.5rem;
-    position: relative; }
-    .content-inner .form-bottom .form-col .form-card {
-      width: 50%;
-      padding: 0 1.5rem;
-      margin-bottom: 4rem; }
-      @media screen and (max-width: 1024px) {
-        .content-inner .form-bottom .form-col .form-card {
-          margin-bottom: 4rem; } }
-      @media screen and (max-width: 600px) {
-        .content-inner .form-bottom .form-col .form-card {
-          width: 100%; } }
-      .content-inner .form-bottom .form-col .form-card .card-box {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        padding: 2.5rem;
-        height: 100%;
-        border-radius: 2rem;
-        background: #fff; }
-        .content-inner .form-bottom .form-col .form-card .card-box .card-img {
-          width: 15%;
+.content.form-two {
+  background: #f9f9ff; }
+
+.content.form-four {
+  background: #f9f9ff; }
+
+.content-inner .form-top {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem; }
+  .content-inner .form-top h2 {
+    color: #264585;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase; }
+    @media screen and (max-width: 700px) {
+      .content-inner .form-top h2 {
+        font-size: 2.4rem; } }
+    @media screen and (max-width: 500px) {
+      .content-inner .form-top h2 {
+        font-size: 2rem; } }
+  .content-inner .form-top p {
+    font-size: 2.4rem;
+    color: #262626; }
+    @media screen and (max-width: 700px) {
+      .content-inner .form-top p {
+        font-size: 2rem; } }
+    @media screen and (max-width: 500px) {
+      .content-inner .form-top p {
+        font-size: 1.6rem; } }
+
+.content-inner .form-bottom .form-col {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
+  position: relative; }
+  .content-inner .form-bottom .form-col .form-card {
+    width: 50%;
+    padding: 0 1.5rem;
+    margin-bottom: 4rem; }
+    @media screen and (max-width: 1024px) {
+      .content-inner .form-bottom .form-col .form-card {
+        margin-bottom: 4rem; } }
+    @media screen and (max-width: 600px) {
+      .content-inner .form-bottom .form-col .form-card {
+        width: 100%; } }
+    .content-inner .form-bottom .form-col .form-card .card-box {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      padding: 2.5rem;
+      height: 100%;
+      border-radius: 2rem;
+      background: #fff; }
+      .content-inner .form-bottom .form-col .form-card .card-box .card-img {
+        width: 15%;
+        position: relative; }
+        .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
+          width: 7rem;
+          height: 7rem;
+          display: block;
           position: relative; }
-          .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
-            width: 7rem;
-            height: 7rem;
-            display: block;
-            position: relative; }
-            @media screen and (max-width: 900px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
-                width: 6rem;
-                height: 6rem; } }
-            @media screen and (max-width: 800px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
-                width: 5rem;
-                height: 5rem; } }
-            @media screen and (max-width: 600px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
-                width: 7rem;
-                height: 7rem; } }
-            @media screen and (max-width: 470px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
-                width: 5rem;
-                height: 5rem; } }
-            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left img {
-              object-fit: contain; }
-          .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-right {
-            top: 2rem;
-            right: -3.5rem;
-            padding-top: 100%;
-            position: absolute;
-            width: 100%; }
-            @media screen and (max-width: 800px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-right {
-                top: 1.5rem;
-                right: -2.5rem; } }
-            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-right img {
-              object-fit: contain; }
-        .content-inner .form-bottom .form-col .form-card .card-box .card-text {
-          width: 85%;
-          margin-left: 5rem; }
-          .content-inner .form-bottom .form-col .form-card .card-box .card-text h3 {
-            font-size: 2.4rem;
-            font-weight: 700; }
-            @media screen and (max-width: 1024px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-text h3 {
-                font-size: 2rem; } }
-            @media screen and (max-width: 800px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-text h3 {
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden; } }
-          .content-inner .form-bottom .form-col .form-card .card-box .card-text p {
-            font-size: 2rem;
-            color: #858585; }
-            @media screen and (max-width: 1024px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-text p {
-                font-size: 1.6rem; } }
-            @media screen and (max-width: 800px) {
-              .content-inner .form-bottom .form-col .form-card .card-box .card-text p {
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden; } }
+          @media screen and (max-width: 900px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
+              width: 6rem;
+              height: 6rem; } }
+          @media screen and (max-width: 800px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
+              width: 5rem;
+              height: 5rem; } }
+          @media screen and (max-width: 600px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
+              width: 7rem;
+              height: 7rem; } }
+          @media screen and (max-width: 470px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left {
+              width: 5rem;
+              height: 5rem; } }
+          .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-left img {
+            object-fit: contain; }
+        .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-right {
+          top: 2rem;
+          right: -3.5rem;
+          padding-top: 100%;
+          position: absolute;
+          width: 100%; }
+          @media screen and (max-width: 800px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-right {
+              top: 1.5rem;
+              right: -2.5rem; } }
+          .content-inner .form-bottom .form-col .form-card .card-box .card-img .img-right img {
+            object-fit: contain; }
+      .content-inner .form-bottom .form-col .form-card .card-box .card-text {
+        width: 85%;
+        margin-left: 5rem; }
+        .content-inner .form-bottom .form-col .form-card .card-box .card-text h3 {
+          font-size: 2.4rem;
+          font-weight: 700; }
+          @media screen and (max-width: 1024px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-text h3 {
+              font-size: 2rem; } }
+          @media screen and (max-width: 800px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-text h3 {
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden; } }
+        .content-inner .form-bottom .form-col .form-card .card-box .card-text p {
+          font-size: 2rem;
+          color: #858585; }
+          @media screen and (max-width: 1024px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-text p {
+              font-size: 1.6rem; } }
+          @media screen and (max-width: 800px) {
+            .content-inner .form-bottom .form-col .form-card .card-box .card-text p {
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden; } }
 
 .customer-wrap {
   padding: 10rem 0; }
@@ -1626,11 +1623,9 @@ main.KNP .footer-box-bottom .footer-box-col {
 
 .partner {
   background: #f9f9ff; }
-  .partner-wrap {
-    padding: 10rem 0; }
-    @media screen and (max-width: 1024px) {
-      .partner-wrap {
-        padding: 5rem 0; } }
+  @media screen and (max-width: 1024px) {
+    .partner-wrap {
+      padding: 5rem 0; } }
   .partner-inner .partner-column-top {
     margin-bottom: 5rem; }
     .partner-inner .partner-column-top .solution-inner-title {
@@ -1724,8 +1719,6 @@ main.KNP .footer-box-bottom .footer-box-col {
 
 .price {
   background: linear-gradient(0deg, #ffffff 50%, #f3f3ff 100%); }
-  .price-inner {
-    padding-top: 7rem; }
   .price-list .list-title {
     margin-bottom: 7rem;
     text-align: center; }
@@ -2694,89 +2687,88 @@ main.KNP .footer-box-bottom .footer-box-col {
             border-radius: 0.4rem;
             background-color: #174ae6; }
 
-.company-body .body-form {
-  padding: 7rem 0; }
-  @media screen and (max-width: 1024px) {
-    .company-body .body-form {
-      padding: 5rem 0; } }
-  .company-body .body-form div.form-list {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    align-items: center;
-    margin: 0 -2rem; }
+@media screen and (max-width: 1024px) {
+  .company-body .body-form {
+    padding: 5rem 0; } }
+
+.company-body .body-form div.form-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  margin: 0 -2rem; }
+  @media screen and (max-width: 768px) {
+    .company-body .body-form div.form-list {
+      flex-direction: column; } }
+  .company-body .body-form div.form-list .list-col {
+    width: 50%;
+    padding: 0 2rem;
+    position: relative; }
     @media screen and (max-width: 768px) {
-      .company-body .body-form div.form-list {
-        flex-direction: column; } }
-    .company-body .body-form div.form-list .list-col {
-      width: 50%;
-      padding: 0 2rem;
-      position: relative; }
-      @media screen and (max-width: 768px) {
-        .company-body .body-form div.form-list .list-col {
-          width: 100%; } }
-      @media screen and (max-width: 768px) {
-        .company-body .body-form div.form-list .list-col:nth-child(1) {
-          margin-bottom: 3rem; } }
-      .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
-        font-size: 3rem;
-        color: #2645b5;
-        margin-bottom: 2.5rem; }
-        @media screen and (max-width: 1024px) {
-          .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
-            font-size: 2.6rem; } }
-        @media screen and (max-width: 610px) {
-          .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
-            margin-bottom: 2rem; } }
-        @media screen and (max-width: 500px) {
-          .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
-            font-size: 2rem; } }
-      .company-body .body-form div.form-list .list-col:nth-child(1) p {
-        font-size: 2.4rem;
-        color: #262626; }
-        @media screen and (max-width: 1024px) {
-          .company-body .body-form div.form-list .list-col:nth-child(1) p {
-            font-size: 2rem; } }
-        @media screen and (max-width: 500px) {
-          .company-body .body-form div.form-list .list-col:nth-child(1) p {
-            font-size: 1.6rem; } }
-        .company-body .body-form div.form-list .list-col:nth-child(1) p span {
-          font-weight: 600; }
-      .company-body .body-form div.form-list .list-col:nth-child(2) .img-1 {
-        z-index: 1;
-        position: relative;
-        padding-top: calc((290 / 516) * 100%); }
-        .company-body .body-form div.form-list .list-col:nth-child(2) .img-1 img {
-          object-fit: contain; }
-      .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 {
-        z-index: 2;
-        width: 6rem;
-        height: 6rem;
-        top: 0;
-        left: 0;
-        right: 0;
+      .company-body .body-form div.form-list .list-col {
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
+      .company-body .body-form div.form-list .list-col:nth-child(1) {
+        margin-bottom: 3rem; } }
+    .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
+      font-size: 3rem;
+      color: #2645b5;
+      margin-bottom: 2.5rem; }
+      @media screen and (max-width: 1024px) {
+        .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
+          font-size: 2.6rem; } }
+      @media screen and (max-width: 610px) {
+        .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
+          margin-bottom: 2rem; } }
+      @media screen and (max-width: 500px) {
+        .company-body .body-form div.form-list .list-col:nth-child(1) h2 {
+          font-size: 2rem; } }
+    .company-body .body-form div.form-list .list-col:nth-child(1) p {
+      font-size: 2.4rem;
+      color: #262626; }
+      @media screen and (max-width: 1024px) {
+        .company-body .body-form div.form-list .list-col:nth-child(1) p {
+          font-size: 2rem; } }
+      @media screen and (max-width: 500px) {
+        .company-body .body-form div.form-list .list-col:nth-child(1) p {
+          font-size: 1.6rem; } }
+      .company-body .body-form div.form-list .list-col:nth-child(1) p span {
+        font-weight: 600; }
+    .company-body .body-form div.form-list .list-col:nth-child(2) .img-1 {
+      z-index: 1;
+      position: relative;
+      padding-top: calc((290 / 516) * 100%); }
+      .company-body .body-form div.form-list .list-col:nth-child(2) .img-1 img {
+        object-fit: contain; }
+    .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 {
+      z-index: 2;
+      width: 6rem;
+      height: 6rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute; }
+      .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 a::before {
+        content: "";
+        width: 8rem;
+        height: 8rem;
+        display: block;
+        top: -12px;
         bottom: 0;
-        margin: auto;
-        position: absolute; }
-        .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 a::before {
-          content: "";
-          width: 8rem;
-          height: 8rem;
-          display: block;
-          top: -12px;
-          bottom: 0;
-          right: 0;
-          left: -10px;
-          border-radius: 50%;
-          background: #cecece;
-          position: absolute;
-          opacity: 0; }
-        .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 a:hover::before {
-          animation: pulse 2.5s infinite; }
-        .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 a img {
-          object-fit: contain; }
+        right: 0;
+        left: -10px;
+        border-radius: 50%;
+        background: #cecece;
+        position: absolute;
+        opacity: 0; }
+      .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 a:hover::before {
+        animation: pulse 2.5s infinite; }
+      .company-body .body-form div.form-list .list-col:nth-child(2) .img-2 a img {
+        object-fit: contain; }
 
 .company.right {
   background-color: #f9f9ff; }
