@@ -515,7 +515,8 @@ table {
           display: -ms-flex;
           display: -o-flex;
           display: flex;
-          align-items: center; }
+          align-items: center;
+          justify-content: end; }
           .hd-box .hd-col:nth-child(2) .hd-content > ul {
             display: -webkit-flex;
             display: -moz-flex;
@@ -762,81 +763,83 @@ table {
       @media screen and (max-width: 360px) {
         .hd-box .mobile-menu {
           right: 14rem; } }
-    .hd-box .hd-contact .contact-box {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: flex;
-      align-items: center; }
-      .hd-box .hd-contact .contact-box .phone {
-        margin-right: 2.5rem; }
-        .hd-box .hd-contact .contact-box .phone a i::before {
-          color: #0091ff;
-          font-size: 1.8rem; }
-      .hd-box .hd-contact .contact-box .language {
-        cursor: pointer;
-        margin-right: 2.5rem;
-        position: relative; }
-        @media screen and (max-width: 450px) {
-          .hd-box .hd-contact .contact-box .language {
-            margin-right: 1rem; } }
-        .hd-box .hd-contact .contact-box .language img {
-          width: 2.3rem;
-          height: 1.5rem;
-          object-fit: contain; }
-      .hd-box .hd-contact .contact-box .contact {
-        width: fit-content;
-        position: relative;
-        background: transparent; }
-        .hd-box .hd-contact .contact-box .contact.selected a {
-          background: linear-gradient(180deg, #94abff -0.01%, #3456cf 50%, #2645b5 100%); }
-          .hd-box .hd-contact .contact-box .contact.selected a span {
-            color: #fff; }
-        .hd-box .hd-contact .contact-box .contact a {
-          display: block;
+    .hd-box .hd-contact {
+      margin-left: 4.5rem; }
+      .hd-box .hd-contact .contact-box {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center; }
+        .hd-box .hd-contact .contact-box .phone {
+          margin-right: 2.5rem; }
+          .hd-box .hd-contact .contact-box .phone a i::before {
+            color: #0091ff;
+            font-size: 1.8rem; }
+        .hd-box .hd-contact .contact-box .language {
           cursor: pointer;
-          overflow: hidden;
-          position: relative;
-          border-radius: 1.7rem;
-          padding: 0.55rem 3rem;
-          border: 1px solid #2645b5; }
+          margin-right: 2.5rem;
+          position: relative; }
           @media screen and (max-width: 450px) {
-            .hd-box .hd-contact .contact-box .contact a {
-              padding: 0.5rem 2rem; } }
-          .hd-box .hd-contact .contact-box .contact a:hover span {
-            color: #fff; }
-          .hd-box .hd-contact .contact-box .contact a::before, .hd-box .hd-contact .contact-box .contact a::after {
-            content: " ";
+            .hd-box .hd-contact .contact-box .language {
+              margin-right: 1rem; } }
+          .hd-box .hd-contact .contact-box .language img {
+            width: 2.3rem;
+            height: 1.5rem;
+            object-fit: contain; }
+        .hd-box .hd-contact .contact-box .contact {
+          width: fit-content;
+          position: relative;
+          background: transparent; }
+          .hd-box .hd-contact .contact-box .contact.selected a {
+            background: linear-gradient(180deg, #94abff -0.01%, #3456cf 50%, #2645b5 100%); }
+            .hd-box .hd-contact .contact-box .contact.selected a span {
+              color: #fff; }
+          .hd-box .hd-contact .contact-box .contact a {
             display: block;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(180deg, #94abff -0.01%, #3456cf 50%, #2645b5 100%);
-            z-index: -1; }
-          .hd-box .hd-contact .contact-box .contact a::before {
-            z-index: 1;
-            transform: translateX(-100%); }
-          .hd-box .hd-contact .contact-box .contact a:hover:before {
-            transform: translateX(0);
-            transition: transform 350ms ease; }
-          .hd-box .hd-contact .contact-box .contact a::after {
-            z-index: 0;
-            transform: translateX(100%);
-            transition: none;
-            transition: transform 350ms ease; }
-          .hd-box .hd-contact .contact-box .contact a:hover:after {
-            opacity: 1;
-            transform: translateX(0);
-            transition: transform 350ms 360ms ease; }
-          .hd-box .hd-contact .contact-box .contact a span {
-            z-index: 5;
-            color: #002485;
-            font-weight: 600;
+            cursor: pointer;
+            overflow: hidden;
             position: relative;
-            transition: color 350ms ease; }
+            border-radius: 1.7rem;
+            padding: 0.55rem 3rem;
+            border: 1px solid #2645b5; }
+            @media screen and (max-width: 450px) {
+              .hd-box .hd-contact .contact-box .contact a {
+                padding: 0.5rem 2rem; } }
+            .hd-box .hd-contact .contact-box .contact a:hover span {
+              color: #fff; }
+            .hd-box .hd-contact .contact-box .contact a::before, .hd-box .hd-contact .contact-box .contact a::after {
+              content: " ";
+              display: block;
+              position: absolute;
+              width: 100%;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              background: linear-gradient(180deg, #94abff -0.01%, #3456cf 50%, #2645b5 100%);
+              z-index: -1; }
+            .hd-box .hd-contact .contact-box .contact a::before {
+              z-index: 1;
+              transform: translateX(-100%); }
+            .hd-box .hd-contact .contact-box .contact a:hover:before {
+              transform: translateX(0);
+              transition: transform 350ms ease; }
+            .hd-box .hd-contact .contact-box .contact a::after {
+              z-index: 0;
+              transform: translateX(100%);
+              transition: none;
+              transition: transform 350ms ease; }
+            .hd-box .hd-contact .contact-box .contact a:hover:after {
+              opacity: 1;
+              transform: translateX(0);
+              transition: transform 350ms 360ms ease; }
+            .hd-box .hd-contact .contact-box .contact a span {
+              z-index: 5;
+              color: #002485;
+              font-weight: 600;
+              position: relative;
+              transition: color 350ms ease; }
   .hd .mobile {
     display: none;
     height: 100%;

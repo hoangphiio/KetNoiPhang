@@ -36,6 +36,7 @@
         .hd-content {
           @include flex();
           align-items: center;
+          justify-content: end;
           > ul {
             @include flex();
             align-items: center;
@@ -345,6 +346,7 @@
     }
 
     & .hd-contact {
+      margin-left: 4.5rem;
       & .contact-box {
         @include flex();
         align-items: center;
