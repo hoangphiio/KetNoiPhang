@@ -42,10 +42,6 @@ a {
   overflow: hidden;
 }
 
-section {
-  padding: 7.5rem 0;
-}
-
 button,
 select {
   border: none;
@@ -78,7 +74,6 @@ img {
   padding: 0 15px;
 }
 
-
 .shine {
   will-change: transform;
   transition: all 0.4s ease-in-out;
@@ -102,5 +97,19 @@ img {
   }
   &:hover::before {
     left: 100%;
+  }
+}
+
+section {
+  padding: 7.5rem 0;
+  &.bg {
+    background-color: #f9f9ff;
+  }
+  &#connect {
+    padding: 0;
+  }
+  &#banner, &#price {
+    padding: 7rem 0;
+    padding-bottom: 0;
   }
 }

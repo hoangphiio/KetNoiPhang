@@ -1,8 +1,7 @@
 .price {
   background: linear-gradient(0deg, #ffffff 50%, #f3f3ff 100%);
   &-wrap {
-  }
-  &-inner {
+    padding-top: 7rem;
   }
   &-list {
     & .list-title {

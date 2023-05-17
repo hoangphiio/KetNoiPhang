@@ -1,14 +1,4 @@
 .content {
-  &.form-one {
-  }
-  &.form-two {
-    background: #f9f9ff;
-  }
-  &.form-three {
-  }
-  &.form-four {
-    background: #f9f9ff;
-  }
   &-wrap {
   }
   &-inner {
@@ -138,7 +128,6 @@
 
 .customer {
   &-wrap {
-    padding: 10rem 0;
     @include max(1024px) {
       padding: 5rem 0;
     }
@@ -234,7 +223,6 @@
 }
 
 .partner {
-  background: #f9f9ff;
   &-wrap {
     @include max(1024px) {
       padding: 5rem 0;
