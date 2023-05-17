@@ -56,28 +56,28 @@
   <body>
     <main class="KNP">
       <header>
-        <div class="header">
+        <div class="hd">
           <div class="container">
-            <div class="header-wrap">
-              <div class="header-inner">
-                <div class="list-box">
-                  <div class="header-logo">
-                    <a href="#">
-                      <img
-                        loading="lazy"
-                        class="img"
-                        src="../assets/img/header/logoKNP.svg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <nav class="header-link menu">
+            <div class="hd-inner">
+              <div class="hd-box">
+                <div class="hd-col">
+                  <a href="#">
+                    <img
+                      loading="lazy"
+                      class="img"
+                      src="../assets/img/header/logoDPM.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <nav class="hd-col menu">
+                  <div class="hd-content">
                     <ul>
-                      <li class="selected">
+                      <li>
                         <a href="#"> Trang chủ </a>
                       </li>
-                      <li>
-                        <a href="#"> Giới thiệu </a>
+                      <li class="selected">
+                        <a href="tong-quan.html">Giới thiệu</a>
                       </li>
                       <li class="product">
                         <div class="item-box">
@@ -144,10 +144,7 @@
                         </ul>
                       </li>
                       <li>
-                        <a href="#"> Khách hàng </a>
-                      </li>
-                      <li>
-                        <a href="bang-gia.html"> Đối tác </a>
+                        <a href="#">Khách hàng</a>
                       </li>
                       <li class="dropdown">
                         <div class="item-box">
@@ -159,30 +156,41 @@
                         <ul class="item-product">
                           <li>
                             <img
-                              src="../assets/img/header/logoNew1.svg"
+                              src="./assets/img/header/logoNew1.svg"
                               alt=""
                             />
                             <a href="#"> Hoạt động sự kiện </a>
                           </li>
                           <li>
                             <img
-                              src="../assets/img/header/logoNew2.svg"
+                              src="./assets/img/header/logoNew2.svg"
                               alt=""
                             />
                             <a href="#"> Tin tức sản phẩm </a>
                           </li>
                           <li>
                             <img
-                              src="../assets/img/header/logoNew3.svg"
+                              src="./assets/img/header/logoNew3.svg"
                               alt=""
                             />
                             <a href="#"> Kiến thức hữu ích </a>
                           </li>
                         </ul>
                       </li>
+                      <li>
+                        <a href="#">Liên hệ</a>
+                      </li>
                     </ul>
-                  </nav>
-                </div>
+                    <div class="hd-contact">
+                      <div class="nb-p">
+                        <a href="#">
+                          <i class="ic-phone"></i>
+                          <p>090 117 06 59</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
               </div>
             </div>
             <div class="mobile">
@@ -193,12 +201,12 @@
                       <img
                         loading="lazy"
                         class="img"
-                        src="./assets/img/header/logoKNP.svg"
+                        src="../assets/img/header/logoDPM.svg"
                         alt=""
                       />
                     </a>
                   </div>
-                  <span class="overlay"></span>
+                  <span id="overlay" class="overlay"></span>
                   <div class="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -210,7 +218,7 @@
                         <img
                           loading="lazy"
                           class="img"
-                          src="./assets/img/header/logoKNP.svg"
+                          src="../assets/img/header/logoDPM.svg"
                           alt=""
                         />
                       </a>
@@ -220,13 +228,13 @@
                         <a href="#"> Trang chủ </a>
                       </li>
                       <li>
-                        <a href="#"> Giới thiệu </a>
+                        <a href="#">Tổng quan</a>
                       </li>
                       <li class="product">
                         <div class="item-box">
                           <div class="item-list">
                             <a href="#"> Sản phẩm </a>
-                            <i class="ic-down rotate"></i>
+                            <i class="ic-down"></i>
                           </div>
                         </div>
                         <ul class="item-product">
@@ -234,13 +242,21 @@
                             <ul>
                               <li>Chuyển đổi số</li>
                               <li>
-                                <a href="#">
+                                <img
+                                  src="../assets/img/header/dpm.png"
+                                  alt=""
+                                />
+                                <a href="tong-quan.html">
                                   <span class="serviceDPM">DPM</span> - Digital
                                   Process Management
                                   <p>Số hoá quy trình nghiệp vụ</p>
                                 </a>
                               </li>
                               <li>
+                                <img
+                                  src="../assets/img/header/dcm.png"
+                                  alt=""
+                                />
                                 <a href="#">
                                   <span class="serviceDCM">DCM</span> - Digital
                                   Content management
@@ -253,6 +269,10 @@
                             <ul>
                               <li>Giao dịch số</li>
                               <li>
+                                <img
+                                  src="../assets/img/header/dsign.png"
+                                  alt=""
+                                />
                                 <a href="#">
                                   <span class="serviceDS">Dsign</span> - Digital
                                   Signature Portal
@@ -260,6 +280,10 @@
                                 </a>
                               </li>
                               <li>
+                                <img
+                                  src="../assets/img/header/hub.png"
+                                  alt=""
+                                />
                                 <a href="#">
                                   <span class="serviceHUB">Hub</span> -
                                   Transaction Hub Service
@@ -270,43 +294,22 @@
                           </li>
                         </ul>
                       </li>
-                      <li>
-                        <a href="#"> Khách hàng </a>
+                      <li class="selected">
+                        <a href="#"> Tính năng</a>
                       </li>
                       <li>
-                        <a href="#"> Đối tác </a>
+                        <a href="bang-gia.html">Bảng giá</a>
                       </li>
-                      <li class="dropdown">
-                        <div class="item-box">
-                          <div class="item-list selected">
-                            <a href="#"> Tin tức </a>
-                            <i class="ic-down rotate"></i>
-                          </div>
-                        </div>
-                        <ul class="item-product">
-                          <li>
-                            <a href="#"> Hoạt động sự kiện </a>
-                          </li>
-                          <li>
-                            <a href="#"> Tin tức sản phẩm </a>
-                          </li>
-                          <li>
-                            <a href="#"> Kiến thức hữu ích </a>
-                          </li>
-                        </ul>
+                      <li>
+                        <a href="#"> Khách hàng</a>
                       </li>
                     </ul>
                     <div class="header-contact">
                       <div class="contact-box">
-                        <div class="phone">
-                          <a href="#">
-                            <i class="ic-phone"></i>
-                          </a>
-                        </div>
                         <div class="language">
                           <img
                             loading="lazy"
-                            src="./assets/img/header/language.svg"
+                            src="../assets/img/header/language.svg"
                             alt=""
                           />
                         </div>
