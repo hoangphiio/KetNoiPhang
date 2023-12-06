@@ -1,11 +1,29 @@
 @mixin flex() {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
 }
-@mixin mid-flex() {
+
+@mixin flex-al() {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+@mixin flex-ct() {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -18,7 +36,9 @@
   -webkit-justify-content: center;
 }
 
-@mixin mid-flex-btw() {
+@mixin flex-btw() {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -29,35 +49,14 @@
   -webkit-align-items: center;
   justify-content: space-between;
   -webkit-justify-content: space-between;
-  // width: calc(100% + 3rem);
-  // margin-left: -1.5rem;
-
-  // @media (max-width: 1024px) {
-  //   width: calc(100% + 1.5rem);
-  //   margin-left: -0.75rem;
-  // }
-}
-@mixin excerpt(
-  $font-size: $paragraph-font-size,
-  $line-height: 1.4,
-  $lines-to-show: 3,
-  $excerpt-bg: transparent
-) {
-  background: $excerpt-bg;
-  display: -webkit-box;
-  font-size: 1.4;
-  line-height: $line-height;
-  -webkit-line-clamp: $lines-to-show;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 @mixin imgPd($ver: 0, $hori: 0) {
-  padding-top: calc(($ver / $hori) * 100%);
   position: relative;
   overflow: hidden;
+  padding-top: calc(($ver / $hori) * 100%);
 }
+
 @mixin imgCover {
   position: absolute;
   top: 50%;
@@ -83,27 +82,32 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 @mixin max($value) {
   @media screen and (max-width: $value) {
     @content;
   }
 }
+
 @mixin min($value) {
   @media screen and (min-width: $value) {
     @content;
   }
 }
-@mixin hover($value: 1025px) {
+
+@mixin hover($value: 1200px) {
   &:hover {
     @media screen and (min-width: $value) {
       @content;
     }
   }
 }
+
 @mixin sqr($value: 4rem) {
   width: $value;
   height: $value;
 }
+
 @mixin cir($value: 4rem) {
   width: $value;
   height: $value;
@@ -115,6 +119,7 @@
   background-position: center;
   background-size: cover;
 }
+
 @mixin clear {
   &::after {
     content: "";

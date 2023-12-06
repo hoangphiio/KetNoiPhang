@@ -2,24 +2,9 @@
 @import url("../js/library/hover/hover.css");
 @import url("../js/library/swiper/swiper-bundle-min.css");
 
-// component
-@import "./component/burgerMenu";
-@import "./component/capcha";
-
 // core
 @import "./core/animation";
 @import "./core/base";
 @import "./core/mixin";
 @import "./core/reset";
 @import "./core/variable";
-
-@import "./layout/header";
-@import "./layout/footer";
-
-// layout DPM
-@import "./layout/DPM/banner";
-@import "./layout/DPM/feature";
-@import "./layout/DPM/price";
-@import "./layout/DPM/customer";
-@import "./layout/DPM/contact";
-@import "./layout/DPM/overview";

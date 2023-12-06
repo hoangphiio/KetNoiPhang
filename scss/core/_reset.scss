@@ -73,6 +73,7 @@ menu,
 nav,
 output,
 ruby,
+section,
 summary,
 time,
 mark,
@@ -81,6 +82,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
 }
 
@@ -92,17 +95,26 @@ figure,
 footer,
 header,
 hgroup,
-menu {
+menu,
+nav,
+section {
   display: block;
 }
+
+body {
+  line-height: 1;
+}
+
 ol,
 ul {
-  list-style: none !important;
+  list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -110,6 +122,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;

@@ -1,9 +1,9 @@
 import aosModule from "./modules/aosModule.js";
 import swiperModule from "./modules/swiperModule.js";
-import dropdownModule from "./modules/dropdownModule.js";
+import menuHearderModule from "./modules/menuHearderModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   aosModule();
   swiperModule();
-  dropdownModule();
+  menuHearderModule();
 });
