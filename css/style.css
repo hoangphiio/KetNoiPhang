@@ -1,7 +1,7 @@
 @import url("../js/library/aos/aos.css");
 @import url("../js/library/hover/hover.css");
 @import url("../js/library/swiper/swiper-bundle-min.css");
-@import url("../assets/font/Raleway/stylesheet.css");
+@import url("../assets/font/BeVietNam/stylesheet.css");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +33,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #262626;
+  font-family: "Be Vietnam Pro";
 }
 
 a {
@@ -161,8 +162,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -205,4 +204,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+}/*# sourceMappingURL=style.css.map */
