@@ -1,6 +1,4 @@
 @mixin flex() {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -52,8 +50,8 @@
 }
 
 @mixin imgPd($ver: 0, $hori: 0) {
-  position: relative;
   overflow: hidden;
+  position: relative;
   padding-top: calc(($ver / $hori) * 100%);
 }
 
@@ -66,6 +64,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 @mixin imgContain {
   position: absolute;
   top: 50%;

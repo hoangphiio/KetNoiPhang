@@ -1,0 +1,168 @@
+.footer {
+  background: #fafafa;
+}
+
+.ft {
+  &-top {
+    padding-top: 6rem;
+    @include flex-btw;
+    @include max(1200px) {
+      padding-top: 4rem;
+    }
+    &-cl {
+      flex-wrap: nowrap;
+      @include flex-al;
+      &:nth-child(1) {
+        gap: 8rem;
+      }
+    }
+    &-trademark {
+      a {
+        height: 4rem;
+        display: block;
+      }
+      &:nth-child(1) {
+        a {
+          width: 11rem;
+        }
+      }
+      &:nth-child(2) {
+        a {
+          width: 18.2rem;
+        }
+      }
+    }
+    &-social {
+      gap: 1.5rem;
+      @include flex-al;
+      a {
+        transition: 0.4s ease-in-out;
+        display: inline-block;
+        @include sqr(4rem);
+        @include min(1201px) {
+          &:hover {
+            transform: translateY(-1.2rem);
+          }
+        }
+      }
+    }
+  }
+  &-center {
+    &-wrap {
+      margin: 0 -2rem;
+      row-gap: 4rem;
+      flex-wrap: wrap;
+      @include flex;
+    }
+    &-cl {
+      padding: 0 2rem;
+      width: calc(100% / 3);
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+          @include min(1201px) {
+            &:hover {
+              h3 {
+                color: $color-first;
+              }
+              a[href="#"] {
+                color: $color-first;
+                &.dot {
+                  &::before {
+                    background: $color-first;
+                  }
+                }
+              }
+            }
+          }
+          h3 {
+            color: #544837;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.2rem;
+            transition: 0.4s ease-in-out;
+          }
+          a {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            transition: 0.4s ease-in-out;
+          }
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+      &:nth-child(1) {
+        ul {
+          li {
+            &:nth-child(4) {
+              span {
+                color: $color-second;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        ul {
+          li {
+            &:nth-child(2),
+            &:nth-child(5) {
+              a {
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-img {
+      width: 13.8rem;
+      height: 5.2rem;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+  &-bottom {
+    &-wrap {
+      padding: 1rem 0;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 100vw;
+        background: #eee;
+        transform: translateX(-50%);
+      }
+    }
+    &-policy {
+      ul {
+        gap: 6rem;
+        @include flex-ct;
+        li {
+          @include min(1201px) {
+            &:hover {
+              a[href="#"] {
+                color: $color-first;
+                &.dot {
+                  &::before {
+                    background: $color-first;
+                  }
+                }
+              }
+            }
+          }
+          a{
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
