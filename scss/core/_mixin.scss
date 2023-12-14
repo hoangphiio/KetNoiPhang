@@ -7,8 +7,6 @@
 }
 
 @mixin flex-al() {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -20,8 +18,6 @@
 }
 
 @mixin flex-ct() {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -35,8 +31,6 @@
 }
 
 @mixin flex-btw() {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;

@@ -5,7 +5,13 @@ $color-four: #ffc107;
 $color-five: #00c86b;
 $color-six: #544837;
 $color-seven: #858585;
+$color-eight: #0091ff;
+$color-ten: #28b0ff;
+$color-eleven: #424d54;
+$color-twelve: #2f281e;
+$color-thirteen: #415086;
 $color-white: #fff;
+$color-black: #000;
 
 .section-padding {
   padding: 6rem 0;
@@ -28,5 +34,16 @@ $color-white: #fff;
     transition: 0.4s ease-in-out;
     background: rgba(38, 38, 38, 0.5);
     @include cir(0.6rem);
+  }
+}
+
+.logo {
+  display: block;
+  height: 4rem;
+  &.vuthao {
+    width: 11rem;
+  }
+  &.ketnoiphang {
+    width: 18.2rem;
   }
 }

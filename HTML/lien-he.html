@@ -48,31 +48,5 @@
       href="../assets/img/favicon/favicon.ico"
     />
   </head>
-  <body>
-    <div id="formattedDate">
-      <span id="weekday"></span>
-      <span id="day"></span>
-      <span id="month"></span>
-      <span id="year"></span>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const currentDate = new Date();
-
-        const options = {
-          weekday: "short",
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        };
-        const formattedDate = currentDate.toLocaleDateString("en-US", options);
-        const parts = formattedDate.split(" ");
-
-        document.getElementById("weekday").innerText = parts[0];
-        document.getElementById("day").innerText = parts[1].slice(0, -1);
-        document.getElementById("month").innerText = parts[2];
-        document.getElementById("year").innerText = parts[3];
-      });
-    </script>
-  </body>
+  <body></body>
 </html>
