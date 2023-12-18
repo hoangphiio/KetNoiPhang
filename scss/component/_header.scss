@@ -12,18 +12,103 @@
   &-wrap {
     @include flex-btw;
   }
+  &-menu {
+    transition: 0.4s ease-in-out;
+    @include max(1200px) {
+      transform: translateX(-100%);
+    }
+    &.active {
+      transform: translateX(0);
+    }
+    .hd-logo {
+      display: none;
+      @include max(1200px) {
+        display: block;
+        padding: 1.5rem;
+        border-bottom: 0.1rem solid #e5e5e5;
+      }
+    }
+    @include max(1200px) {
+      top: 0;
+      left: 0;
+      z-index: 4;
+      width: 38rem;
+      height: 100%;
+      position: fixed;
+      background: $color-white;
+      overflow: hidden auto;
+      box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+      flex-direction: column;
+      @include flex;
+    }
+    @include max(450px) {
+      width: 35rem;
+    }
+    @include max(400px) {
+      width: 30rem;
+    }
+    @include max(350px) {
+      width: 27rem;
+    }
+    &-info {
+      margin-top: auto;
+      padding: 1.5rem;
+      > * {
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+      @include min(1201px) {
+        display: none;
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: $color-eight;
+        line-height: 2.2rem;
+      }
+      a {
+        display: block;
+        font-size: 1.6rem;
+        color: $color-six;
+      }
+      .ft-top-social {
+        justify-content: center;
+      }
+    }
+  }
   .menu {
     &-list {
       margin: 0 -2.5rem;
       @include flex-al;
+      @include max(1200px) {
+        margin: 0;
+        padding: 1rem 0;
+        align-items: baseline;
+        flex-direction: column;
+      }
     }
     &-item {
       padding: 0 2.5rem;
       position: relative;
+      &:nth-child(7) {
+        > a {
+          @include flex-al;
+          &::before {
+            display: none;
+          }
+        }
+        @include max(1200px) {
+          display: none;
+        }
+      }
       @include min(1201px) {
         &:hover {
           > a {
             color: $color-eight;
+            &::before {
+              width: calc(100% - 5rem);
+            }
           }
           .ic-down {
             transform: rotate(180deg);
@@ -41,6 +126,29 @@
           }
         }
       }
+      @include max(1200px) {
+        padding: 1.5rem;
+        width: 100%;
+      }
+      &.current-page-item {
+        > a {
+          font-weight: 600;
+          color: $color-ten;
+          &::before {
+            width: calc(100% - 5rem);
+            @include max(1200px) {
+              bottom: -1.4rem;
+              width: 100%;
+            }
+          }
+        }
+        .ic {
+          &::before {
+            font-weight: 700;
+            color: $color-ten;
+          }
+        }
+      }
       &.dropdown {
         @include min(1201px) {
           &::before {
@@ -54,34 +162,37 @@
           }
         }
         > ul {
-          opacity: 0;
-          visibility: hidden;
-          pointer-events: none;
-          transition: 0.4s ease-in-out;
-          transform: translate(0, 2.5rem);
-        }
-      }
-      &.selected {
-        a {
-          font-weight: 600;
-          color: $color-black;
-        }
-        &::before {
-          content: "";
-          left: 0;
-          right: 0;
-          bottom: -3rem;
-          margin: auto;
-          height: 0.4rem;
-          position: absolute;
-          border-radius: 0.4rem;
-          width: calc(100% - 5rem);
-          background: $color-ten;
+          @include min(1201px) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: 0.4s ease-in-out;
+            transform: translate(0, 2.5rem);
+          }
         }
       }
       > a {
         color: $color-six;
         transition: 0.4s ease-in-out;
+        &::before {
+          content: "";
+          left: 0;
+          right: 0;
+          width: 0;
+          bottom: -3rem;
+          margin: auto;
+          height: 0.4rem;
+          position: absolute;
+          border-radius: 0.4rem;
+          background: $color-ten;
+          transition: 0.4s ease-in-out;
+        }
+
+        @include max(1200px) {
+          width: 100%;
+          display: block;
+          position: relative;
+        }
       }
       .ic {
         display: inline-block;
@@ -91,6 +202,19 @@
         &::before {
           font-size: 1.2rem;
           transition: 0.4s ease-in-out;
+        }
+        &-down {
+          &.active {
+            transform: rotate(180deg);
+          }
+          @include max(1200px) {
+            top: 1.2rem;
+            right: 1rem;
+            margin: 0;
+            padding: 0.5rem;
+            position: absolute;
+            @include flex-ct;
+          }
         }
       }
     }
@@ -107,9 +231,8 @@
     }
   }
   &-bar {
-    display: none;
-    @include max(1200px) {
-      display: block;
+    @include min(1201px) {
+      display: none;
     }
     &.active {
       span {
@@ -134,35 +257,63 @@
       transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
   }
-  .mega {
+  .submobile {
     top: 4rem;
-    left: -100%;
-    padding: 4rem 2rem;
-    min-width: 76rem;
     background: #fff;
     position: absolute;
     border-top: 0.4rem solid $color-ten;
     box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+    @include max(1200px) {
+      top: unset;
+      display: none;
+      position: relative;
+      margin-top: 1rem;
+    }
+  }
+  .mega {
+    left: -100%;
+    padding: 4rem 2rem;
+    min-width: 76rem;
     @include flex-al;
+    @include max(1200px) {
+      left: unset;
+      display: none;
+      min-width: auto;
+      padding: 1.5rem;
+    }
     &-item {
       padding: 0 2rem;
       position: relative;
       margin-bottom: -2rem;
       width: calc(100% / 2);
+      @include max(1200px) {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
       &:nth-child(1) {
         padding-left: 0;
-        &::before {
-          content: "";
-          top: -2rem;
-          right: 0;
-          width: 0.1rem;
-          position: absolute;
-          background: #e5e5e5;
-          height: calc(100% + 2rem);
+        @include max(1200px) {
+          padding: 0;
+        }
+        @include min(1201px) {
+          &::before {
+            content: "";
+            top: -2rem;
+            right: 0;
+            width: 0.1rem;
+            position: absolute;
+            background: #e5e5e5;
+            height: calc(100% + 2rem);
+          }
         }
       }
       &:nth-child(2) {
         padding-right: 0;
+        @include max(1200px) {
+          padding: 0;
+        }
       }
       > * {
         margin-bottom: 2rem;
@@ -174,6 +325,18 @@
         margin-bottom: 2rem;
         color: $color-twelve;
         text-transform: uppercase;
+        @include max(1200px) {
+          font-size: 1.6rem;
+        }
+      }
+      &-inner {
+        margin: 0 -0.5rem;
+        @include flex-al;
+        @include max(350px) {
+          margin: 0;
+          row-gap: 1rem;
+          flex-wrap: wrap;
+        }
       }
       &-img {
         padding: 0 0.5rem;
@@ -183,6 +346,10 @@
               transform: translateY(-0.5rem);
             }
           }
+        }
+        @include max(350px) {
+          padding: 0;
+          display: none;
         }
         a {
           padding: 0.6rem;
@@ -210,10 +377,14 @@
             }
           }
         }
+        @include max(350px) {
+          padding: 0;
+        }
         a {
           h2 {
             font-weight: 400;
             font-size: 1.6rem;
+            line-height: normal;
             margin-bottom: 0.6rem;
             @include min(1201px) {
               &::after {
@@ -225,8 +396,23 @@
                 visibility: hidden;
               }
             }
+            @include max(1200px) {
+              font-size: 1.4rem;
+            }
             span {
               font-weight: 700;
+              position: relative;
+              @include max(350px) {
+                display: block;
+                margin-bottom: 0.6rem;
+              }
+              &::after {
+                content: "-";
+                margin: 0 0.2rem;
+                @include max(350px) {
+                  display: none;
+                }
+              }
               &.DPM {
                 color: $color-thirteen;
               }
@@ -258,21 +444,18 @@
           }
         }
       }
-      &-inner {
-        margin: 0 -0.5rem;
-        @include flex-al;
-      }
     }
   }
   .submenu {
-    top: 4rem;
     left: 0;
     padding: 2rem;
     min-width: 25rem;
-    background: #fff;
-    position: absolute;
-    border-top: 0.4rem solid $color-ten;
-    box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+    @include max(1200px) {
+      left: 0;
+      display: none;
+      padding: 1.5rem;
+      min-width: auto;
+    }
     &-item {
       &:not(:last-child) {
         margin-bottom: 2rem;
@@ -304,6 +487,9 @@
       &-inner {
         margin: 0 -0.5rem;
         @include flex-al;
+        @include max(350px) {
+          margin: 0;
+        }
       }
       &-img {
         padding: 0 0.5rem;
@@ -313,6 +499,10 @@
               transform: translateY(-0.5rem);
             }
           }
+        }
+        @include max(350px) {
+          padding: 0;
+          display: none;
         }
         a {
           padding: 0.8rem;
@@ -339,6 +529,9 @@
               font-weight: 600;
             }
           }
+        }
+        @include max(350px) {
+          padding: 0;
         }
         h2 {
           color: #262626;

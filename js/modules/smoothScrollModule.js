@@ -1,4 +1,4 @@
-export default function smoothScroll() {
+export default function smoothScrollModule() {
   SmoothScroll({
     // Scrolling Core
     animationTime: 500, // [ms]

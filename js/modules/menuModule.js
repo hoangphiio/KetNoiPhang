@@ -30,7 +30,7 @@ export default function menuModule() {
     overlay.classList.remove("active");
 
     if (window.innerWidth < 1201) {
-      $(".submenu").slideUp();
+      $(".submobile").slideUp();
     }
 
     btnSubs.forEach((btnSub) => {
@@ -45,7 +45,7 @@ export default function menuModule() {
       $(".subBtn").click(function (e) {
         e.preventDefault();
         $(this).toggleClass("active");
-        $(this).next(".submenu").stop().slideToggle();
+        $(this).next(".submobile").stop().slideToggle();
       });
     }
   });

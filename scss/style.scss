@@ -9,5 +9,9 @@
 @import "./core/variable";
 
 // component
-@import "./component/header";
 @import "./component/footer";
+@import "./component/header";
+@import "./component/scrollTop";
+
+// layout
+@import "./layout/contact";

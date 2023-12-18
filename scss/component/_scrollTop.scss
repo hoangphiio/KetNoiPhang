@@ -1,0 +1,62 @@
+#scrollTop {
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  z-index: 999;
+  position: fixed;
+  transition: 0.4s ease-in-out;
+  @include max(1280px) {
+    bottom: 5%;
+  }
+  @include max(1199px) {
+    right: 2.88rem;
+  }
+  @include max(767px) {
+    right: 1rem;
+  }
+  &.active {
+    opacity: 1;
+  }
+}
+.st {
+  .input-contact {
+    z-index: 10;
+    display: block;
+    padding: 0.8rem;
+    position: relative;
+    background: $color-first;
+    cursor: pointer;
+    @include cir(4rem);
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(2);
+      animation: pulse 2.5s infinite;
+      background: linear-gradient(135deg, #21d1f7 14.64%, #2196f3 85.36%);
+    }
+    &:nth-child(1) {
+      margin-bottom: 2rem;
+    }
+    &:nth-child(2) {
+      background: linear-gradient(135deg, #21d1f7 0%, #2196f3 100%);
+      img {
+        animation: ring 1.5s infinite ease-in-out;
+      }
+    }
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      @include min(1201px){
+        &:hover{
+          transform: translateY(-0.5rem);
+        }
+      }
+    }
+  }
+}

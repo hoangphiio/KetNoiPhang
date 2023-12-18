@@ -68,18 +68,26 @@
             </a>
           </div>
           <nav class="hd-nav hd-menu">
+            <div class="hd-logo">
+              <a href="#" class="logo ketnoiphang">
+                <img
+                  src="../assets/img/logo-san-pham/logo-KNP.svg"
+                  loading="lazy"
+                />
+              </a>
+            </div>
             <div class="menu">
               <ul class="menu-list">
                 <li class="menu-item">
                   <a href="#">Trang chủ </a>
                 </li>
-                <li class="menu-item selected">
+                <li class="menu-item">
                   <a href="#">Giới thiệu</a>
                 </li>
-                <li class="menu-item dropdown">
+                <li class="menu-item dropdown current-page-item">
                   <a href="/HTML/san-pham.html"> Sản phẩm </a>
                   <i class="ic ic-down subBtn"></i>
-                  <ul class="mega">
+                  <ul class="mega submobile">
                     <li class="mega-item">
                       <h2>Chuyển đổi số</h2>
                       <div class="mega-item-wrap">
@@ -96,7 +104,7 @@
                             <a href="#">
                               <h2 title="DPM - Digital Process Management">
                                 <span class="DPM">DPM </span>
-                                - Digital Process Management
+                                Digital Process Management
                               </h2>
                               <p title="Số hóa quy trình nghiệp vụ">
                                 Số hóa quy trình nghiệp vụ
@@ -119,7 +127,7 @@
                             <a href="#">
                               <h2 title="DCM - Digital Content Management">
                                 <span class="DCM">DCM </span>
-                                - Digital Content Management
+                                Digital Content Management
                               </h2>
                               <p title="Số hóa tài liệu tri thức">
                                 Số hóa tài liệu tri thức
@@ -145,7 +153,7 @@
                             <a href="#">
                               <h2 title="Dsign - Digital Signature Portal">
                                 <span class="DSIGN">Dsign </span>
-                                - Digital Signature Portal
+                                Digital Signature Portal
                               </h2>
                               <p title="Trình ký số online">
                                 Trình ký số online
@@ -168,7 +176,7 @@
                             <a href="#">
                               <h2 title="Hub - Transaction Hub Service">
                                 <span class="Hub">Hub </span>
-                                - Transaction Hub Service
+                                Transaction Hub Service
                               </h2>
                               <p title="Cổng kết nối doanh nghiệp">
                                 Cổng kết nối doanh nghiệp
@@ -186,7 +194,7 @@
                 <li class="menu-item dropdown">
                   <a href="#"> Tin tức </a>
                   <i class="ic ic-down subBtn"></i>
-                  <ul class="submenu">
+                  <ul class="submenu submobile">
                     <li class="submenu-item">
                       <div class="submenu-item-wrap">
                         <div class="submenu-item-inner">
@@ -261,16 +269,46 @@
                 </li>
               </ul>
             </div>
-            <div class="hd-bar">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="hd-menu-info">
+              <h3>Giới thiệu về Công ty Cổ Phần Công Nghệ Vũ Thảo</h3>
+              <a href="#"> Số điện thoại: 090 117 0659 </a>
+              <a href="#"> Email: lienhe@vuthao.com </a>
+              <div class="ft-top-social">
+                <a href="#" class="youtube">
+                  <img
+                    src="../assets/img/social/youtube.svg"
+                    alt="facebook"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="#" class="linkedin">
+                  <img
+                    src="../assets/img/social/linkedin.svg"
+                    alt="linkedin"
+                    loading="lazy"
+                  />
+                </a>
+                <a href="#" class="facebook">
+                  <img
+                    src="../assets/img/social/facebook.svg"
+                    alt="facebook"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
             </div>
           </nav>
+          <div class="hd-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         <div class="overlay"></div>
       </div>
     </header>
+
+    <main class="main"></main>
 
     <footer class="footer">
       <div class="container">
@@ -328,7 +366,7 @@
                 <ul>
                   <li>
                     <a href="#">
-                      <h3>Công ty Cổ phần Công nghệ Vũ Thảo</h3>
+                      <h2>Công ty Cổ phần Công nghệ Vũ Thảo</h2>
                     </a>
                   </li>
                   <li>
@@ -355,7 +393,7 @@
                 <ul>
                   <li>
                     <a href="#">
-                      <h3>Giới thiệu</h3>
+                      <h2>Giới thiệu</h2>
                     </a>
                   </li>
                   <li>
@@ -376,7 +414,7 @@
                 <ul>
                   <li>
                     <a href="#">
-                      <h3>Sản phẩm</h3>
+                      <h2>Sản phẩm</h2>
                     </a>
                   </li>
                   <li>
@@ -410,12 +448,12 @@
                 <ul>
                   <li>
                     <a href="#">
-                      <h3>Khách hàng</h3>
+                      <h2>Khách hàng</h2>
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <h3>Liên hệ</h3>
+                      <h2>Liên hệ</h2>
                     </a>
                   </li>
                 </ul>
@@ -424,7 +462,7 @@
                 <ul>
                   <li>
                     <a href="#">
-                      <h3>Tin tức</h3>
+                      <h2>Tin tức</h2>
                     </a>
                   </li>
                 </ul>
@@ -451,6 +489,24 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scroll Top -->
+    <div id="scrollTop">
+      <div class="st">
+        <div class="st-col">
+          <div class="input-contact">
+            <a href="#">
+              <img src="../assets/img/icon/messenger.svg" loading="lazy" />
+            </a>
+          </div>
+          <div class="input-contact">
+            <a href="#">
+              <img src="../assets/img/icon/phone.svg" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="../js/library/aos/aos.js"></script>
     <script src="../js/library/smothScroll/smothScroll.js"></script>
