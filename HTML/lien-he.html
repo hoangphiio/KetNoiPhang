@@ -38,22 +38,134 @@
     <meta property="og:locale" content="vi_VN" />
     <meta property="fb:pages" content="" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-
-    <title>Kết nối phẳng - Liên hệ</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../assets/icon/iconfont/style.css" />
-    <link
-      id="favicon"
-      rel="shortcut icon"
-      href="../assets/img/favicon/favicon.ico"
-    />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+
+    <script src="../js/library/jquery/jquery-min.js"></script>
+
+    <title>Kết nối phẳng - Liên hệ</title>
   </head>
   <body>
     <main class="main contact">
       <section class="section-padding">
         <div class="container">
-          <div class="contact-title">
-            <h1>Chúng tôi có thể giúp gì cho bạn?</h1>
+          <div class="contact-content">
+            <h1 class="title">Chúng tôi có thể giúp gì cho bạn?</h1>
+            <h2>
+              Bạn có thắc mắc hay cần báo cáo vấn đề xảy ra với sản phẩm hoặc
+              bạn muốn tìm hiểu rõ hơn về sản phẩm? Chúng tôi luôn luôn sẵn sàng
+              hỗ trợ.
+            </h2>
+          </div>
+          <div class="contact-office">
+            <div class="contact-office-wrap">
+              <ul>
+                <li>
+                  <h3>Trụ sở chính</h3>
+                  <p>
+                    Tầng 3, Phòng 3.15, Khu I, Toà nhà The Prince Residence, số
+                    19-21 Nguyễn Văn Trỗi, P.12, Q. Phú Nhuận, TP Hồ Chí Minh,
+                    VN
+                  </p>
+                </li>
+                <li>
+                  <h3>Văn phòng đại diện</h3>
+                  <p>
+                    Dreamplex Thái Hà, Tầng 6, Tòa nhà số 174 Thái Hà, Phường
+                    Trung Liệt, Quận Đống Đa, Hà Nội, VN
+                  </p>
+                </li>
+                <li>
+                  <h3>Trung tâm phần mềm và dịch vụ</h3>
+                  <p>
+                    Tầng 2-4-6, Toà nhà MG Building, Số 2-2B Lam Sơn, Phường 2,
+                    Q. Tân Bình, TP Hồ Chí Minh, VN
+                    <span> (Địa chỉ liên hệ chính dịch vụ phần mềm)</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-infomation">
+            <div class="contact-infomation-box">
+              <div class="contact-infomation-column">
+                <div class="form">
+                  <div class="form-contact">
+                    <a href="#" class="form-phone">
+                      <span class="phone">Hotline: </span>
+                      <span>090 117 0659</span>
+                    </a>
+                    <a class="form-address">
+                      <span class="address">Địa chỉ: </span>
+                      <span>
+                        Toà nhà MG, số 2-2B Lam Sơn, Phường 2, Quận Tân Bình, TP
+                        Hồ Chí Minh
+                      </span>
+                    </a>
+                  </div>
+                  <div class="form-map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.7492198439531!2d106.66681825231267!3d10.811550072134214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292b2cc73585%3A0x376e207d4f0da08c!2zTS5HIEJVSUxESU5HIC0gVsSCTiBQSMOSTkcgQ0hPIFRIVcOKIFPDgk4gQkFZ!5e0!3m2!1svi!2s!4v1626158874252!5m2!1svi!2s"
+                      width="100%"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-infomation-column">
+                <form class="form">
+                  <div class="form-fill">
+                    <div class="form-fill-infomation">
+                      <div class="form-title">
+                        <h2>Vũ Thảo sẽ liên hệ sớm theo thông tin sau:</h2>
+                      </div>
+                      <div class="form-input">
+                        <label for="fname">Họ và tên <span>(*)</span></label>
+                        <input type="text" maxlength="255" id="txtFullName" />
+                      </div>
+                      <div class="form-input">
+                        <label for="email">Email <span>(*)</span></label>
+                        <input type="text" maxlength="255" id="txtEmail" />
+                      </div>
+                      <div class="form-input">
+                        <label for="phone"
+                          >Số điện thoại <span>(*)</span></label
+                        >
+                        <input type="text" maxlength="255" id="txtMobile" />
+                      </div>
+                      <div class="form-input">
+                        <label for="text">
+                          Nội dung liên hệ <span>(*)</span>
+                        </label>
+                        <textarea
+                          rows="2"
+                          cols="20"
+                          id="txtContent"
+                          placeholder="Vui lòng điền nội dung"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="form-fill-capcha">
+                      <iframe
+                        title="reCAPTCHA"
+                        width="304"
+                        height="78"
+                        role="presentation"
+                        name="a-580m2msiya8m"
+                        frameborder="0"
+                        scrolling="no"
+                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeCryIcAAAAAGAC-P3Szw3RtqRGPN0ulso4LbJv&amp;co=aHR0cHM6Ly93d3cudnV0aGFvLmNvbS52bjo0NDM.&amp;hl=vi&amp;v=vm_YDiq1BiI3a8zfbIPZjtF2&amp;size=normal&amp;cb=yy0u5i7d0s52"
+                      ></iframe>
+                    </div>
+                    <div class="form-fill-send">
+                      <a href="#" class="btn btn-send"> Gửi </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>

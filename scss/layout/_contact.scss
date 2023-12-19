@@ -1,0 +1,287 @@
+.contact {
+  overflow: hidden;
+  section {
+    background: linear-gradient(180deg, #fff 12.61%, #eef6ff 61.07%);
+  }
+  &-content {
+    > * {
+      margin-bottom: 2rem;
+      @include max(767px) {
+        margin-bottom: 1rem;
+      }
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 4rem;
+      @include max(1200px) {
+        font-size: 2.4rem;
+      }
+      @include max(767px) {
+        font-size: 2rem;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 2.8rem;
+      color: $color-seven;
+      @include max(1200px) {
+        font-size: 1.8rem;
+      }
+      @include max(767px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &-office {
+    margin-bottom: 4rem;
+    &-wrap {
+      padding: 3rem 0;
+      border-top: 0.1rem dashed #a1a1a1;
+      border-bottom: 0.1rem dashed #a1a1a1;
+      flex-direction: column;
+      @include flex;
+      @include max(767px) {
+        padding: 2rem 0;
+      }
+      ul {
+        margin: 0 -1rem;
+        flex-wrap: wrap;
+        @include flex;
+        @include max(991px) {
+          row-gap: 2rem;
+          justify-content: center;
+        }
+        li {
+          width: calc(100% / 3);
+          padding: 0 1rem;
+          text-align: center;
+          position: relative;
+          @include max(991px) {
+            width: calc(100% / 2);
+          }
+          @include max(500px) {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            @include max(991px) {
+              &::before {
+                display: none;
+              }
+            }
+          }
+          &:nth-child(3) {
+            @include max(991px) {
+              width: 80%;
+            }
+            @include max(500px) {
+              width: 100%;
+            }
+          }
+          &:not(:last-child)::before {
+            content: "";
+            top: 0;
+            right: 0;
+            width: 0.1rem;
+            height: 100%;
+            position: absolute;
+            border-right: 0.1rem solid #dadada;
+            @include max(500px) {
+              display: none;
+            }
+          }
+          h3 {
+            color: $color-six;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 2.2rem;
+            margin-bottom: 1.2rem;
+            @include max(1200px) {
+              font-size: 1.6rem;
+            }
+          }
+          p {
+            font-weight: 400;
+            line-height: 2rem;
+            span {
+              font-size: 1.2rem;
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-infomation {
+    &-box {
+      margin: 0 -2rem;
+      @include flex;
+      @include max(1200px) {
+        margin: 0 -1rem;
+      }
+      @include max(767px) {
+        row-gap: 4rem;
+        flex-wrap: wrap;
+      }
+    }
+    &-column {
+      padding: 0 2rem;
+      width: calc(100% / 2);
+      @include max(1200px) {
+        padding: 0 1rem;
+      }
+      @include max(767px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  flex-direction: column;
+  box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+  @include flex;
+  @include max(767px) {
+    min-height: 62rem;
+  }
+  &-contact {
+    padding: 2.5rem;
+    background: #fffbef;
+    border: 0.2rem solid $color-white;
+    @include max(767px) {
+      padding: 2rem;
+    }
+    > a {
+      @include flex;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      @include max(767px) {
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+      }
+      span {
+        position: relative;
+        line-height: 2.4rem;
+        transition: 0.4s ease-in-out;
+        @include flex;
+        &::before {
+          margin-right: 1rem;
+          font-size: 1.8rem;
+          color: $color-first;
+          font-family: "iconfont";
+        }
+        &:nth-child(1) {
+          font-weight: 400;
+          padding-right: 1rem;
+          white-space: nowrap;
+          color: $color-twelve;
+          &.phone {
+            &::before {
+              content: "\e904";
+            }
+          }
+          &.address {
+            &::before {
+              content: "\e903";
+            }
+          }
+        }
+        &:nth-child(2) {
+          font-weight: 600;
+          font-size: 1.8rem;
+          @include max(1200px) {
+            font-size: 1.6rem;
+          }
+          @include max(767px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+  &-map {
+    height: 100%;
+    iframe {
+      height: 100%;
+    }
+  }
+  &-fill {
+    padding: 2.5rem;
+    background: $color-white;
+    @include max(767px) {
+      padding: 2rem;
+    }
+    &-infomation {
+      margin-bottom: 2rem;
+    }
+    &-capcha {
+      margin-bottom: 2rem;
+    }
+    &-send {
+      a {
+        width: 100%;
+        padding: 0.85rem;
+        font-weight: 700;
+        text-align: center;
+        color: $color-white;
+        border-radius: 0.6rem;
+        display: inline-block;
+        line-height: normal;
+        background: linear-gradient(
+          180deg,
+          #4cd9ed -0.01%,
+          #47aaec 50%,
+          #437fec 100%
+        );
+      }
+    }
+  }
+  &-title {
+    margin-bottom: 2rem;
+    h2 {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: normal;
+      @include max(767px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &-input {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      color: #5e5e5e;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      margin-bottom: 0.5rem;
+      span {
+        color: #f00;
+      }
+    }
+    input,
+    textarea {
+      width: 100%;
+      outline: 0;
+      padding: 0.8rem;
+      min-height: 3.3rem;
+      border-radius: 0.4rem;
+      border: 0.1rem solid #e8e8e8;
+      &:focus-visible {
+        border-color: $color-first;
+      }
+    }
+    textarea {
+      resize: vertical;
+      min-height: 13rem;
+    }
+  }
+}

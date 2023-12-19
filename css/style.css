@@ -1183,3 +1183,337 @@ table {
     transform: translateY(-0.5rem);
   }
 }
+
+.contact {
+  overflow: hidden;
+}
+.contact section {
+  background: linear-gradient(180deg, #fff 12.61%, #eef6ff 61.07%);
+}
+.contact-content > * {
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .contact-content > * {
+    margin-bottom: 1rem;
+  }
+}
+.contact-content h1 {
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+}
+@media screen and (max-width: 1200px) {
+  .contact-content h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-content h1 {
+    font-size: 2rem;
+  }
+}
+.contact-content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: #858585;
+}
+@media screen and (max-width: 1200px) {
+  .contact-content h2 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-content h2 {
+    font-size: 1.6rem;
+  }
+}
+.contact-office {
+  margin-bottom: 4rem;
+}
+.contact-office-wrap {
+  padding: 3rem 0;
+  border-top: 0.1rem dashed #a1a1a1;
+  border-bottom: 0.1rem dashed #a1a1a1;
+  flex-direction: column;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .contact-office-wrap {
+    padding: 2rem 0;
+  }
+}
+.contact-office-wrap ul {
+  margin: 0 -1rem;
+  flex-wrap: wrap;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+@media screen and (max-width: 991px) {
+  .contact-office-wrap ul {
+    row-gap: 2rem;
+    justify-content: center;
+  }
+}
+.contact-office-wrap ul li {
+  width: 33.3333333333%;
+  padding: 0 1rem;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .contact-office-wrap ul li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact-office-wrap ul li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact-office-wrap ul li:nth-child(2)::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact-office-wrap ul li:nth-child(3) {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact-office-wrap ul li:nth-child(3) {
+    width: 100%;
+  }
+}
+.contact-office-wrap ul li:not(:last-child)::before {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0.1rem;
+  height: 100%;
+  position: absolute;
+  border-right: 0.1rem solid #dadada;
+}
+@media screen and (max-width: 500px) {
+  .contact-office-wrap ul li:not(:last-child)::before {
+    display: none;
+  }
+}
+.contact-office-wrap ul li h3 {
+  color: #544837;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+@media screen and (max-width: 1200px) {
+  .contact-office-wrap ul li h3 {
+    font-size: 1.6rem;
+  }
+}
+.contact-office-wrap ul li p {
+  font-weight: 400;
+  line-height: 2rem;
+}
+.contact-office-wrap ul li p span {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.contact-infomation-box {
+  margin: 0 -2rem;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .contact-infomation-box {
+    margin: 0 -1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-infomation-box {
+    row-gap: 4rem;
+    flex-wrap: wrap;
+  }
+}
+.contact-infomation-column {
+  padding: 0 2rem;
+  width: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .contact-infomation-column {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-infomation-column {
+    width: 100%;
+  }
+}
+
+.form {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  flex-direction: column;
+  box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .form {
+    min-height: 62rem;
+  }
+}
+.form-contact {
+  padding: 2.5rem;
+  background: #fffbef;
+  border: 0.2rem solid #fff;
+}
+@media screen and (max-width: 767px) {
+  .form-contact {
+    padding: 2rem;
+  }
+}
+.form-contact > a {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.form-contact > a:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .form-contact > a {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+}
+.form-contact > a span {
+  position: relative;
+  line-height: 2.4rem;
+  transition: 0.4s ease-in-out;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.form-contact > a span::before {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  color: #0060ff;
+  font-family: "iconfont";
+}
+.form-contact > a span:nth-child(1) {
+  font-weight: 400;
+  padding-right: 1rem;
+  white-space: nowrap;
+  color: #2f281e;
+}
+.form-contact > a span:nth-child(1).phone::before {
+  content: "\e904";
+}
+.form-contact > a span:nth-child(1).address::before {
+  content: "\e903";
+}
+.form-contact > a span:nth-child(2) {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 1200px) {
+  .form-contact > a span:nth-child(2) {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-contact > a span:nth-child(2) {
+    font-size: 1.4rem;
+  }
+}
+.form-map {
+  height: 100%;
+}
+.form-map iframe {
+  height: 100%;
+}
+.form-fill {
+  padding: 2.5rem;
+  background: #fff;
+}
+@media screen and (max-width: 767px) {
+  .form-fill {
+    padding: 2rem;
+  }
+}
+.form-fill-infomation {
+  margin-bottom: 2rem;
+}
+.form-fill-capcha {
+  margin-bottom: 2rem;
+}
+.form-fill-send a {
+  width: 100%;
+  padding: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.6rem;
+  display: inline-block;
+  line-height: normal;
+  background: linear-gradient(180deg, #4cd9ed -0.01%, #47aaec 50%, #437fec 100%);
+}
+.form-title {
+  margin-bottom: 2rem;
+}
+.form-title h2 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: normal;
+}
+@media screen and (max-width: 767px) {
+  .form-title h2 {
+    font-size: 1.6rem;
+  }
+}
+.form-input:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form-input label {
+  display: block;
+  color: #5e5e5e;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.form-input label span {
+  color: #f00;
+}
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  outline: 0;
+  padding: 0.8rem;
+  min-height: 3.3rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #e8e8e8;
+}
+.form-input input:focus-visible,
+.form-input textarea:focus-visible {
+  border-color: #0060ff;
+}
+.form-input textarea {
+  resize: vertical;
+  min-height: 13rem;
+}
