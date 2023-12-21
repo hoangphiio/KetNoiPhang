@@ -48,3 +48,96 @@ $color-black: #000;
     width: 18.2rem;
   }
 }
+
+.btn-hover {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  border-radius: 0.6rem;
+  background: linear-gradient(
+    180deg,
+    #4cd9ed -0.01%,
+    #47aaec 50%,
+    #437fec 100%
+  );
+  @include min(1201px) {
+    &:hover {
+      a {
+        color: $color-white;
+      }
+      &::after {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background: #0060ff57;
+    transition: 0.4s ease-in-out;
+  }
+  a {
+    width: 100%;
+    z-index: 3;
+    font-weight: 700;
+    padding: 1.05rem;
+    overflow: hidden;
+    position: relative;
+    color: $color-white;
+    display: inline-block;
+    transition: 0.4s ease-in-out;
+  }
+}
+
+.tabContent {
+  display: none;
+  &.open {
+    display: block;
+    animation: fadeInUp 1s ease-in-out;
+  }
+}
+
+.box-tag {
+  row-gap: 1.5rem;
+  flex-wrap: wrap;
+  @include flex-btw;
+}
+
+.tag {
+  display: block;
+  font-weight: 500;
+  width: fit-content;
+  color: $color-first;
+  line-height: 2.2rem;
+  padding: 0.5rem 1.5rem;
+  background: #eef2ff;
+  border-radius: 0.5rem;
+  @include max(1200px) {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.time {
+  display: block;
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: fit-content;
+  color: $color-seven;
+  line-height: 2.2rem;
+}
+
+.desc {
+  font-weight: 400;
+  color: $color-seven;
+  line-height: 1.8rem;
+  @include lc(3);
+}

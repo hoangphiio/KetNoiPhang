@@ -78,7 +78,7 @@
               h2 {
                 color: $color-first;
               }
-              a[href="#"] {
+              a[href] {
                 color: $color-first;
                 &.dot {
                   &::before {
@@ -174,7 +174,7 @@
         li {
           @include min(1201px) {
             &:hover {
-              a[href="#"] {
+              a[href] {
                 color: $color-first;
                 &.dot {
                   &::before {
@@ -185,6 +185,7 @@
             }
           }
           a {
+            line-height: normal;
             white-space: nowrap;
             transition: 0.4s ease-in-out;
           }
