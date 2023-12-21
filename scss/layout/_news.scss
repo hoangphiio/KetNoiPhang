@@ -14,10 +14,22 @@
     cursor: pointer;
     @include cir(4rem);
     @include flex-ct;
+    @include max(767px) {
+      @include cir(3rem);
+    }
+    @include max(550px) {
+      top: 25%;
+    }
+    @include max(400px) {
+      top: 20%;
+    }
     &::after {
       font-weight: 700;
       font-size: 1.8rem;
       color: $color-first;
+      @include max(767px) {
+        font-size: 1.6rem;
+      }
     }
     &.swiper-button-prev {
       left: 0;
@@ -33,7 +45,6 @@
     }
   }
   &-inner {
-    padding: 2rem 0;
     position: relative;
     &::before {
       content: "";
@@ -48,7 +59,13 @@
   }
   &-tab {
     margin: 0 -5rem;
+    padding: 2rem 0;
     @include flex-ct;
+    @include max(650px) {
+      margin: 0;
+      overflow: auto hidden;
+      justify-content: stretch;
+    }
   }
   &-control {
     padding: 0 5rem;
@@ -68,6 +85,19 @@
     @include max(1200px) {
       padding: 0 2.5rem;
     }
+    @include max(767px) {
+      padding: 0 1.5rem;
+    }
+    &:nth-child(1) {
+      @include max(1200px) {
+        padding-left: 0;
+      }
+    }
+    &:nth-child(3) {
+      @include max(1200px) {
+        padding-right: 0;
+      }
+    }
     span {
       width: 100%;
       display: block;
@@ -79,6 +109,9 @@
       @include max(1200px) {
         font-size: 1.4rem;
       }
+      @include max(650px) {
+        white-space: nowrap;
+      }
       &::before {
         content: "";
         left: 0;
@@ -89,6 +122,9 @@
         border-radius: 0.4rem;
         background: $color-ten;
         transition: 0.4s ease-in-out;
+        @include max(650px) {
+          bottom: -0.6rem;
+        }
       }
     }
   }
@@ -120,6 +156,9 @@
     @include max(1024px) {
       row-gap: 4rem;
       margin: 0 -0.5rem;
+    }
+    @include max(767px) {
+      row-gap: 2rem;
     }
     &-column {
       padding: 0 2rem;
@@ -194,7 +233,7 @@
       @include max(850px) {
         width: calc(100% / 2);
       }
-      @include max(500px){
+      @include max(500px) {
         width: 100%;
       }
     }
@@ -230,6 +269,9 @@
         @include lc(3);
         @include max(1200px) {
           font-size: 1.4rem;
+        }
+        @include max(767px) {
+          margin-bottom: 0.5rem;
         }
       }
     }
@@ -289,11 +331,26 @@
         @include max(1200px) {
           font-size: 2.8rem;
         }
+        @include max(767px) {
+          font-size: 2rem;
+          min-height: 6rem;
+          line-height: 3rem;
+        }
+      }
+      .box-tag {
+        @include max(400px) {
+          align-items: normal;
+          flex-direction: column;
+          justify-content: stretch;
+        }
       }
       .tag {
         font-size: 1.8rem;
         @include max(1200px) {
           font-size: 1.6rem;
+        }
+        @include max(767px) {
+          font-size: 1.4rem;
         }
       }
       .time {
@@ -307,6 +364,11 @@
         font-size: 1.6rem;
         min-height: 8.4rem;
         line-height: 2.8rem;
+        @include max(767px) {
+          min-height: 7.2rem;
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+        }
       }
     }
   }
@@ -318,6 +380,9 @@
   @include max(1200px) {
     padding-bottom: 4rem;
   }
+  @include max(550px) {
+    background: #eef6ff;
+  }
   &-title {
     margin-bottom: 4rem;
     h2 {
@@ -326,6 +391,9 @@
       line-height: 3.4rem;
       color: $color-black;
       text-transform: uppercase;
+      @include max(767px) {
+        font-size: 2.4rem;
+      }
     }
   }
   &-img {
@@ -365,6 +433,9 @@
     @include max(1024px) {
       width: calc(100% / 2);
     }
+    @include max(550px) {
+      width: 100%;
+    }
     &-inner {
       overflow: hidden;
       border-radius: 1rem;
@@ -395,9 +466,15 @@
           color: $color-ten;
         }
       }
+      @include max(550px) {
+        min-height: auto;
+      }
     }
     .desc {
       min-height: 5.4rem;
+      @include max(550px) {
+        min-height: auto;
+      }
     }
   }
   &-pagination {
@@ -405,11 +482,25 @@
     @include max(1200px) {
       padding-top: 4rem;
     }
+    @include max(767px) {
+      padding-top: 0;
+    }
     ul {
       margin: 0 -0.5rem;
       @include flex-ct;
       li {
         padding: 0 0.5rem;
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11) {
+          @include max(767px) {
+            display: none;
+          }
+        }
         @include min(1201px) {
           &:hover {
             a {
@@ -427,6 +518,7 @@
         }
         a {
           border-radius: 0.6rem;
+          background: $color-white;
           transition: 0.4s ease-in-out;
           border: 0.1rem solid #d9d9d9;
           @include sqr(3.4rem);

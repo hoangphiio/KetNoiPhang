@@ -9,6 +9,9 @@
   background: #fff;
   transition: 0.8s ease-in-out;
   box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+  @include max(1200px) {
+    overflow: hidden;
+  }
   &-wrap {
     @include flex-btw;
   }
