@@ -1,0 +1,47 @@
+.breadcumb {
+  padding-top: 4rem;
+  @include max(1200px) {
+    padding-top: 2rem;
+  }
+  &-wrap {
+    ul {
+      overflow: auto hidden;
+      @include flex-al;
+      li {
+        position: relative;
+        &:not(:last-child) {
+          &::after {
+            content: "/";
+            font-size: 1.6rem;
+            margin: 0 0.5rem;
+            display: inline-block;
+            @include max(1200px) {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        @include min(1201px) {
+          &:hover {
+            a {
+              color: $color-second;
+            }
+          }
+        }
+        a {
+          font-size: 1.8rem;
+          font-weight: 400;
+          color: $color-six;
+          line-height: 2.4rem;
+          white-space: nowrap;
+          transition: 0.4s ease-in-out;
+          @include max(1200px) {
+            font-size: 1.6rem;
+          }
+          &.selected {
+            color: $color-second;
+          }
+        }
+      }
+    }
+  }
+}

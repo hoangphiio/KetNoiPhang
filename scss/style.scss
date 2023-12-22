@@ -2,18 +2,20 @@
 @import url("../js/library/swiper/swiper-bundle-min.css");
 
 // core
-@import "./core/animation";
-@import "./core/base";
 @import "./core/mixin";
+@import "./core/base";
 @import "./core/reset";
 @import "./core/variable";
+@import "./core/animation";
 
 // component
 @import "./component/banner";
+@import "./component/breadcumb";
 @import "./component/footer";
 @import "./component/header";
 @import "./component/scrollTop";
 
 // layout
 @import "./layout/contact";
+@import "./layout/detail";
 @import "./layout/news";

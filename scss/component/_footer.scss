@@ -30,14 +30,8 @@
       gap: 1.5rem;
       @include flex-al;
       a {
-        transition: 0.4s ease-in-out;
         display: inline-block;
         @include sqr(4rem);
-        @include min(1201px) {
-          &:hover {
-            transform: translateY(-1.2rem);
-          }
-        }
       }
     }
   }
@@ -76,20 +70,20 @@
           @include min(1201px) {
             &:hover {
               h2 {
-                color: $color-first;
+                color: $color-second;
               }
               a[href] {
-                color: $color-first;
+                color: $color-second;
                 &.dot {
                   &::before {
-                    background: $color-first;
+                    background: $color-second;
                   }
                 }
               }
             }
           }
           h2 {
-            color: #544837;
+            color: $color-six;
             font-size: 1.8rem;
             font-weight: 600;
             line-height: 2.2rem;
@@ -175,10 +169,10 @@
           @include min(1201px) {
             &:hover {
               a[href] {
-                color: $color-first;
+                color: $color-second;
                 &.dot {
                   &::before {
-                    background: $color-first;
+                    background: $color-second;
                   }
                 }
               }
