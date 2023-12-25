@@ -332,8 +332,9 @@ table {
 }
 
 .box-tag {
-  gap: 1.5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -348,7 +349,6 @@ table {
 .tag {
   display: block;
   font-weight: 500;
-  width: -moz-fit-content;
   width: fit-content;
   color: #174ae6;
   line-height: 2.2rem;
@@ -367,7 +367,6 @@ table {
   display: block;
   font-weight: 500;
   font-size: 1.2rem;
-  width: -moz-fit-content;
   width: fit-content;
   color: #858585;
   line-height: 2.2rem;
@@ -437,8 +436,49 @@ table {
     transform: translate3d(0, 0, 0);
   }
 }
+.bn {
+  height: 100%;
+}
 .bn-home {
   position: relative;
+}
+
+.fullScreen {
+  z-index: 3;
+  position: relative;
+  height: calc(100vh - 7rem);
+}
+.fullScreen .bn-home {
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.fullScreen .bn-home:before {
+  content: "";
+  width: 100%;
+  display: block;
+  padding-top: calc(56.25% - 20rem);
+}
+.fullScreen .bn-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+}
+.fullScreen .bn-background img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .haftScreen .bn-background {
@@ -453,6 +493,7 @@ table {
   height: 100%;
 }
 .haftScreen .bn-flex {
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -465,11 +506,11 @@ table {
 }
 
 .news .bn-block {
-  padding: 10rem 0;
+  padding: 8rem 0;
 }
 @media screen and (max-width: 767px) {
   .news .bn-block {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
 }
 .news .bn-content {
@@ -510,6 +551,7 @@ table {
 }
 .breadcumb-wrap ul {
   overflow: auto hidden;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -561,6 +603,7 @@ table {
 
 .ft-top {
   padding-top: 6rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -584,6 +627,7 @@ table {
 }
 .ft-top-cl {
   flex-wrap: nowrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -604,6 +648,7 @@ table {
 }
 .ft-top-social {
   gap: 1.5rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -621,6 +666,7 @@ table {
   margin: 0 -2rem;
   row-gap: 4rem;
   flex-wrap: wrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -707,8 +753,7 @@ table {
   height: 5.2rem;
 }
 .ft-center-img img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .ft-bottom-wrap {
   padding: 1rem 0;
@@ -726,6 +771,7 @@ table {
 }
 .ft-bottom-policy ul {
   gap: 6rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -779,6 +825,7 @@ table {
   }
 }
 .hd-wrap {
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -822,6 +869,7 @@ table {
     overflow: hidden auto;
     box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
     flex-direction: column;
+    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -871,6 +919,7 @@ table {
 }
 .hd .menu-list {
   margin: 0 -2.5rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -892,6 +941,7 @@ table {
   position: relative;
 }
 .hd .menu-item:nth-child(7) > a {
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1015,6 +1065,7 @@ table {
     margin: 0;
     padding: 0.5rem;
     position: absolute;
+    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -1077,6 +1128,7 @@ table {
   left: -100%;
   padding: 4rem 2rem;
   min-width: 76rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1152,6 +1204,7 @@ table {
 }
 .hd .mega-item-inner {
   margin: 0 -0.5rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1278,7 +1331,7 @@ table {
 .hd .submenu {
   left: 0;
   padding: 2rem;
-  min-width: 25rem;
+  min-width: 27rem;
 }
 @media screen and (max-width: 1200px) {
   .hd .submenu {
@@ -1299,6 +1352,7 @@ table {
 }
 .hd .submenu-item-inner {
   margin: 0 -0.5rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1501,6 +1555,7 @@ table {
   border-top: 0.1rem dashed #a1a1a1;
   border-bottom: 0.1rem dashed #a1a1a1;
   flex-direction: column;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1514,6 +1569,7 @@ table {
 .contact-office-wrap ul {
   margin: 0 -1rem;
   flex-wrap: wrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1592,6 +1648,7 @@ table {
 }
 .contact-infomation-box {
   margin: 0 -2rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1629,6 +1686,7 @@ table {
   border-radius: 1rem;
   flex-direction: column;
   box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1650,6 +1708,7 @@ table {
   }
 }
 .form-contact > a {
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1662,6 +1721,7 @@ table {
   position: relative;
   line-height: 2.4rem;
   transition: 0.4s ease-in-out;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1782,11 +1842,12 @@ table {
 }
 @media screen and (max-width: 1200px) {
   .detail {
-    padding: 4rem 0;
+    padding: 2rem 0 4rem 0;
   }
 }
 .detail-wrap {
   margin: 0 -2rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1795,6 +1856,12 @@ table {
 @media screen and (max-width: 1200px) {
   .detail-wrap {
     margin: 0 -1rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .detail-wrap {
+    row-gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 .detail-column {
@@ -1808,8 +1875,18 @@ table {
 .detail-column:nth-child(1) {
   width: 70%;
 }
+@media screen and (max-width: 991px) {
+  .detail-column:nth-child(1) {
+    width: 100%;
+  }
+}
 .detail-column:nth-child(2) {
   width: 30%;
+}
+@media screen and (max-width: 991px) {
+  .detail-column:nth-child(2) {
+    width: 100%;
+  }
 }
 .detail-content h1 {
   color: #544837;
@@ -1824,7 +1901,14 @@ table {
     line-height: 4rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .detail-content h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
 .detail-content p {
+  display: block;
   color: #544837;
   margin-bottom: 2rem;
   line-height: 2.2rem;
@@ -1873,6 +1957,7 @@ table {
 }
 .detail-table-box {
   margin-bottom: 1rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1908,8 +1993,7 @@ table {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .detail-box span {
   display: block;
@@ -1923,6 +2007,7 @@ table {
   margin-bottom: 2rem;
   border-top: 0.1rem solid #cfcfcf;
   border-bottom: 0.1rem solid #cfcfcf;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1939,6 +2024,7 @@ table {
 }
 .detail-social-link {
   gap: 2rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1954,6 +2040,7 @@ table {
 .detail-hashtag {
   row-gap: 1rem;
   flex-wrap: wrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1972,7 +2059,7 @@ table {
   margin-right: 1rem;
 }
 .detail-sticky {
-  top: 4rem;
+  top: 10rem;
   position: sticky;
 }
 .detail .search-form {
@@ -2000,12 +2087,6 @@ table {
   font-size: 1.6rem;
   color: #9a9a9a;
   cursor: pointer;
-}
-.detail-search input::-moz-placeholder {
-  line-height: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #9a9a9a;
 }
 .detail-search input::placeholder {
   line-height: normal;
@@ -2049,6 +2130,10 @@ table {
   line-height: 2rem;
   margin-bottom: 1.5rem;
   transition: 0.4s ease-in-out;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media screen and (min-width: 1201px) {
   .detail-sub-item h4:hover {
@@ -2074,6 +2159,7 @@ table {
   width: 4rem;
   height: 4rem;
   border-radius: 999px;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2143,6 +2229,7 @@ table {
 .share-tab {
   margin: 0 -5rem;
   padding: 2rem 0;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2246,6 +2333,7 @@ table {
 .share-box {
   margin: 0 -2rem;
   flex-wrap: wrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2302,6 +2390,7 @@ table {
   border-radius: 1rem;
   flex-direction: column;
   background: #fff;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2323,6 +2412,7 @@ table {
 @media screen and (max-width: 950px) {
   .share-box-list {
     flex-wrap: wrap;
+    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -2332,6 +2422,7 @@ table {
 .share-box-item {
   margin: 0 -0.75rem;
   padding-bottom: 2.5rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2392,8 +2483,7 @@ table {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .share-box-infomation {
   width: 60%;
@@ -2432,6 +2522,7 @@ table {
   border-radius: 1rem;
   flex-direction: column;
   background: #fff;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2455,12 +2546,12 @@ table {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .share-card-infomation {
   padding: 2rem;
   flex-direction: column;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2588,13 +2679,13 @@ table {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .new-list {
   margin: 0 -2rem;
   margin-bottom: -4rem;
   flex-wrap: wrap;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2632,6 +2723,7 @@ table {
   border-radius: 1rem;
   flex-direction: column;
   background: #fff;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2688,6 +2780,7 @@ table {
 }
 .new-pagination ul {
   margin: 0 -0.5rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2724,6 +2817,7 @@ table {
   border: 0.1rem solid #d9d9d9;
   width: 3.4rem;
   height: 3.4rem;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2742,4 +2836,4 @@ table {
 }
 .new-pagination ul li .ic::before {
   transition: 0.4s ease-in-out;
-}
+}/*# sourceMappingURL=style.css.map */

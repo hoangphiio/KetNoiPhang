@@ -1,13 +1,17 @@
 .detail {
   padding: 4rem 0 6rem 0;
-  @include max(1200px){
-    padding: 4rem 0;
+  @include max(1200px) {
+    padding: 2rem 0 4rem 0;
   }
   &-wrap {
     margin: 0 -2rem;
     @include flex;
-    @include max(1200px){
+    @include max(1200px) {
       margin: 0 -1rem;
+    }
+    @include max(991px) {
+      row-gap: 2rem;
+      flex-wrap: wrap;
     }
   }
   &-column {
@@ -17,9 +21,15 @@
     }
     &:nth-child(1) {
       width: 70%;
+      @include max(991px) {
+        width: 100%;
+      }
     }
     &:nth-child(2) {
       width: 30%;
+      @include max(991px) {
+        width: 100%;
+      }
     }
   }
   &-content {
@@ -29,12 +39,17 @@
       font-weight: 700;
       line-height: 4rem;
       margin-bottom: 2rem;
-      @include max(1200px){
+      @include max(1200px) {
         font-size: 2.8rem;
         line-height: 4rem;
       }
+      @include max(767px) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
     }
     p {
+      display: block;
       color: $color-six;
       margin-bottom: 2rem;
       line-height: 2.2rem;
@@ -47,13 +62,13 @@
     }
     .tag {
       font-size: 1.8rem;
-      @include max(1200px){
+      @include max(1200px) {
         font-size: 1.4rem;
       }
     }
     .time {
       font-size: 1.6rem;
-      @include max(1200px){
+      @include max(1200px) {
         font-size: 1.4rem;
       }
     }
@@ -151,7 +166,7 @@
     }
   }
   &-sticky {
-    top: 4rem;
+    top: 10rem;
     position: sticky;
   }
   .search-form {
@@ -223,6 +238,7 @@
         line-height: 2rem;
         margin-bottom: 1.5rem;
         transition: 0.4s ease-in-out;
+        @include lc(3);
         @include min(1201px) {
           &:hover {
             color: $color-second;
