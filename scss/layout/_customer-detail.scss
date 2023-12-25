@@ -1,0 +1,12 @@
+.customer-detail {
+  .detail {
+    &-wrap {
+      margin: 0;
+      flex-direction: column;
+    }
+  }
+
+  .customer {
+    background: #eef6ff;
+  }
+}

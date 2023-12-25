@@ -53,6 +53,7 @@
       color: $color-six;
       margin-bottom: 2rem;
       line-height: 2.2rem;
+      text-align: justify;
       span {
         font-weight: 700;
       }
@@ -98,6 +99,7 @@
       margin-bottom: 1rem;
       @include flex-al;
       span {
+        line-height: normal;
         &:nth-child(1) {
           font-weight: 600;
           font-size: 1.6rem;
@@ -106,6 +108,7 @@
         &:nth-child(2) {
           font-size: 1.2rem;
           color: $color-second;
+          cursor: pointer;
         }
       }
     }
@@ -160,6 +163,12 @@
       color: $color-seven;
       padding: 0.5rem 1rem;
       background: #f1f1f1;
+      transition: 0.4s ease-in-out;
+      @include min(1201px) {
+        &:hover {
+          color: $color-second;
+        }
+      }
       &:not(:last-child) {
         margin-right: 1rem;
       }

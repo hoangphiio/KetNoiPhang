@@ -442,6 +442,8 @@
   }
   &-content {
     padding: 2rem;
+    flex-direction: column;
+    @include flex;
     a {
       > * {
         &:not(:last-child) {
@@ -471,6 +473,15 @@
       @include max(550px) {
         min-height: auto;
       }
+    }
+  }
+  &-link {
+    margin: 0 auto;
+    margin-top: auto;
+    max-width: 15rem;
+    margin-top: auto;
+    a {
+      padding: 1rem;
     }
   }
   &-pagination {

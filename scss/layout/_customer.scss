@@ -1,0 +1,60 @@
+.customer {
+  .new {
+    &-content {
+      background: #f8f8f8;
+      > a {
+        margin-bottom: 1.5rem;
+      }
+      h4 {
+        min-height: 6rem;
+        @include lc(3);
+      }
+    }
+    &-img {
+      a {
+        padding-top: calc((200 / 330) * 100%);
+      }
+    }
+  }
+}
+
+.partner {
+  background: #eef6ff;
+  &-title {
+    margin-bottom: 4rem;
+    @include max(1200px) {
+      margin-bottom: 2rem;
+    }
+    .title {
+      color: $color-first;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+  }
+  &-logo {
+    margin: 0 -2rem;
+    margin-bottom: -4rem;
+    flex-wrap: wrap;
+    @include flex-al;
+    @include max(1200px) {
+      margin: 0 -1rem;
+      margin-bottom: -2rem;
+    }
+    > div {
+      padding: 0 2rem;
+      padding-bottom: 4rem;
+      width: calc(100% / 4);
+      @include max(1200px) {
+        padding: 0 1rem;
+        padding-bottom: 2rem;
+      }
+      @include max(767px) {
+        width: calc(100% / 3);
+      }
+      @include max(500px) {
+        width: calc(100% / 2);
+      }
+    }
+  }
+}
