@@ -3,12 +3,20 @@
   @include max(1200px) {
     padding-top: 2rem;
   }
+  @include max(767px) {
+    padding: 1rem 0;
+    border-top: 0.1rem solid #cfcfcf;
+    border-bottom: 0.1rem solid #cfcfcf;
+  }
   &-wrap {
     ul {
       overflow: auto hidden;
       @include flex-al;
       li {
         position: relative;
+        @include max(1200px) {
+          @include flex-al;
+        }
         &:not(:last-child) {
           &::after {
             content: "/";
@@ -36,6 +44,9 @@
           transition: 0.4s ease-in-out;
           @include max(1200px) {
             font-size: 1.6rem;
+          }
+          @include max(767px) {
+            font-size: 1.4rem;
           }
           &.selected {
             color: $color-second;

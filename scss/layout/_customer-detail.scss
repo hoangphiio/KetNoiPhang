@@ -4,6 +4,44 @@
       margin: 0;
       flex-direction: column;
     }
+    &-content {
+      margin-bottom: -2rem;
+      p {
+        &.img {
+          @include flex-al;
+          @include max(767px) {
+            row-gap: 1rem;
+            flex-wrap: wrap;
+          }
+          img {
+            width: 20.6rem;
+            height: 3rem;
+            object-fit: contain;
+          }
+        }
+        &.text {
+          &-title {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 2.8rem;
+            @include max(1200px) {
+              font-size: 1.8rem;
+              line-height: normal;
+            }
+          }
+        }
+      }
+      ul {
+        margin-bottom: 2rem;
+        padding-left: 4rem;
+        list-style-type: disc;
+        li {
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
   }
 
   .customer {

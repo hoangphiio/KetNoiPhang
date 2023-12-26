@@ -44,7 +44,7 @@
         line-height: 4rem;
       }
       @include max(767px) {
-        font-size: 2.4rem;
+        font-size: 2rem;
         line-height: 3rem;
       }
     }
@@ -78,7 +78,7 @@
       font-weight: 600;
     }
     .text {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     .link {
       display: block;

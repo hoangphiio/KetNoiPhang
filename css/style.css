@@ -199,10 +199,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
 ol,
 ul {
   list-style: none;
@@ -684,6 +680,13 @@ table {
     padding-top: 2rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .breadcumb {
+    padding: 1rem 0;
+    border-top: 0.1rem solid #cfcfcf;
+    border-bottom: 0.1rem solid #cfcfcf;
+  }
+}
 .breadcumb-wrap ul {
   overflow: auto hidden;
   display: -moz-flex;
@@ -696,6 +699,17 @@ table {
 }
 .breadcumb-wrap ul li {
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .breadcumb-wrap ul li {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }
 }
 .breadcumb-wrap ul li:not(:last-child)::after {
   content: "/";
@@ -724,6 +738,11 @@ table {
 @media screen and (max-width: 1200px) {
   .breadcumb-wrap ul li a {
     font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .breadcumb-wrap ul li a {
+    font-size: 1.4rem;
   }
 }
 .breadcumb-wrap ul li a.selected {
@@ -1131,7 +1150,7 @@ table {
   .hd .menu-item.dropdown::before {
     content: "";
     left: 0;
-    bottom: -2.8rem;
+    bottom: -2.4rem;
     width: 100%;
     height: 2.6rem;
     position: absolute;
@@ -1156,7 +1175,7 @@ table {
   left: 0;
   right: 0;
   width: 0;
-  bottom: -3rem;
+  bottom: -2.6rem;
   margin: auto;
   height: 0.4rem;
   position: absolute;
@@ -1235,7 +1254,7 @@ table {
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .hd .submobile {
-  top: 4rem;
+  top: 4.2rem;
   background: #fff;
   position: absolute;
   border-top: 0.4rem solid #28b0ff;
@@ -1957,6 +1976,51 @@ table {
   margin: 0;
   flex-direction: column;
 }
+.customer-detail .detail-content {
+  margin-bottom: -2rem;
+}
+.customer-detail .detail-content p.img {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .customer-detail .detail-content p.img {
+    row-gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+.customer-detail .detail-content p.img img {
+  width: 20.6rem;
+  height: 3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.customer-detail .detail-content p.text-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+@media screen and (max-width: 1200px) {
+  .customer-detail .detail-content p.text-title {
+    font-size: 1.8rem;
+    line-height: normal;
+  }
+}
+.customer-detail .detail-content ul {
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  list-style-type: disc;
+}
+.customer-detail .detail-content ul li {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
 .customer-detail .customer {
   background: #eef6ff;
 }
@@ -2035,6 +2099,125 @@ table {
   }
 }
 
+.introduce .text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: justify;
+}
+.introduce .text:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.introduce .text a {
+  margin: 0;
+  display: inline-block;
+}
+.introduce .title {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.introduce .link {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  line-height: 2.4rem;
+}
+.introduce .link span {
+  font-weight: 600;
+  color: #28b0ff;
+}
+.introduce-wrap {
+  margin: 0 -2rem;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.introduce-column {
+  padding: 0 2rem;
+}
+.introduce-column:nth-child(1) {
+  width: 20%;
+}
+.introduce-column:nth-child(2) {
+  width: 80%;
+}
+.introduce .link-list {
+  margin-bottom: -2rem;
+  flex-direction: column;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.introduce .link-item {
+  padding-bottom: 2rem;
+}
+.introduce .link-item a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  transition: 0.4s ease-in-out;
+}
+@media screen and (min-width: 1201px) {
+  .introduce .link-item a:hover {
+    color: #28b0ff;
+  }
+}
+.introduce .link-item a.selected {
+  font-weight: 600;
+  color: #28b0ff;
+}
+.introduce-infomation {
+  padding-bottom: 4rem;
+}
+.introduce-content {
+  margin-bottom: -4rem;
+}
+.introduce-content-list {
+  margin: 0 -2rem;
+  padding-bottom: 4rem;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.introduce-content-list.flex-reserve {
+  flex-direction: row-reverse;
+}
+.introduce-content-list.content-img {
+  flex-direction: column;
+}
+.introduce-content-list.content-img > div {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding-top: 44.7368421053%;
+}
+.introduce-content-list.content-img > div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.introduce-content-column {
+  padding: 0 2rem;
+}
+.introduce-content-column:nth-child(1) {
+  width: 40%;
+}
+.introduce-content-column:nth-child(2) {
+  width: 60%;
+}
+
+.policy .introduce-infomation {
+  padding-bottom: 0;
+}
+
 .detail {
   padding: 4rem 0 6rem 0;
 }
@@ -2100,7 +2283,7 @@ table {
 }
 @media screen and (max-width: 767px) {
   .detail-content h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 3rem;
   }
 }
@@ -2138,7 +2321,7 @@ table {
   font-weight: 600;
 }
 .detail-content .text {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .detail-content .link {
   display: block;
@@ -3057,6 +3240,51 @@ table {
 .customer-detail .detail-wrap {
   margin: 0;
   flex-direction: column;
+}
+.customer-detail .detail-content {
+  margin-bottom: -2rem;
+}
+.customer-detail .detail-content p.img {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .customer-detail .detail-content p.img {
+    row-gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+.customer-detail .detail-content p.img img {
+  width: 20.6rem;
+  height: 3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.customer-detail .detail-content p.text-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+@media screen and (max-width: 1200px) {
+  .customer-detail .detail-content p.text-title {
+    font-size: 1.8rem;
+    line-height: normal;
+  }
+}
+.customer-detail .detail-content ul {
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  list-style-type: disc;
+}
+.customer-detail .detail-content ul li {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 .customer-detail .customer {
   background: #eef6ff;
