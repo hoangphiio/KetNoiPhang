@@ -627,6 +627,14 @@ table {
   position: absolute;
   transform: translate(-50%, -50%);
 }
+.haftScreen .bn-block {
+  padding: 10rem 0;
+}
+@media screen and (max-width: 767px) {
+  .haftScreen .bn-block {
+    padding: 5rem 0;
+  }
+}
 .haftScreen .bn-flex {
   display: -moz-flex;
   display: -ms-flex;
@@ -658,6 +666,19 @@ table {
   padding: 0 1rem;
   width: 50%;
 }
+.home .connect .bn-content {
+  margin: 0;
+}
+.home .connect .bn-content h2 {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 300;
+  line-height: 4.6rem;
+  color: #fff;
+}
+.home .connect .bn-content h2 span {
+  font-weight: 700;
+}
 
 .customers .bn-content {
   flex-direction: column;
@@ -684,14 +705,6 @@ table {
   }
 }
 
-.news .bn-block {
-  padding: 8rem 0;
-}
-@media screen and (max-width: 767px) {
-  .news .bn-block {
-    padding: 4rem 0;
-  }
-}
 .news .bn-content {
   text-align: center;
 }
