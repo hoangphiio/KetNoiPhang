@@ -1,7 +1,7 @@
 export default function toggleButton() {
   $(document).ready(function () {
-    var $showBtn = $("#show");
-    var $toggleBtn = $(".toggle-button");
+    const $showBtn = $("#show");
+    const $toggleBtn = $(".toggle-button");
 
     $showBtn.click(function () {
       $toggleBtn.slideToggle("flow");

@@ -1,8 +1,8 @@
 export default function scrollTopModule() {
-  var basicScrollTop = function () {
-    var btnTop = document.querySelector("#scrollTop");
+  const scrollTop = () => {
+    const btnTop = document.querySelector("#scrollTop");
 
-    var btnReveal = function () {
+    const btnReveal = () => {
       if (window.scrollY >= 100) {
         btnTop.classList.add("active");
       } else {
@@ -10,8 +10,23 @@ export default function scrollTopModule() {
       }
     };
 
-    // Listeners
-    window.addEventListener("scroll", btnReveal);
+    const throttledScroll = () => {
+      let ticking = false;
+
+      return () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            btnReveal();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+    };
+
+    const optimizedScroll = throttledScroll();
+    window.addEventListener("scroll", optimizedScroll);
   };
-  basicScrollTop();
+
+  scrollTop();
 }

@@ -4,12 +4,19 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     text-align: justify;
+    @include max(1200px) {
+      font-size: 1.4rem;
+      text-align: left;
+    }
     &:not(:last-child) {
       margin-bottom: 2rem;
     }
     a {
       margin: 0;
       display: inline-block;
+    }
+    span {
+      font-weight: 600;
     }
   }
   .title {
@@ -21,9 +28,18 @@
     font-size: 1.6rem;
     margin-bottom: 2rem;
     line-height: 2.4rem;
+    @include max(1200px) {
+      font-size: 1.4rem;
+    }
     span {
       font-weight: 600;
       color: $color-second;
+    }
+  }
+  .dot {
+    &::before {
+      top: 1rem;
+      bottom: unset;
     }
   }
   .number {
@@ -41,6 +57,14 @@
       background: rgba(40, 176, 255, 0.5);
       border-radius: 51% 49% 57% 43% / 59% 29% 71% 41%;
     }
+    &-three {
+      background: #ffc10780;
+      border-radius: 42% 58% 51% 49% / 52% 21% 79% 48%;
+    }
+    &-four {
+      background: #6989f780;
+      border-radius: 36% 64% 33% 67% / 27% 43% 57% 73%;
+    }
   }
   .table {
     width: 100%;
@@ -53,6 +77,13 @@
         line-height: 2.4rem;
         padding-bottom: 2rem;
         text-align: justify;
+        @include max(1200px) {
+          font-size: 1.4rem;
+          text-align: left;
+        }
+        @include max(767px) {
+          display: block;
+        }
         &:nth-child(1) {
           font-weight: 600;
           padding-right: 2rem;
@@ -63,23 +94,55 @@
   &-wrap {
     margin: 0 -2rem;
     @include flex;
+    @include max(1200px) {
+      margin: 0 -1rem;
+    }
+    @include max(991px) {
+      margin: 0;
+      row-gap: 2rem;
+      flex-wrap: wrap;
+    }
   }
   &-column {
     padding: 0 2rem;
+    @include max(1200px) {
+      padding: 0 1rem;
+    }
+    @include max(991px) {
+      padding: 0;
+    }
     &:nth-child(1) {
       width: 20%;
+      @include max(991px) {
+        width: 100%;
+      }
     }
     &:nth-child(2) {
       width: 80%;
+      @include max(991px) {
+        width: 100%;
+      }
     }
   }
   .link-list {
     margin-bottom: -2rem;
     flex-direction: column;
     @include flex;
+    @include max(991px) {
+      gap: 4rem;
+      padding: 2rem 0;
+      margin-bottom: 0;
+      overflow: auto hidden;
+      flex-direction: initial;
+      border-top: 0.1rem solid #cfcfcf;
+      border-bottom: 0.1rem solid #cfcfcf;
+    }
   }
   .link-item {
     padding-bottom: 2rem;
+    @include max(991px) {
+      padding-bottom: 0;
+    }
     a {
       font-size: 1.6rem;
       font-weight: 400;
@@ -90,10 +153,21 @@
           color: $color-second;
         }
       }
+      @include max(991px) {
+        font-size: 1.4rem;
+        white-space: nowrap;
+      }
       &.selected {
         font-weight: 600;
         color: $color-second;
       }
+    }
+  }
+  &-link {
+    top: 10rem;
+    position: sticky;
+    @include max(991px) {
+      position: static;
     }
   }
   &-infomation {
@@ -103,14 +177,30 @@
   }
   &-content {
     margin-bottom: -4rem;
+    @include max(767px){
+      margin-bottom: 0;
+    }
     &-list {
       margin: 0 -2rem;
       padding-bottom: 4rem;
-      @include flex;
+      @include flex-al;
+      @include max(1200px) {
+        margin: 0 -1rem;
+      }
+      @include max(767px) {
+        row-gap: 2rem;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+      }
       &.flex-reserve {
         flex-direction: row-reverse;
+        @include max(767px) {
+          row-gap: 2rem;
+          flex-direction: column-reverse;
+        }
       }
       &.content-img {
+        align-items: normal;
         flex-direction: column;
         > div {
           display: block;
@@ -125,11 +215,20 @@
     }
     &-column {
       padding: 0 2rem;
+      @include max(1200px) {
+        padding: 0 1rem;
+      }
       &:nth-child(1) {
         width: 40%;
+        @include max(767px) {
+          width: 100%;
+        }
       }
       &:nth-child(2) {
         width: 60%;
+        @include max(767px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -149,6 +248,20 @@
       &:nth-child(3),
       &:nth-child(5) {
         margin-top: 2rem;
+      }
+    }
+    &-box {
+      &:nth-child(6) {
+        .text.dot {
+          margin-bottom: 2rem;
+        }
+      }
+      &:nth-child(8) {
+        .text.dot {
+          &:last-child {
+            margin-bottom: 2rem;
+          }
+        }
       }
     }
   }

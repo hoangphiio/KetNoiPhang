@@ -3,7 +3,6 @@
 }
 
 .share {
-  background: #eef6ff;
   .button-swiper {
     top: 30%;
     z-index: 3;
@@ -482,6 +481,39 @@
     margin-top: auto;
     a {
       padding: 1rem;
+    }
+  }
+  &-all {
+    a {
+      margin-top: 4rem;
+      text-align: right;
+      color: $color-ten;
+      justify-content: flex-end;
+      @include flex-al;
+      @include min(1201px) {
+        &:hover {
+          i {
+            transform: translateX(0.5rem);
+          }
+          span {
+            color: #335fb3;
+          }
+        }
+      }
+      @include max(1200px) {
+        margin-top: 3rem;
+      }
+      i {
+        transition: 0.4s ease-in-out;
+        &::before {
+          font-size: 1.8rem;
+        }
+      }
+      span {
+        margin-left: 1rem;
+        font-size: 1.6rem;
+        transition: 0.4s ease-in-out;
+      }
     }
   }
   &-pagination {

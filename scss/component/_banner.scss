@@ -30,8 +30,39 @@
         @include max(1200px) {
           padding-top: 56.25%;
         }
-        @include max(767px){
+        @include max(767px) {
           padding-top: 60%;
+        }
+      }
+    }
+    &-title {
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+        color: $color-twelve;
+        @include max(1200px) {
+          line-height: normal;
+        }
+        @include max(991px) {
+          font-size: 3rem;
+        }
+        @include max(500px) {
+          font-size: 2.4rem;
+        }
+        @include max(400px) {
+          font-size: 2rem;
+        }
+      }
+      h2 {
+        font-weight: 400;
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        line-height: 3.6rem;
+        color: $color-thirteen;
+        span {
+          font-weight: 600;
         }
       }
     }
@@ -58,8 +89,7 @@
     &-content {
       height: 100%;
       position: relative;
-      justify-content: space-around;
-      @include flex-al;
+      @include flex-ct;
     }
 
     &-img {
@@ -90,10 +120,38 @@
   }
 }
 
+.home {
+  .bn {
+    &-content {
+      margin: 0 -1rem;
+    }
+    &-img {
+      img {
+        object-fit: contain;
+      }
+    }
+    &-title {
+      img {
+        width: 24rem;
+        height: 4rem;
+        margin-bottom: 2rem;
+      }
+      .new-link{
+        max-width: 26rem;
+      }
+    }
+    &-column {
+      padding: 0 1rem;
+      width: calc(100% / 2);
+    }
+  }
+}
+
 .customers {
   .bn {
     &-content {
       flex-direction: column;
+      justify-content: space-around;
     }
     &-title {
       margin: 0 auto;
@@ -102,24 +160,7 @@
         max-width: 80rem;
       }
       h1 {
-        font-size: 5rem;
-        font-weight: 700;
-        line-height: 6rem;
         text-align: center;
-        color: $color-twelve;
-        @include max(1200px) {
-          font-size: 4rem;
-          line-height: normal;
-        }
-        @include max(991px) {
-          font-size: 3rem;
-        }
-        @include max(500px) {
-          font-size: 2.4rem;
-        }
-        @include max(400px){
-          font-size: 2rem;
-        }
       }
     }
     &-column {
