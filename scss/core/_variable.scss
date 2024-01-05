@@ -43,9 +43,6 @@ $color-black: #000;
 
 .section-title {
   margin-bottom: 4rem;
-  @include max(1200px) {
-    margin-bottom: 2rem;
-  }
   .title {
     color: $color-eight;
     text-align: center;
