@@ -62,6 +62,9 @@ img {
   max-width: 100%;
   transition: 0.6s ease-in-out;
 }
+img:focus-visible {
+  outline: 0;
+}
 
 .container {
   position: relative;
@@ -624,6 +627,11 @@ table {
   justify-content: center;
   -webkit-justify-content: center;
 }
+@media screen and (max-width: 695px) {
+  .fullScreen .bn-content {
+    gap: 1.2rem;
+  }
+}
 .fullScreen .bn-img {
   z-index: 1;
   overflow: hidden;
@@ -700,7 +708,6 @@ table {
 @media screen and (max-width: 695px) {
   .home .bn-content {
     margin: 0;
-    gap: 1.2rem;
     flex-direction: column;
   }
 }
@@ -755,6 +762,11 @@ table {
 .home .connect .bn-content {
   margin: 0;
   text-align: center;
+  flex-direction: column;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
 }
 .home .connect .bn-content h2 {
   max-width: 85rem;
