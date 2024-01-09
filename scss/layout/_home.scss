@@ -14,10 +14,13 @@
       margin: 0 -0.5rem;
       margin-bottom: -1rem;
     }
-    @include max(991px) {
+    @include max(820px) {
       grid-template-rows:
         calc(100% / 4) calc(100% / 4)
         calc(100% / 4) calc(100% / 4);
+    }
+    @include max(767px) {
+      display: block;
     }
   }
   &-item {
@@ -101,6 +104,14 @@
       @include max(1080px) {
         flex-direction: row;
       }
+      @include max(450px) {
+        gap: 1rem;
+        flex-direction: column-reverse;
+      }
+    }
+    @include max(450px) {
+      gap: 1rem;
+      flex-direction: column-reverse;
     }
     &.flex-column {
       gap: 2rem;
@@ -109,11 +120,19 @@
         gap: 0;
         flex-direction: unset;
       }
+      @include max(450px) {
+        gap: 1rem;
+        flex-direction: column-reverse;
+      }
       &-reverse {
         justify-content: flex-end;
         flex-direction: column-reverse;
         @include max(1080px) {
           flex-direction: unset;
+        }
+        @include max(450px) {
+          gap: 1rem;
+          flex-direction: column-reverse;
         }
       }
       .space-column {
@@ -126,6 +145,9 @@
           @include max(767px) {
             width: 50%;
           }
+          @include max(450px) {
+            width: 80%;
+          }
         }
         &:nth-child(2) {
           @include max(991px) {
@@ -133,6 +155,9 @@
           }
           @include max(767px) {
             width: 50%;
+          }
+          @include max(450px) {
+            width: 100%;
           }
         }
         @include max(1080px) {
@@ -147,12 +172,18 @@
     @include max(1080px) {
       padding: 0 0.5rem;
     }
+    @include max(450px) {
+      padding: 0;
+    }
     &:nth-child(1) {
       @include max(991px) {
         width: 40%;
       }
       @include max(767px) {
         width: 50%;
+      }
+      @include max(450px) {
+        width: 80%;
       }
     }
     &:nth-child(2) {
@@ -161,6 +192,9 @@
       }
       @include max(767px) {
         width: 50%;
+      }
+      @include max(450px) {
+        width: 100%;
       }
     }
   }

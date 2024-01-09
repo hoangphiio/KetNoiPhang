@@ -1,7 +1,6 @@
 .bn {
   z-index: 3;
   height: 100%;
-  overflow: hidden;
   position: relative;
   &-home {
     height: 100%;
@@ -30,9 +29,6 @@
         @include max(1200px) {
           padding-top: 56.25%;
         }
-        @include max(767px) {
-          padding-top: 60%;
-        }
       }
     }
     &-title {
@@ -48,11 +44,12 @@
         @include max(991px) {
           font-size: 3rem;
         }
-        @include max(500px) {
-          font-size: 2.4rem;
-        }
-        @include max(400px) {
+        @include max(767px) {
           font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        @include max(580px) {
+          font-size: 1.8rem;
         }
       }
       h2 {
@@ -61,6 +58,19 @@
         margin-bottom: 2rem;
         line-height: 3.6rem;
         color: $color-thirteen;
+        @include max(1200px) {
+          line-height: normal;
+        }
+        @include max(991px) {
+          font-size: 2rem;
+        }
+        @include max(767px) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+        @include max(580px) {
+          font-size: 1.4rem;
+        }
         span {
           font-weight: 600;
         }
@@ -130,9 +140,28 @@
   .bn {
     .new-link {
       max-width: 26rem;
+      @include max(991px) {
+        max-width: 22rem;
+      }
+      @include max(767px) {
+        max-width: unset;
+        width: fit-content;
+      }
+      a {
+        @include max(767px) {
+          font-size: 1.2rem;
+        }
+      }
     }
     &-content {
       margin: 0 -1rem;
+      @include max(767px) {
+        margin: 0 -0.8rem;
+      }
+      @include max(450px) {
+        margin: 0;
+        flex-direction: column;
+      }
     }
     &-img {
       img {
@@ -144,11 +173,39 @@
         width: 24rem;
         height: 4rem;
         margin-bottom: 2rem;
+        @include max(991px) {
+          width: 16rem;
+        }
+        @include max(767px) {
+          margin-bottom: 1rem;
+        }
+        @include max(580px) {
+          display: none;
+        }
       }
     }
     &-column {
       padding: 0 1rem;
       width: calc(100% / 2);
+      @include max(767px) {
+        padding: 0 0.8rem;
+      }
+      @include max(450px) {
+        padding: 0;
+      }
+      &:nth-child(1) {
+        @include max(767px) {
+          width: 60%;
+        }
+        @include max(450px) {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        @include max(767px) {
+          width: 40%;
+        }
+      }
     }
   }
   .connect {
@@ -209,7 +266,7 @@
       }
       &-background {
         @include max(700px) {
-          filter: blur(0.2rem);
+          // filter: blur(0.2rem);
         }
       }
       &-flex {
