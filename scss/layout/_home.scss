@@ -96,9 +96,6 @@
     @include max(1080px) {
       padding: 1.9rem;
     }
-    @include max(767px) {
-      padding: 1.4rem;
-    }
     &.flex-row-reverse {
       flex-direction: row-reverse;
       @include max(1080px) {
@@ -218,6 +215,19 @@
       }
       @include max(767px) {
         font-size: 1.6rem;
+      }
+      span {
+        @include max(370px) {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+        &::after {
+          content: "-";
+          margin: 0 0.5rem;
+          @include max(370px) {
+            display: none;
+          }
+        }
       }
     }
     p {

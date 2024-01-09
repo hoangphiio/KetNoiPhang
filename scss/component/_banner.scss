@@ -1,6 +1,7 @@
 .bn {
   z-index: 3;
   height: 100%;
+  overflow: hidden;
   position: relative;
   &-home {
     height: 100%;
@@ -29,6 +30,18 @@
         @include max(1200px) {
           padding-top: 56.25%;
         }
+        @include max(695px) {
+          padding: 40%;
+        }
+        @include max(500px){
+          padding: 50%;
+        }
+        @include max(450px){
+          padding: 60%;
+        }
+        @include max(400px){
+          padding: 70%;
+        }
       }
     }
     &-title {
@@ -48,9 +61,6 @@
           font-size: 2rem;
           margin-bottom: 1rem;
         }
-        @include max(580px) {
-          font-size: 1.8rem;
-        }
       }
       h2 {
         font-weight: 400;
@@ -67,9 +77,6 @@
         @include max(767px) {
           font-size: 1.6rem;
           margin-bottom: 1rem;
-        }
-        @include max(580px) {
-          font-size: 1.4rem;
         }
         span {
           font-weight: 600;
@@ -158,8 +165,9 @@
       @include max(767px) {
         margin: 0 -0.8rem;
       }
-      @include max(450px) {
+      @include max(695px) {
         margin: 0;
+        gap: 1.2rem;
         flex-direction: column;
       }
     }
@@ -179,9 +187,6 @@
         @include max(767px) {
           margin-bottom: 1rem;
         }
-        @include max(580px) {
-          display: none;
-        }
       }
     }
     &-column {
@@ -190,20 +195,20 @@
       @include max(767px) {
         padding: 0 0.8rem;
       }
-      @include max(450px) {
+      @include max(695px) {
         padding: 0;
       }
       &:nth-child(1) {
         @include max(767px) {
           width: 60%;
         }
-        @include max(450px) {
+        @include max(695px) {
           width: 100%;
         }
       }
       &:nth-child(2) {
         @include max(767px) {
-          width: 40%;
+          width: 60%;
         }
       }
     }
@@ -266,7 +271,7 @@
       }
       &-background {
         @include max(700px) {
-          // filter: blur(0.2rem);
+          filter: blur(0.2rem);
         }
       }
       &-flex {
@@ -317,6 +322,7 @@
           }
           @include max(767px) {
             font-size: 2.4rem;
+            font-weight: 400;
           }
         }
         h3 {
