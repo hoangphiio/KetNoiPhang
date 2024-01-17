@@ -267,6 +267,11 @@ table {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1200px) {
+  .section-title .title {
+    margin-bottom: 1rem;
+  }
+}
 .section-title .subtitle {
   font-weight: 400;
   font-size: 2.4rem;
@@ -494,6 +499,9 @@ table {
   display: flex;
 }
 .bn-background img {
+  height: 100%;
+}
+.bn .swiper {
   height: 100%;
 }
 
@@ -794,6 +802,7 @@ table {
 }
 @media screen and (max-width: 767px) {
   .home .connect .bn-content .new-link {
+    width: 100%;
     max-width: 15rem;
   }
 }
@@ -828,9 +837,25 @@ table {
     padding: 6rem 0;
   }
 }
+@media screen and (max-width: 550px) {
+  .home .award .bn-block {
+    padding: 4rem 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home .award .bn-block {
+    padding: 2rem 0;
+  }
+}
 @media screen and (max-width: 700px) {
-  .home .award .bn-background {
-    filter: blur(0.2rem);
+  .home .award .bn-background::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 .home .award .bn-flex {
@@ -869,10 +894,11 @@ table {
 }
 @media screen and (max-width: 700px) {
   .home .award .bn-content {
-    padding: 2rem;
+    padding: 1rem;
+    position: relative;
     border-radius: 1rem;
     flex-direction: column;
-    box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0.8rem 1.7rem 0.2rem rgba(0, 0, 0, 0.14), 0 0.3rem 1.4rem 0.2rem rgba(0, 0, 0, 0.12), 0 0.5rem 0.5rem -0.3rem rgba(0, 0, 0, 0.2);
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -906,6 +932,11 @@ table {
     font-weight: 400;
   }
 }
+@media screen and (max-width: 550px) {
+  .home .award .bn-content h2 {
+    font-size: 1.8rem;
+  }
+}
 .home .award .bn-content h3 {
   color: #7c7c7c;
   font-size: 2.5rem;
@@ -926,7 +957,7 @@ table {
 }
 @media screen and (max-width: 991px) {
   .home .award .bn-content h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 .home .award .bn-content h3::before {
@@ -2317,7 +2348,7 @@ table {
   border-radius: 0.4rem;
   transition: 0.4s ease-in-out;
   border: 0.1rem solid #e8e8e8;
-  cursor: pointer;
+  cursor: default;
 }
 @media screen and (min-width: 1201px) {
   .form-input input:hover,
@@ -2719,6 +2750,11 @@ table {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (max-width: 370px) {
+  .space-infomation a {
+    text-align: center;
+  }
+}
 .space-infomation h2 {
   font-size: 2rem;
   font-weight: 700;
@@ -2739,8 +2775,22 @@ table {
 @media screen and (max-width: 370px) {
   .space-infomation h2 span {
     display: block;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
   }
+}
+.space-infomation h2 span.DPM {
+  color: #415086;
+}
+.space-infomation h2 span.DCM {
+  color: #ffc107;
+}
+.space-infomation h2 span.HUB {
+  color: #28b0ff;
+}
+.space-infomation h2 span.Dsign {
+  color: #00c86b;
 }
 .space-infomation h2 span::after {
   content: "-";
@@ -4009,8 +4059,18 @@ table {
   max-width: 15rem;
   margin-top: auto;
 }
+@media screen and (max-width: 767px) {
+  .new-link {
+    max-width: 12rem;
+  }
+}
 .new-link a {
   padding: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .new-link a {
+    padding: 0.8rem;
+  }
 }
 .new-all a {
   margin-top: 4rem;

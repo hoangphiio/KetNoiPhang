@@ -1,4 +1,13 @@
 export default function swiperModule() {
+  const bannerSwiper = new Swiper(".banner .swiper", {
+    loop: true,
+    slidesPerView: 1,
+    speed: 1200,
+    effect: "fade",
+    autoplay: { delay: 5000 },
+    fadeEffect: { crossFade: true },
+  });
+
   const demo = document.querySelectorAll(".gallery-slider");
 
   demo.forEach((item) => {

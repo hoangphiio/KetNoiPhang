@@ -479,8 +479,14 @@
     margin-top: auto;
     max-width: 15rem;
     margin-top: auto;
+    @include max(767px){
+      max-width: 12rem;
+    }
     a {
       padding: 1rem;
+      @include max(767px){
+        padding: 0.8rem;
+      }
     }
   }
   &-all {
