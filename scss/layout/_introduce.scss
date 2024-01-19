@@ -20,8 +20,12 @@
     }
   }
   .title {
+    font-size: 2.4rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    @include max(767px){
+      font-size: 2rem;
+    }
   }
   .link {
     display: block;
@@ -132,10 +136,9 @@
       gap: 4rem;
       padding: 2rem 0;
       margin-bottom: 0;
+      position: relative;
       overflow: auto hidden;
       flex-direction: initial;
-      border-top: 0.1rem solid #cfcfcf;
-      border-bottom: 0.1rem solid #cfcfcf;
     }
   }
   .link-item {
@@ -167,17 +170,39 @@
     top: 10rem;
     position: sticky;
     @include max(991px) {
-      position: static;
+      top: unset;
+      position: relative;
+      &::before {
+        content: "";
+        top: 0;
+        left: -1.5rem;
+        height: 0.1rem;
+        position: absolute;
+        background: #cfcfcf;
+        width: calc(100% + 3rem);
+      }
+      &::after {
+        content: "";
+        bottom: 0;
+        left: -1.5rem;
+        height: 0.1rem;
+        position: absolute;
+        background: #cfcfcf;
+        width: calc(100% + 3rem);
+      }
     }
   }
   &-infomation {
     &:not(:last-child) {
       padding-bottom: 4rem;
+      @include max(767px){
+        padding-bottom: 2rem;
+      }
     }
   }
   &-content {
     margin-bottom: -4rem;
-    @include max(767px){
+    @include max(767px) {
       margin-bottom: 0;
     }
     &-list {
@@ -190,6 +215,7 @@
       @include max(767px) {
         row-gap: 2rem;
         flex-wrap: wrap;
+        padding-bottom: 2rem;
         flex-direction: column-reverse;
       }
       &.flex-reserve {
@@ -248,18 +274,27 @@
       &:nth-child(3),
       &:nth-child(5) {
         margin-top: 2rem;
+        @include max(767px){
+          margin-bottom: 0;
+        }
       }
     }
     &-box {
       &:nth-child(6) {
         .text.dot {
           margin-bottom: 2rem;
+          @include max(767px){
+            margin-bottom: 0;
+          }
         }
       }
       &:nth-child(8) {
         .text.dot {
           &:last-child {
             margin-bottom: 2rem;
+            @include max(767px){
+              margin-bottom: 0;
+            }
           }
         }
       }

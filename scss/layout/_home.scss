@@ -28,14 +28,6 @@
     padding-bottom: 4rem;
     flex-direction: column;
     @include flex;
-    @include min(1201px) {
-      &:hover {
-        .space-box {
-          border-color: $color-second;
-          box-shadow: 0 0 0.8rem 0 #99c5f0;
-        }
-      }
-    }
     @include max(1200px) {
       padding: 0 0.8rem;
       padding-bottom: 1.6rem;
@@ -93,6 +85,19 @@
     border: 0.1rem solid transparent;
     cursor: default;
     @include flex-al;
+    @include min(1201px) {
+      &:hover {
+        border-color: $color-second;
+        box-shadow: 0 0 0.8rem 0 #99c5f0;
+        .space {
+          &-infomation {
+            h2{
+              color: $color-second;
+            }
+          }
+        }
+      }
+    }
     @include max(1080px) {
       padding: 1.9rem;
     }
@@ -214,6 +219,7 @@
       font-weight: 700;
       line-height: 3rem;
       margin-bottom: 1rem;
+      transition: 0.4s ease-in-out;
       @include max(1200px) {
         font-size: 1.8rem;
         line-height: normal;
@@ -229,16 +235,24 @@
           text-transform: uppercase;
         }
         &.DPM {
-          color: $color-thirteen;
+          @include max(767px) {
+            color: $color-thirteen;
+          }
         }
         &.DCM {
-          color: $color-four;
+          @include max(767px) {
+            color: $color-four;
+          }
         }
         &.HUB {
-          color: $color-ten;
+          @include max(767px) {
+            color: $color-ten;
+          }
         }
         &.Dsign {
-          color: $color-five;
+          @include max(767px) {
+            color: $color-five;
+          }
         }
         &::after {
           content: "-";

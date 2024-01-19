@@ -2511,12 +2511,6 @@ table {
   display: -o-flex;
   display: flex;
 }
-@media screen and (min-width: 1201px) {
-  .space-item:hover .space-box {
-    border-color: #28b0ff;
-    box-shadow: 0 0 0.8rem 0 #99c5f0;
-  }
-}
 @media screen and (max-width: 1200px) {
   .space-item {
     padding: 0 0.8rem;
@@ -2595,6 +2589,15 @@ table {
   -ms-align-items: center;
   align-items: center;
   -webkit-align-items: center;
+}
+@media screen and (min-width: 1201px) {
+  .space-box:hover {
+    border-color: #28b0ff;
+    box-shadow: 0 0 0.8rem 0 #99c5f0;
+  }
+  .space-box:hover .space-infomation h2 {
+    color: #28b0ff;
+  }
 }
 @media screen and (max-width: 1080px) {
   .space-box {
@@ -2760,6 +2763,7 @@ table {
   font-weight: 700;
   line-height: 3rem;
   margin-bottom: 1rem;
+  transition: 0.4s ease-in-out;
 }
 @media screen and (max-width: 1200px) {
   .space-infomation h2 {
@@ -2780,17 +2784,25 @@ table {
     text-transform: uppercase;
   }
 }
-.space-infomation h2 span.DPM {
-  color: #415086;
+@media screen and (max-width: 767px) {
+  .space-infomation h2 span.DPM {
+    color: #415086;
+  }
 }
-.space-infomation h2 span.DCM {
-  color: #ffc107;
+@media screen and (max-width: 767px) {
+  .space-infomation h2 span.DCM {
+    color: #ffc107;
+  }
 }
-.space-infomation h2 span.HUB {
-  color: #28b0ff;
+@media screen and (max-width: 767px) {
+  .space-infomation h2 span.HUB {
+    color: #28b0ff;
+  }
 }
-.space-infomation h2 span.Dsign {
-  color: #00c86b;
+@media screen and (max-width: 767px) {
+  .space-infomation h2 span.Dsign {
+    color: #00c86b;
+  }
 }
 .space-infomation h2 span::after {
   content: "-";
@@ -2837,8 +2849,14 @@ table {
   font-weight: 600;
 }
 .introduce .title {
+  font-size: 2.4rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .introduce .title {
+    font-size: 2rem;
+  }
 }
 .introduce .link {
   display: block;
@@ -2971,10 +2989,9 @@ table {
     gap: 4rem;
     padding: 2rem 0;
     margin-bottom: 0;
+    position: relative;
     overflow: auto hidden;
     flex-direction: initial;
-    border-top: 0.1rem solid #cfcfcf;
-    border-bottom: 0.1rem solid #cfcfcf;
   }
 }
 .introduce .link-item {
@@ -3012,11 +3029,35 @@ table {
 }
 @media screen and (max-width: 991px) {
   .introduce-link {
-    position: static;
+    top: unset;
+    position: relative;
+  }
+  .introduce-link::before {
+    content: "";
+    top: 0;
+    left: -1.5rem;
+    height: 0.1rem;
+    position: absolute;
+    background: #cfcfcf;
+    width: calc(100% + 3rem);
+  }
+  .introduce-link::after {
+    content: "";
+    bottom: 0;
+    left: -1.5rem;
+    height: 0.1rem;
+    position: absolute;
+    background: #cfcfcf;
+    width: calc(100% + 3rem);
   }
 }
 .introduce-infomation:not(:last-child) {
   padding-bottom: 4rem;
+}
+@media screen and (max-width: 767px) {
+  .introduce-infomation:not(:last-child) {
+    padding-bottom: 2rem;
+  }
 }
 .introduce-content {
   margin-bottom: -4rem;
@@ -3046,6 +3087,7 @@ table {
   .introduce-content-list {
     row-gap: 2rem;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
     flex-direction: column-reverse;
   }
 }
@@ -3110,11 +3152,26 @@ table {
 .rules .introduce-infomation:nth-child(3), .rules .introduce-infomation:nth-child(5) {
   margin-top: 2rem;
 }
+@media screen and (max-width: 767px) {
+  .rules .introduce-infomation:nth-child(3), .rules .introduce-infomation:nth-child(5) {
+    margin-bottom: 0;
+  }
+}
 .rules .introduce-box:nth-child(6) .text.dot {
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 767px) {
+  .rules .introduce-box:nth-child(6) .text.dot {
+    margin-bottom: 0;
+  }
+}
 .rules .introduce-box:nth-child(8) .text.dot:last-child {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .rules .introduce-box:nth-child(8) .text.dot:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .detail {
