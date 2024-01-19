@@ -23,7 +23,7 @@
     font-size: 2.4rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    @include max(767px){
+    @include max(767px) {
       font-size: 2rem;
     }
   }
@@ -195,7 +195,7 @@
   &-infomation {
     &:not(:last-child) {
       padding-bottom: 4rem;
-      @include max(767px){
+      @include max(767px) {
         padding-bottom: 2rem;
       }
     }
@@ -274,7 +274,7 @@
       &:nth-child(3),
       &:nth-child(5) {
         margin-top: 2rem;
-        @include max(767px){
+        @include max(767px) {
           margin-bottom: 0;
         }
       }
@@ -283,7 +283,7 @@
       &:nth-child(6) {
         .text.dot {
           margin-bottom: 2rem;
-          @include max(767px){
+          @include max(767px) {
             margin-bottom: 0;
           }
         }
@@ -292,7 +292,7 @@
         .text.dot {
           &:last-child {
             margin-bottom: 2rem;
-            @include max(767px){
+            @include max(767px) {
               margin-bottom: 0;
             }
           }
