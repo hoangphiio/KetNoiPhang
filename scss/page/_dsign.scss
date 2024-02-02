@@ -1,0 +1,93 @@
+.dsign {
+  .hd {
+    .submobile {
+      border-top-color: $color-five;
+    }
+    .menu {
+      &-item {
+        &.product {
+          > a {
+            &::after {
+              background: #e2ffe1;
+            }
+          }
+        }
+        @include min(1201px) {
+          &:hover {
+            > a {
+              color: $color-five;
+            }
+            .ic-down {
+              &::before {
+                color: $color-five;
+              }
+            }
+          }
+        }
+        > a {
+          &::before {
+            background: $color-five;
+          }
+        }
+        &.current-page-item {
+          > a {
+            color: $color-five;
+          }
+        }
+      }
+    }
+    .btn {
+      &-hover {
+        background: $color-five;
+        &::after {
+          background: #35e881;
+        }
+      }
+    }
+  }
+  .ft {
+    &-center {
+      &-cl {
+        ul {
+          li {
+            @include min(1201px) {
+              &:hover {
+                h2 {
+                  color: $color-five;
+                }
+                a[href] {
+                  color: $color-five;
+                  &.dot {
+                    &::before {
+                      background: $color-five;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-bottom {
+      &-policy {
+        ul {
+          li {
+            @include min(1201px) {
+              &:hover {
+                a[href] {
+                  color: $color-five;
+                  &.dot {
+                    &::before {
+                      background: $color-five;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -102,7 +102,7 @@
           width: calc(100% + 1.6rem);
           @include flex-al;
           @include min(1201px) {
-            &:hover{
+            &:hover {
               box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
             }
           }
@@ -262,13 +262,16 @@
       width: 3.2rem;
       height: 0.3rem;
       display: block;
-      margin-top: 0.6rem;
       border-radius: 0.5rem;
       background: $color-black;
       transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      &:not(:first-child) {
+        margin-top: 0.6rem;
+      }
     }
   }
   .submobile {
+    z-index: 1;
     top: 4.3rem;
     background: #fff;
     position: absolute;

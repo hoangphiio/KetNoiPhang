@@ -1,0 +1,15 @@
+.hub {
+  .hd {
+    .menu {
+      &-item {
+        &.product {
+          > a {
+            &::after {
+              background: #daf1ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -111,7 +111,7 @@
       position: relative;
       @include flex-ct;
       @include max(695px) {
-        gap: 1.2rem;
+        gap: 2rem;
       }
     }
     &-img {
@@ -150,7 +150,7 @@
 
 .home {
   .bn {
-    .new-link {
+    .btn-link {
       max-width: 26rem;
       @include max(991px) {
         max-width: 22rem;
@@ -244,7 +244,8 @@
             font-weight: 700;
           }
         }
-        .new-link {
+        .btn-link {
+          margin: 0 auto;
           @include max(767px) {
             width: 100%;
             max-width: 15rem;
@@ -415,6 +416,9 @@
     &-content {
       flex-direction: column;
       justify-content: space-around;
+      @include max(767px) {
+        justify-content: center;
+      }
     }
     &-title {
       margin: 0 auto;
@@ -422,15 +426,24 @@
       @include max(991px) {
         max-width: 80rem;
       }
+      @include max(767px) {
+        max-width: 50rem;
+      }
       h1 {
         text-align: center;
+        @include max(767px) {
+          font-size: 2.4rem;
+        }
       }
     }
     &-column {
       &:nth-child(2) {
         width: 60%;
-        @include max(767px) {
-          width: 50%;
+        @include max(500px) {
+          width: 80%;
+        }
+        @include max(420px) {
+          width: 100%;
         }
       }
     }

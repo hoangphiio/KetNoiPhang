@@ -1,0 +1,93 @@
+.dcm {
+  .hd {
+    .submobile {
+      border-top-color: $color-four;
+    }
+    .menu {
+      &-item {
+        &.product {
+          > a {
+            &::after {
+              background: #fff5d7;
+            }
+          }
+        }
+        @include min(1201px) {
+          &:hover {
+            > a {
+              color: $color-four;
+            }
+            .ic-down {
+              &::before {
+                color: $color-four;
+              }
+            }
+          }
+        }
+        > a {
+          &::before {
+            background: $color-four;
+          }
+        }
+        &.current-page-item {
+          > a {
+            color: $color-four;
+          }
+        }
+      }
+    }
+    .btn {
+      &-hover {
+        background: $color-four;
+        &::after {
+          background: #ffd75e;
+        }
+      }
+    }
+  }
+  .ft {
+    &-center {
+      &-cl {
+        ul {
+          li {
+            @include min(1201px) {
+              &:hover {
+                h2 {
+                  color: $color-four;
+                }
+                a[href] {
+                  color: $color-four;
+                  &.dot {
+                    &::before {
+                      background: $color-four;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-bottom {
+      &-policy {
+        ul {
+          li {
+            @include min(1201px) {
+              &:hover {
+                a[href] {
+                  color: $color-four;
+                  &.dot {
+                    &::before {
+                      background: $color-four;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ $color-eleven: #424d54;
 $color-twelve: #2f281e;
 $color-thirteen: #415086;
 $color-fourteen: #cfcfcf;
+$color-fiveteen: #2645b5;
 $color-white: #fff;
 $color-black: #000;
 
@@ -102,6 +103,18 @@ $color-black: #000;
   &.ketnoiphang {
     width: 18.2rem;
   }
+  &.dpm {
+    width: 19.7rem;
+  }
+  &.dcm {
+    width: 18.3rem;
+  }
+  &.dsign {
+    width: 10rem;
+  }
+  &.hub {
+    width: 16.1rem;
+  }
 }
 
 .btn-hover {
@@ -109,7 +122,7 @@ $color-black: #000;
   overflow: hidden;
   position: relative;
   text-align: center;
-  display: inline-block;
+  display: block;
   border-radius: 0.6rem;
   background: linear-gradient(
     180deg,

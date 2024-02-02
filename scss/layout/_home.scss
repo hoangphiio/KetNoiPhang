@@ -91,7 +91,7 @@
         box-shadow: 0 0 0.8rem 0 #99c5f0;
         .space {
           &-infomation {
-            h2{
+            h2 {
               color: $color-second;
             }
           }
@@ -140,6 +140,12 @@
       .space-column {
         padding: 0;
         width: 100%;
+        @include max(1080px) {
+          padding: 0 0.5rem;
+        }
+        @include max(450px) {
+          padding: 0;
+        }
         &:nth-child(1) {
           @include max(991px) {
             width: 40%;
@@ -161,9 +167,6 @@
           @include max(450px) {
             width: 100%;
           }
-        }
-        @include max(1080px) {
-          padding: 0 0.5rem;
         }
       }
     }

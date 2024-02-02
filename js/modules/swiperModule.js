@@ -1,10 +1,12 @@
 export default function swiperModule() {
   const bannerSwiper = new Swiper(".banner .swiper", {
     loop: true,
-    slidesPerView: 1,
     speed: 1200,
     effect: "fade",
-    autoplay: { delay: 5000 },
+    noSwiping: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
     fadeEffect: { crossFade: true },
   });
 
