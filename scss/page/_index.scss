@@ -84,4 +84,14 @@
       }
     }
   }
+  .connect {
+    .new-link {
+      min-width: 24rem;
+      border-radius: 2rem;
+      background: $color-white;
+      &::after {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
 }

@@ -15,9 +15,7 @@ export default function swiperModule() {
   demo.forEach((item) => {
     const demo2 = item.querySelector(".swiper");
     const slide = item.querySelectorAll(".swiper-slide");
-    // if (window.innerWidth > 1200 && slide.length <= 6) {
-    //   demo2.classList.add("is-gallery-slider");
-    // }
+
     const sw_gallery = new Swiper(demo2, {
       speed: 1500,
       effect: "fade",

@@ -4432,6 +4432,9 @@ table {
     background: #2645b5;
   }
 }
+.dpm .connect .new-link a {
+  color: #2645b5;
+}
 
 .dsign .hd .submobile {
   border-top-color: #00c86b;
@@ -4548,4 +4551,12 @@ table {
   .section-subpage .ft-center-cl:nth-child(2) ul li {
     margin-bottom: 0;
   }
+}
+.section-subpage .connect .new-link {
+  min-width: 24rem;
+  border-radius: 2rem;
+  background: #fff;
+}
+.section-subpage .connect .new-link::after {
+  background: rgba(0, 0, 0, 0.1);
 }
