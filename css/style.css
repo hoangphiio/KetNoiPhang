@@ -4526,10 +4526,7 @@ table {
 .section-page .hd .menu-item .ic {
   cursor: default;
 }
-.section-page .fullScreen .bn-title h2 {
-  color: #262626;
-}
-.section-page.dpm .bn .btn-hover {
+.section-page.dpm .bn .btn-link {
   background: linear-gradient(180deg, #94abff -0.01%, #3456cf 50%, #2645b5 100%);
 }
 .section-page.dpm .section-title .title {
@@ -4540,6 +4537,15 @@ table {
 }
 .section-page.dpm .section-background {
   background: #f9f9ff;
+}
+.section-page.dpm .fullScreen .bn-title h2 {
+  color: #262626;
+}
+.section-page.dpm .content-title {
+  color: #2645b5;
+}
+.section-page .flex-row-reverse .content-row {
+  flex-direction: row-reverse;
 }
 
 .section-subpage .hd .btn-register {
@@ -4608,4 +4614,40 @@ table {
 }
 .section-subpage .connect .new-link::after {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.content-row {
+  margin: 0 -4rem;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.content-column {
+  padding: 0 4rem;
+  width: 50%;
+}
+.content-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 3.6rem;
+}
+.content-list {
+  margin-bottom: 1.5rem;
+}
+.content-item {
+  padding-bottom: 1.5rem;
+}
+.content-item p {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+.content-item p span {
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

@@ -11,18 +11,9 @@
       }
     }
   }
-  .fullScreen {
-    .bn {
-      &-title {
-        h2 {
-          color: #262626;
-        }
-      }
-    }
-  }
   &.dpm {
     .bn {
-      .btn-hover {
+      .btn-link {
         background: linear-gradient(
           180deg,
           #94abff -0.01%,
@@ -41,6 +32,27 @@
     }
     .section-background {
       background: #f9f9ff;
+    }
+    .fullScreen {
+      .bn {
+        &-title {
+          h2 {
+            color: #262626;
+          }
+        }
+      }
+    }
+    .content {
+      &-title {
+        color: $color-fiveteen;
+      }
+    }
+  }
+  .flex-row-reverse {
+    .content {
+      &-row {
+        flex-direction: row-reverse;
+      }
     }
   }
 }
@@ -123,6 +135,36 @@
       background: $color-white;
       &::after {
         background: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+.content {
+  &-row {
+    margin: 0 -4rem;
+    @include flex-al;
+  }
+  &-column {
+    padding: 0 4rem;
+    width: calc(100% / 2);
+  }
+  &-title {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 3.6rem;
+  }
+  &-list {
+    margin-bottom: 1.5rem;
+  }
+  &-item {
+    padding-bottom: 1.5rem;
+    p {
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      span {
+        font-weight: 600;
       }
     }
   }
