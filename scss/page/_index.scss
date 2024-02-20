@@ -140,6 +140,7 @@
   }
 }
 .content {
+  overflow: hidden;
   &-row {
     margin: 0 -4rem;
     @include flex-al;

@@ -526,9 +526,6 @@
     @include max(1200px) {
       padding-top: 4rem;
     }
-    @include max(767px) {
-      padding-top: 0;
-    }
     ul {
       margin: 0 -0.5rem;
       @include flex-ct;

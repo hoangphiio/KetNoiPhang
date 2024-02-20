@@ -4263,11 +4263,6 @@ table {
     padding-top: 4rem;
   }
 }
-@media screen and (max-width: 767px) {
-  .new-pagination {
-    padding-top: 0;
-  }
-}
 .new-pagination ul {
   margin: 0 -0.5rem;
   display: -webkit-flex;
@@ -4616,6 +4611,9 @@ table {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.content {
+  overflow: hidden;
+}
 .content-row {
   margin: 0 -4rem;
   display: -webkit-flex;
