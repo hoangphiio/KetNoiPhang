@@ -5,15 +5,6 @@
   z-index: 999;
   position: fixed;
   transition: 0.4s ease-in-out;
-  @include max(1280px) {
-    bottom: 5%;
-  }
-  @include max(1199px) {
-    right: 2.88rem;
-  }
-  @include max(767px) {
-    right: 1rem;
-  }
   &.active {
     opacity: 1;
   }
@@ -52,8 +43,8 @@
     img {
       width: 2.5rem;
       height: 2.5rem;
-      @include min(1201px){
-        &:hover{
+      @include min(1201px) {
+        &:hover {
           transform: translateY(-0.5rem);
         }
       }
