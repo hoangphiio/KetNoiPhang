@@ -225,26 +225,48 @@
     margin-bottom: -4rem;
     flex-wrap: wrap;
     @include flex;
+    @include max(991px) {
+      margin: 0 -0.5rem;
+      margin-bottom: -1rem;
+    }
   }
   &-card {
     padding: 0 2rem;
     padding-bottom: 4rem;
     width: calc(100% / 2);
+    @include max(991px) {
+      padding: 0 0.5rem;
+      padding-bottom: 1rem;
+    }
+    @include max(600px) {
+      width: 100%;
+    }
   }
   &-list {
     gap: 2rem;
     height: 100%;
     padding: 3rem;
     border-radius: 2rem;
-    background: pink;
+    background: $color-white;
     @include flex;
+    @include max(767px) {
+      padding: 2rem;
+      flex-direction: column;
+    }
   }
   &-item {
     &:first-child {
       width: 7rem;
+      @include max(767px) {
+        margin: 0 auto;
+      }
     }
     &:last-child {
       width: calc(100% - 7rem);
+      @include max(767px) {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
   &-img {
@@ -261,12 +283,18 @@
       font-size: 2.4rem;
       line-height: normal;
       padding-bottom: 1rem;
+      @include max(991px) {
+        font-size: 2rem;
+      }
     }
     h4 {
       font-size: 1.8rem;
       font-weight: 400;
       line-height: 2.6rem;
       color: $color-seven;
+      @include max(991px) {
+        font-size: 1.6rem;
+      }
     }
   }
 }

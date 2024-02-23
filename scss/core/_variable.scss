@@ -60,10 +60,10 @@ $color-black: #000;
     line-height: 3.4rem;
     @include max(1200px) {
       font-size: 2rem;
-      line-height: normal;
+      line-height: 3rem;
     }
     @include max(767px) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 }
