@@ -4865,6 +4865,7 @@ table {
 .section-subpage .hd .btn-register {
   font-weight: 600;
   padding: 0.9rem 3rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 1201px) {
   .section-subpage .hd .menu-item.product {
