@@ -13,6 +13,14 @@
     }
   }
   &.hub {
+    .section-title {
+      .title {
+        color: $color-second;
+        span {
+          color: $color-second;
+        }
+      }
+    }
     .content {
       &-title {
         color: $color-second;

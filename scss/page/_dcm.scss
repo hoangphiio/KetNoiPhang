@@ -90,4 +90,65 @@
       }
     }
   }
+  .section-background {
+    background: #fafafa;
+  }
+  .bn {
+    .btn-link {
+      background: linear-gradient(
+        180deg,
+        #ffe9a6 -0.01%,
+        #ffd75e 36.83%,
+        #ffc822 100%
+      );
+      &::after {
+        background: #ffd75e;
+      }
+    }
+  }
+  .section-title {
+    .title {
+      color: $color-four;
+      span {
+        color: $color-four;
+      }
+    }
+  }
+  .content {
+    &-title {
+      color: $color-four;
+    }
+    &-subtitle {
+      color: #262626;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 3.2rem;
+    }
+  }
+  .connect {
+    .new-link {
+      a {
+        color: $color-black;
+      }
+    }
+  }
+  .home {
+    .connect {
+      .bn-content {
+        h2 {
+          color: $color-black;
+        }
+      }
+    }
+  }
+  .flex-col {
+    flex-direction: column;
+    .content-title {
+      text-align: center;
+    }
+    .content-column {
+      width: 100%;
+    }
+  }
 }

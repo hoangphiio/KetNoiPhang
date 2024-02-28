@@ -114,10 +114,12 @@
       }
     }
   }
-  .dot {
-    &::before {
-      top: 1.2rem;
-      bottom: unset;
+  .main {
+    .dot {
+      &::before {
+        top: 1.2rem;
+        bottom: unset;
+      }
     }
   }
 }
@@ -196,8 +198,15 @@
       @include imgContain;
     }
   }
+  &-box {
+    padding-top: 1.5rem;
+    justify-content: space-between;
+    @include flex;
+    .content-list {
+      margin-bottom: 0;
+    }
+  }
 }
-
 .workflow {
   &-wrap {
     margin: 0 -2rem;

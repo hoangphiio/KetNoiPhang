@@ -265,7 +265,7 @@ table {
     height: 0.6rem;
     border-radius: 999px; }
   .dot-item {
-    padding-left: 3rem; }
+    margin-left: 1.5rem; }
 
 .numbering {
   padding-left: 3rem; }
@@ -3379,6 +3379,42 @@ table {
     .dcm .ft-bottom-policy ul li:hover a[href].dot::before {
       background: #ffc107; } }
 
+.dcm .section-background {
+  background: #fafafa; }
+
+.dcm .bn .btn-link {
+  background: linear-gradient(180deg, #ffe9a6 -0.01%, #ffd75e 36.83%, #ffc822 100%); }
+  .dcm .bn .btn-link::after {
+    background: #ffd75e; }
+
+.dcm .section-title .title {
+  color: #ffc107; }
+  .dcm .section-title .title span {
+    color: #ffc107; }
+
+.dcm .content-title {
+  color: #ffc107; }
+
+.dcm .content-subtitle {
+  color: #262626;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3.2rem; }
+
+.dcm .connect .new-link a {
+  color: #000; }
+
+.dcm .home .connect .bn-content h2 {
+  color: #000; }
+
+.dcm .flex-col {
+  flex-direction: column; }
+  .dcm .flex-col .content-title {
+    text-align: center; }
+  .dcm .flex-col .content-column {
+    width: 100%; }
+
 .dpm .hd .submobile {
   border-top-color: #2645b5; }
 
@@ -3762,6 +3798,11 @@ table {
 .hub .hd .menu-item.product > a::after {
   background: #daf1ff; }
 
+.hub.hub .section-title .title {
+  color: #28b0ff; }
+  .hub.hub .section-title .title span {
+    color: #28b0ff; }
+
 .hub.hub .content-title {
   color: #28b0ff; }
 
@@ -3846,7 +3887,7 @@ table {
   .section-subpage .connect .new-link::after {
     background: rgba(0, 0, 0, 0.1); }
 
-.section-subpage .dot::before {
+.section-subpage .main .dot::before {
   top: 1.2rem;
   bottom: unset; }
 
@@ -3929,6 +3970,16 @@ table {
       width: 100%;
       height: 100%;
       object-fit: contain; }
+  .content-box {
+    padding-top: 1.5rem;
+    justify-content: space-between;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex; }
+    .content-box .content-list {
+      margin-bottom: 0; }
 
 .workflow-wrap {
   margin: 0 -2rem;
