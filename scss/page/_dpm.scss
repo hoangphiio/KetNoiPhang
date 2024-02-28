@@ -100,11 +100,38 @@
   &-card {
     margin: 0 -1.5rem;
     @include flex;
+    @include max(1200px) {
+      margin: 0 -0.5rem;
+    }
+    @include max(991px) {
+      row-gap: 1rem;
+      flex-wrap: wrap;
+    }
   }
   &-list {
     padding: 0 1.5rem;
     width: calc(100% / 4);
+    @include max(1200px) {
+      padding: 0 0.5rem;
+    }
+    @include max(991px) {
+      width: calc(100% / 3);
+    }
+    @include max(767px) {
+      width: calc(100% / 2);
+    }
+    @include max(500px) {
+      width: 100%;
+    }
     &.starter {
+      .product-item {
+        @include min(1201px) {
+          &:hover {
+            border: 0.1rem solid #888;
+            box-shadow: 0 0 1.5rem #b2b2b2;
+          }
+        }
+      }
       .product-currency {
         h3 {
           color: #f00;
@@ -138,6 +165,14 @@
       }
     }
     &.basic {
+      .product-item {
+        @include min(1201px) {
+          &:hover {
+            box-shadow: 0 0 1.5rem #f9dc87;
+            border: 0.1rem solid $color-four;
+          }
+        }
+      }
       .product-package {
         background: rgba(255, 193, 7, 0.1);
         h2 {
@@ -154,6 +189,10 @@
       }
     }
     &.professional {
+      .product-item {
+        box-shadow: 0 0 1.5rem #b2ffd3;
+        border: 0.1rem solid $color-five;
+      }
       .product-package {
         background: rgba(28, 197, 100, 0.1);
         h2 {
@@ -170,6 +209,14 @@
       }
     }
     &.enterprise {
+      .product-item {
+        @include min(1201px) {
+          &:hover {
+            box-shadow: 0 0 1.5rem #a9defd;
+            border: 0.1rem solid $color-second;
+          }
+        }
+      }
       .product-package {
         background: rgba(40, 176, 255, 0.1);
         h2 {
@@ -191,9 +238,10 @@
   }
   &-package {
     padding: 2rem;
+    overflow: hidden;
+    position: relative;
     border-radius: 1rem 1rem 0 0;
     h2 {
-      font-weight: 600;
       font-size: 2rem;
       text-align: center;
     }
@@ -216,6 +264,11 @@
       > div:not(:last-child) {
         padding-bottom: 2rem;
       }
+      .text {
+        @include max(991px) {
+          min-height: 7.8rem;
+        }
+      }
     }
     .text {
       display: block;
@@ -223,9 +276,15 @@
       font-size: 1.6rem;
       font-weight: 300;
       line-height: 2.6rem;
+      @include max(1200px) {
+        font-size: 1.4rem;
+      }
       span {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 1.8rem;
+        @include max(1200px) {
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -233,6 +292,9 @@
     flex-wrap: wrap;
     justify-content: center;
     @include flex;
+    @include max(991px) {
+      flex-direction: column;
+    }
     h3 {
       color: #4a4a4a;
       font-size: 3rem;
@@ -272,6 +334,104 @@
     padding-top: calc((30 / 310) * 100%);
     img {
       @include imgContain;
+    }
+  }
+  .quote {
+    left: 0;
+    right: 0;
+    top: -0.3rem;
+    margin: auto;
+    width: fit-content;
+    position: absolute;
+    &-flex {
+      padding: 0.4rem 0.8rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+      background: #f3a825;
+      @include flex-al;
+    }
+    .star {
+      width: 1.4rem;
+      height: 1.4rem;
+      padding-right: 0.5rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../assets/img/icon/star.svg);
+    }
+    .recomment {
+      color: #fff;
+      font-size: 1rem;
+      line-height: normal;
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.table {
+  &-grid {
+    @include max(767px) {
+      overflow: auto hidden;
+    }
+    table {
+      width: 100%;
+      background: $color-white;
+      border-collapse: collapse;
+      border: 0.1rem solid #e5e5e5;
+      box-shadow: 0 0.2rem 1rem #f0f0f0;
+      @include max(767px) {
+        min-width: 80rem;
+      }
+      tr {
+        &.group {
+          td {
+            font-size: 2rem;
+            color: #2f281e;
+            font-weight: 700;
+            background: #f6f6f6;
+            text-transform: uppercase;
+            @include max(1200px) {
+              font-size: 1.8rem;
+            }
+          }
+          &.feature {
+            ~ tr:nth-child(2n) {
+              background: #f7f7ff;
+            }
+          }
+        }
+      }
+      th {
+        padding: 2rem;
+        font-size: 1.8rem;
+        background: $color-white;
+        border-bottom: 0.1rem solid #e5e5e5;
+        &:nth-child(2) {
+          color: #5e5e5e;
+        }
+        &:nth-child(3) {
+          color: $color-four;
+        }
+        &:nth-child(4) {
+          color: $color-five;
+        }
+        &:nth-child(5) {
+          color: $color-second;
+        }
+        &:not(:last-child) {
+          border-right: 0.1rem solid #e5e5e5;
+        }
+      }
+      td {
+        padding: 2rem;
+        font-size: 1.6rem;
+        text-align: center;
+        vertical-align: middle;
+        @include max(1200px) {
+          font-size: 1.4rem;
+        }
+        &:first-child {
+          text-align: left;
+        }
+      }
     }
   }
 }

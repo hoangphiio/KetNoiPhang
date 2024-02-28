@@ -1,22 +1,14 @@
 export default function toggleButton() {
   $(document).ready(function () {
     const $showBtn = $("#show");
-    const $toggleBtn = $(".toggle-button");
+    const $toggleContent = $(".toggle-button");
 
     $showBtn.click(function () {
-      $toggleBtn.slideToggle("flow");
+      $toggleContent.slideToggle("flow");
 
-      if ($showBtn.hasClass("toggle-show")) {
-        $showBtn
-          .addClass("toggle-hide")
-          .removeClass("toggle-show")
-          .text("[Thu gọn]");
-      } else {
-        $showBtn
-          .removeClass("toggle-hide")
-          .addClass("toggle-show")
-          .text("[Xem thêm]");
-      }
+      $showBtn.toggleClass("toggle-show toggle-hide").text(function () {
+        return $(this).hasClass("toggle-show") ? "[Xem thêm]" : "[Thu gọn]";
+      });
     });
   });
 }
