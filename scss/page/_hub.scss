@@ -12,4 +12,21 @@
       }
     }
   }
+  &.hub {
+    .content {
+      &-title {
+        color: $color-second;
+      }
+    }
+    .section-background {
+      background: #f7fcff;
+    }
+    .connect {
+      .new-link {
+        a {
+          color: $color-second;
+        }
+      }
+    }
+  }
 }

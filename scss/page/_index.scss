@@ -11,48 +11,6 @@
       }
     }
   }
-  &.dpm {
-    .bn {
-      .btn-link {
-        background: linear-gradient(
-          180deg,
-          #94abff -0.01%,
-          #3456cf 50%,
-          #2645b5 100%
-        );
-      }
-    }
-    .section-title {
-      .title {
-        color: $color-fiveteen;
-        span {
-          color: $color-fiveteen;
-        }
-      }
-    }
-    .price {
-      .section-background {
-        background: linear-gradient(0deg, #fff -6.16%, #f3f3ff 42.61%);
-      }
-    }
-    .section-background {
-      background: #f9f9ff;
-    }
-    .fullScreen {
-      .bn {
-        &-title {
-          h2 {
-            color: #262626;
-          }
-        }
-      }
-    }
-    .content {
-      &-title {
-        color: $color-fiveteen;
-      }
-    }
-  }
   .flex-row-reverse {
     .content {
       &-row {
@@ -118,6 +76,15 @@
       }
     }
   }
+  .fullScreen {
+    .bn {
+      &-title {
+        h2 {
+          color: #262626;
+        }
+      }
+    }
+  }
   .ft {
     &-center {
       &-cl {
@@ -145,6 +112,12 @@
       &::after {
         background: rgba(0, 0, 0, 0.1);
       }
+    }
+  }
+  .dot {
+    &::before {
+      top: 1.2rem;
+      bottom: unset;
     }
   }
 }

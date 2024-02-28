@@ -83,6 +83,9 @@ $color-black: #000;
     background: rgba(38, 38, 38, 0.5);
     @include cir(0.6rem);
   }
+  &-item {
+    padding-left: 3rem;
+  }
 }
 
 .numbering {

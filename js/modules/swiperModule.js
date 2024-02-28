@@ -1,6 +1,5 @@
 export default function swiperModule() {
   const bannerSwiper = new Swiper(".banner .swiper", {
-    loop: true,
     speed: 1200,
     effect: "fade",
     noSwiping: true,
