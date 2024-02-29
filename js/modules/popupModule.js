@@ -1,12 +1,9 @@
 export default function popupModule() {
-  $(".popup-open").click(function () {
-    $(this)
-      .parent(".popup-main")
-      .children(".popup-body")
-      .addClass("popup-show");
+  $(".Click-here").on("click", function () {
+    $(".custom-model-main").addClass("model-open");
+  });
+  $(".close-btn, .bg-overlay").click(function () {
+    $(".custom-model-main").removeClass("model-open");
   });
 
-  $(".popup-close, .popup-back").click(function () {
-    $(".popup-body").removeClass("popup-show");
-  });
 }
