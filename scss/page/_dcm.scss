@@ -142,6 +142,11 @@
       }
     }
   }
+  .customer {
+    .new-content {
+      background: $color-white;
+    }
+  }
   .flex-col {
     flex-direction: column;
     .content-title {

@@ -65,6 +65,9 @@ $color-black: #000;
     @include max(767px) {
       font-size: 1.8rem;
     }
+    span {
+      font-weight: 600;
+    }
   }
 }
 

@@ -167,11 +167,7 @@
     }
   }
   &-link {
-    top: 10rem;
-    position: sticky;
     @include max(991px) {
-      top: unset;
-      position: relative;
       &::before {
         content: "";
         top: 0;
@@ -225,7 +221,7 @@
           flex-direction: column-reverse;
         }
       }
-      &.content-img {
+      &.img {
         align-items: normal;
         flex-direction: column;
         > div {

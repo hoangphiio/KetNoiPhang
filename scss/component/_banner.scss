@@ -119,6 +119,9 @@
       overflow: hidden;
       position: relative;
       padding-top: calc((406 / 572) * 100%);
+      @include max(500px) {
+        padding-top: calc((406 / 572) * 140%);
+      }
       img {
         @include imgCover;
       }

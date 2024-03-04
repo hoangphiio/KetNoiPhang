@@ -294,7 +294,8 @@
       }
       a {
         display: block;
-        @include imgPd($ver: 345, $hori: 700);
+        position: relative;
+        padding-top: calc((345 / 700) * 100%);
         img {
           @include imgCover;
         }
@@ -394,7 +395,9 @@
   &-img {
     a {
       display: block;
-      @include imgPd($ver: 160, $hori: 330);
+      overflow: hidden;
+      position: relative;
+      padding-top: calc((160 / 330) * 100%);
       @include min(1201px) {
         &:hover {
           img {
@@ -478,12 +481,12 @@
     margin: 0 auto;
     margin-top: auto;
     max-width: 15rem;
-    @include max(767px){
+    @include max(767px) {
       max-width: 12rem;
     }
     a {
       padding: 1rem;
-      @include max(767px){
+      @include max(767px) {
         padding: 0.8rem;
       }
     }

@@ -5,7 +5,7 @@ export default function swiperModule() {
     noSwiping: true,
     slidesPerView: 1,
     centeredSlides: true,
-    autoplay: { delay: 5000, disableOnInteraction: false },
+    autoplay: { delay: 5000 /*disableOnInteraction: false*/ },
     fadeEffect: { crossFade: true },
   });
 
