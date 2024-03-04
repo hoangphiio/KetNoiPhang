@@ -192,6 +192,9 @@
               content: "05";
               top: 0;
             }
+            &::after {
+              display: none;
+            }
           }
         }
         .circle {
@@ -229,10 +232,12 @@
           background: $color-white;
           transition: 0.4s ease-in-out;
           border: 0.4rem solid #efefef;
-          &:hover {
-            border-color: $color-five;
-            img {
-              transform: scale(1.1);
+          @include min(1201px) {
+            &:hover {
+              border-color: $color-five;
+              img {
+                transform: scale(1.1);
+              }
             }
           }
           img {
@@ -245,10 +250,25 @@
         }
       }
     }
+    &-table {
+      @include max(1200px) {
+        overflow: auto;
+      }
+    }
     &-overflow {
       margin-bottom: -3rem;
+      @include max(1200px) {
+        gap: 2rem;
+        min-width: 120rem;
+        margin-bottom: 0;
+        flex-direction: column;
+        @include flex;
+      }
       > div {
         padding-bottom: 3rem;
+        @include max(1200px) {
+          padding-bottom: 0;
+        }
       }
     }
     &-arrow {
@@ -309,6 +329,15 @@
         }
       }
     }
+    @include max(767px) {
+      width: 5rem;
+      height: 5rem;
+    }
+    .popup-youtube {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
     &::before {
       content: "";
       top: 0;
@@ -319,14 +348,25 @@
       position: absolute;
       border-radius: 50%;
       transform: scale(2);
+      @include max(1200px) {
+        background: rgba(223, 223, 223, 0.8);
+        animation: 2.5s ease 0s infinite normal none running pulse;
+      }
     }
     img {
       width: 2.4rem;
       height: 3.4rem;
       filter: brightness(0) invert(1);
+      @include max(767px) {
+        width: 2rem;
+        height: 3rem;
+      }
     }
   }
   .section-background {
     background: #fafafa;
+  }
+  .main {
+    overflow: hidden;
   }
 }
