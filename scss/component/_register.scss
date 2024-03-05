@@ -1,0 +1,38 @@
+.form {
+  &-popup {
+    &-background {
+      padding: 2rem;
+      background: pink;
+      flex-direction: column;
+      @include flex;
+    }
+    &-top {
+      margin-bottom: 2rem;
+      position: relative;
+      @include flex-btw;
+    }
+    &-title {
+      h3 {
+        font-size: 2.4rem;
+      }
+    }
+    &-close {
+      display: block;
+      cursor: pointer;
+      .ic {
+        display: block;
+        &::before {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  &-group {
+    margin: 0 -2rem;
+    @include flex;
+    &-column {
+      padding: 0 2rem;
+      width: calc(100% / 2);
+    }
+  }
+}
