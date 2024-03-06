@@ -1,20 +1,53 @@
 .form {
   &-popup {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    flex-direction: column;
+    @include flex-ct;
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+    &-register {
+      width: 80%;
+      margin: 1rem;
+      position: relative;
+      overflow: hidden auto;
+      @include max(1200px) {
+        width: 95%;
+      }
+    }
     &-background {
       padding: 2rem;
       overflow: hidden;
-      background: pink;
+      background: $color-white;
       flex-direction: column;
       @include flex;
     }
     &-top {
-      margin-bottom: 2rem;
       position: relative;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.1rem solid #e8e8e8;
       @include flex-btw;
     }
     &-title {
       h3 {
         font-size: 2.4rem;
+        @include max(1200px) {
+          font-size: 2rem;
+        }
       }
     }
     &-close {
@@ -29,11 +62,180 @@
     }
   }
   &-group {
-    margin: 0 -2rem;
+    gap: 2rem;
     @include flex;
+    @include max(767px) {
+      flex-direction: column-reverse;
+    }
     &-column {
-      padding: 0 2rem;
       width: calc(100% / 2);
+      @include max(767px) {
+        width: 100%;
+      }
+    }
+    &-img {
+      height: 100%;
+      padding-top: 100%;
+      position: relative;
+      &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      img {
+        @include imgCover;
+      }
+    }
+    &-infomation {
+      gap: 2rem;
+      flex-direction: column;
+      @include flex;
+      .form-fill-capcha {
+        margin-bottom: 0;
+      }
+    }
+    &-absolute {
+      top: 0;
+      left: 0;
+      gap: 1rem;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      flex-direction: column;
+      @include flex-ct;
+      span {
+        display: block;
+        font-weight: 600;
+        max-width: 32rem;
+        text-align: center;
+        font-size: 2.8rem;
+        color: $color-white;
+        @include max(1200px){
+          font-size: 2.4rem;
+        }
+        &:last-child {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .col-md-6 {
+      width: 50%;
+      @include max(500px) {
+        width: 100%;
+        &:first-child {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+    .col-md-12 {
+      width: 100%;
+    }
+  }
+  &-row {
+    margin: 0 -1rem;
+    flex-wrap: wrap;
+    @include flex;
+    @include max(1200px) {
+      margin: 0 -0.5rem;
+    }
+  }
+  &-col {
+    padding: 0 1rem;
+    @include max(1200px) {
+      padding: 0 0.5rem;
+    }
+    &-label {
+      margin-bottom: 0.6rem;
+      span {
+        color: #5e5e5e;
+        font-size: 1.4rem;
+      }
+    }
+    &-input {
+      .select {
+        width: 100%;
+        position: relative;
+        &::before {
+          content: "";
+          left: 0;
+          bottom: -0.5rem;
+          width: 100%;
+          height: 0.5rem;
+          position: absolute;
+          background: transparent;
+        }
+        @include min(1201px) {
+          &:hover {
+            .select-btn {
+              color: $color-second;
+              border-color: $color-second;
+            }
+            .ic-down {
+              &::before {
+                color: $color-second;
+              }
+            }
+          }
+        }
+        &.active {
+          .select-btn {
+            color: $color-second;
+            border-color: $color-second;
+          }
+          .select-options {
+            opacity: 1;
+            visibility: visible;
+          }
+          .ic-down {
+            transform: rotate(180deg);
+            &::before {
+              color: $color-second;
+            }
+          }
+        }
+        &-btn {
+          cursor: pointer;
+          padding: 0.45rem 0.8rem;
+          border-radius: 0.4rem;
+          border: 0.1rem solid #e8e8e8;
+          @include flex-btw;
+        }
+        .ic-down {
+          transition: 0.4s ease-in-out;
+        }
+        &-options {
+          left: 0;
+          top: 4rem;
+          opacity: 0;
+          width: 100%;
+          cursor: pointer;
+          visibility: hidden;
+          position: absolute;
+          border-radius: 0.4rem;
+          padding: 0.6rem 0.8rem;
+          background: $color-white;
+          transition: 0.4s ease-in-out;
+          border: 0.1rem solid #e8e8e8;
+          box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+          flex-direction: column;
+          @include flex;
+          .option {
+            border-radius: 0.4rem;
+            padding: 0.6rem 0.8rem;
+            @include min(1201px) {
+              &:hover {
+                box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

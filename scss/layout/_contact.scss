@@ -170,7 +170,6 @@
       span {
         position: relative;
         line-height: 2.4rem;
-        transition: 0.4s ease-in-out;
         @include flex;
         &::before {
           margin-right: 1rem;
@@ -212,7 +211,7 @@
       &:hover {
         span {
           &:nth-child(2) {
-            color: $color-first;
+            color: $color-second;
           }
         }
       }
@@ -235,6 +234,7 @@
     }
     &-capcha {
       margin-bottom: 2rem;
+      @include flex;
     }
   }
   &-title {
@@ -251,40 +251,6 @@
   &-input {
     &:not(:last-child) {
       margin-bottom: 2rem;
-    }
-    label {
-      display: block;
-      color: #5e5e5e;
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-      margin-bottom: 0.5rem;
-      span {
-        color: #f00;
-      }
-    }
-    input,
-    textarea {
-      width: 100%;
-      outline: 0;
-      padding: 0.8rem;
-      min-height: 3.3rem;
-      border-radius: 0.4rem;
-      font-family: "Be VietNam Pro";
-      transition: 0.4s ease-in-out;
-      border: 0.1rem solid #e8e8e8;
-      cursor: default;
-      @include min(1201px) {
-        &:hover {
-          border-color: $color-first;
-        }
-      }
-      &:focus-visible {
-        border-color: $color-first;
-      }
-    }
-    textarea {
-      resize: vertical;
-      min-height: 13rem;
     }
   }
 }

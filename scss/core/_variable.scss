@@ -215,3 +215,40 @@ $color-black: #000;
   line-height: 1.8rem;
   @include lc(3);
 }
+
+input,
+textarea {
+  width: 100%;
+  display: block;
+  font-size: 1.4rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
+  font-family: "Be VietNam Pro";
+  border: 0.1rem solid #e8e8e8;
+  @include min(1201px) {
+    &:hover {
+      border-color: $color-second;
+    }
+  }
+  &:focus-visible {
+    outline: 0.1rem solid $color-second;
+  }
+}
+textarea {
+  resize: vertical;
+  min-height: 15rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  span {
+    color: #5e5e5e;
+    font-size: 1.6rem;
+    @include max(1200px) {
+      font-size: 1.4rem;
+    }
+    span {
+      color: #fb4b45;
+    }
+  }
+}

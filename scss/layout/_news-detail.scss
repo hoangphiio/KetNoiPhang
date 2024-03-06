@@ -163,7 +163,6 @@
       color: $color-seven;
       padding: 0.5rem 1rem;
       background: #f1f1f1;
-      transition: 0.4s ease-in-out;
       @include min(1201px) {
         &:hover {
           color: $color-second;
@@ -194,7 +193,7 @@
       outline: 0;
       border: 0;
       width: 100%;
-      padding: 1.5rem;
+      padding: 1.2rem;
       padding-right: 4.5rem;
       overflow: hidden;
       border-radius: 1rem;
@@ -202,19 +201,18 @@
       font-weight: 400;
       font-size: 1.6rem;
       color: #9a9a9a;
-      cursor: pointer;
       &::placeholder {
         line-height: normal;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: #9a9a9a;
       }
     }
     .icon-search {
       top: 1.1rem;
-      right: 1.5rem;
-      position: absolute;
+      right: 1.2rem;
       cursor: pointer;
+      position: absolute;
     }
   }
   &-sub {

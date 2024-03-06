@@ -104,6 +104,9 @@
           @include min(1201px) {
             &:hover {
               box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, 0.14);
+              .ic-phone-1 {
+                animation: ring 1.5s infinite ease-in-out;
+              }
             }
           }
           &::before {

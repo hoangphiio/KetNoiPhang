@@ -63,6 +63,13 @@ img {
   }
 }
 
+.onscroll {
+  touch-action: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: none;
+}
+
 .container {
   position: relative;
   width: 100%;
