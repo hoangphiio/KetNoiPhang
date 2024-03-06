@@ -2,6 +2,7 @@
   &-popup {
     &-background {
       padding: 2rem;
+      overflow: hidden;
       background: pink;
       flex-direction: column;
       @include flex;
